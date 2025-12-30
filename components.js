@@ -52,13 +52,13 @@ function generateNavbar(rootPath) {
     <nav class="navbar" id="navbar">
         <div class="nav-container container">
 
-            <a href="${rootPath}main/index.html" class="nav-logo">
+            <a href="${rootPath}index.html" class="nav-logo">
                 <img src="${rootPath}main/resourcesMain/TerraVistaLogo.png" alt="TerraVista Logo" class="logo-img">
                 <span class="logo-text">TerraVista</span>
             </a>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="${rootPath}main/index.html" class="nav-link">Home</a></li>
+                <li><a href="${rootPath}index.html" class="nav-link">Home</a></li>
                 <li><a href="${rootPath}main/about.html" class="nav-link">About Us</a></li>
                 
                 <li class="dropdown">
@@ -105,7 +105,7 @@ function generateFooter(rootPath) {
                 <div class="footer-section">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="${rootPath}main/index.html">Home</a></li>
+                        <li><a href="${rootPath}index.html">Home</a></li>
                         <li><a href="${rootPath}main/about.html">About Us</a></li>
                         <li><a href="${rootPath}main/contact.html">Contact</a></li>
                     </ul>

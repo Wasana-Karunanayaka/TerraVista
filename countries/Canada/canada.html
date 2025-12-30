@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Canada</title>
+
+    <meta name="description"
+        content="From the Rockies to the Maritimes. Discover Canada's breathtaking wilderness, vibrant multicultural cities, and friendly spirit.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR CANADA -->
+    <style>
+        :root {
+            /* Maple Leaf Red */
+            --theme-primary: #FF0000;
+            /* Dark Gray for contrast */
+            --theme-secondary: #2D2D2D;
+            --theme-bg-light: #fdfefe;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #FF0000;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #cc0000 !important;
+        }
+
+        /* Gradient for Title: Red to Gray */
+        .country-title {
+            background: linear-gradient(135deg, #FF0000 0%, #2D2D2D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Canada/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Canada</h1>
+            <p class="country-slogan">"True North Strong and Free"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Canadian Dollar (CAD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English & French</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127809;</div>
+                <div class="stat-label">Symbol</div>
+                <div class="stat-value">Maple Leaf</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">eTA / Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">The Great White North</h2>
+            <p class="section-subtitle">Vast wilderness, cosmopolitan cities, and endless adventure.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Banff National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/banff.jpg" alt="Banff Lake Louise" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Banff National Park</h3>
+                        <p>Alberta. The crown jewel of the Rockies. Famous for the turquoise Lake Louise, Moraine Lake,
+                            and endless hiking trails.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Niagara Falls -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/niagara.jpg" alt="Niagara Falls" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Niagara Falls</h3>
+                        <p>Ontario. One of the world's most impressive waterfalls. Take the Hornblower cruise into the
+                            mist or see the view from Skylon Tower.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Vancouver -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/vancouver.jpg" alt="Vancouver" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Vancouver</h3>
+                        <p>British Columbia. A stunning coastal city surrounded by mountains. Bike through Stanley Park
+                            or explore Granville Island Market.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Old Quebec City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/quebec.jpg" alt="Chateau Frontenac" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Old Quebec City</h3>
+                        <p>Quebec. North America's only walled city north of Mexico. Walk the cobblestone streets and
+                            see the Château Frontenac.</p>
+                    </div>
+                </div>
+
+                <!-- 5. CN Tower (Toronto) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/toronto.jpg" alt="CN Tower" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Toronto</h3>
+                        <p>Ontario. Canada's largest city. Visit the iconic CN Tower, the Royal Ontario Museum, and the
+                            vibrant Kensington Market.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Whistler -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/whistler.jpg" alt="Whistler" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Whistler</h3>
+                        <p>British Columbia. world-class ski resort and host of the 2010 Winter Olympics. Great for
+                            skiing, mountain biking, and bear watching.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Peggy's Cove -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/peggyscyove.jpg" alt="Peggy's Cove Lighthouse"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Peggy's Cove</h3>
+                        <p>Nova Scotia. A picturesque fishing village famous for its classic red-and-white lighthouse
+                            perched on granite rocks.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Polar Bears in Churchill -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/bear.jpg" alt="Polar Bear" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Churchill</h3>
+                        <p>Manitoba. The "Polar Bear Capital of the World." Take a tundra buggy tour to see polar bears
+                            in the wild or see Beluga whales.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Bay of Fundy -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Canada/fundy.jpg" alt="Bay of Fundy" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bay of Fundy</h3>
+                        <p>New Brunswick. Home to the highest tides in the world. Walk on the ocean floor at low tide
+                            and kayak at high tide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Canadian Culture</h2>
+                <p class="section-subtitle">Diverse, polite, and deeply connected to nature.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Ice Hockey -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Canada/hockey.jpg');">
+                        <div class="culture-icon">&#127954;</div> <!-- Ice Hockey -->
+                        <div class="culture-text">
+                            <h4>Ice Hockey</h4>
+                            <p>More than a sport; it's a religion. From frozen ponds to the NHL, hockey unites the
+                                nation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Maple Syrup -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Canada/maple.jpg');">
+                        <div class="culture-icon">&#127809;</div> <!-- Maple Leaf -->
+                        <div class="culture-text">
+                            <h4>Liquid Gold</h4>
+                            <p>Canada produces 71% of the world's maple syrup. Visit a "Sugar Shack" (Cabane à Sucre)
+                                for taffy on snow.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Politeness -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Canada/polite.jpg');">
+                        <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                        <div class="culture-text">
+                            <h4>The "Sorry" Culture</h4>
+                            <p>Canadians are famously polite. Saying "sorry" is a reflex, used even when someone else
+                                bumps into you.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Indigenous Heritage -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Canada/inuit.jpg');">
+                        <div class="culture-icon">&#128509;</div> <!-- Totem Pole-ish -->
+                        <div class="culture-text">
+                            <h4>Indigenous Heritage</h4>
+                            <p>First Nations, Inuit, and Métis cultures are integral. Discover Totem poles, Pow Wows,
+                                and Inuit art.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Tim Hortons -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Canada/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Tim Hortons</h4>
+                            <p>The iconic coffee chain. Asking for a "Double-Double" (two creams, two sugars) is a
+                                uniquely Canadian phrase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (English/French/Slang)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Canadian Talk</h2>
+                <p class="section-subtitle">Canada has two official languages and plenty of unique slang.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Eh?</td>
+                                <td>Ay</td>
+                                <td>Right? / Don't you agree?</td>
+                                <td><button class="audio-btn" data-phrase="Eh" data-lang="en-CA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Loonie</td>
+                                <td>Loo-nee</td>
+                                <td>One Dollar Coin</td>
+                                <td><button class="audio-btn" data-phrase="Loonie" data-lang="en-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toque</td>
+                                <td>Took</td>
+                                <td>Winter Hat / Beanie</td>
+                                <td><button class="audio-btn" data-phrase="Toque" data-lang="en-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Double-Double</td>
+                                <td>Double Double</td>
+                                <td>Coffee with 2 cream, 2 sugar</td>
+                                <td><button class="audio-btn" data-phrase="Double Double"
+                                        data-lang="en-CA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bonjour (QC)</td>
+                                <td>Bon-zhoor</td>
+                                <td>Hello (French)</td>
+                                <td><button class="audio-btn" data-phrase="Bonjour" data-lang="fr-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Merci (QC)</td>
+                                <td>Mehr-see</td>
+                                <td>Thank you (French)</td>
+                                <td><button class="audio-btn" data-phrase="Merci" data-lang="fr-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pop</td>
+                                <td>Pop</td>
+                                <td>Soda / Soft Drink</td>
+                                <td><button class="audio-btn" data-phrase="Pop" data-lang="en-CA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Washroom</td>
+                                <td>Wash-room</td>
+                                <td>Restroom / Toilet</td>
+                                <td><button class="audio-btn" data-phrase="Washroom" data-lang="en-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mickey</td>
+                                <td>Mick-ee</td>
+                                <td>Small flask of alcohol (375ml)</td>
+                                <td><button class="audio-btn" data-phrase="Mickey" data-lang="en-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Give'r</td>
+                                <td>Giv-er</td>
+                                <td>Try hard / Go for it</td>
+                                <td><button class="audio-btn" data-phrase="Giver" data-lang="en-CA">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Canada on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Canada</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

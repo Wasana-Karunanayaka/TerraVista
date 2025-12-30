@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Morocco</title>
+
+    <meta name="description"
+        content="Journey to the Kingdom of Morocco. Get lost in the souks of Marrakech, camp in the Sahara Desert, and wander the Blue City of Chefchaouen.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR MOROCCO -->
+    <style>
+        :root {
+            /* Morocco Red (Flag & Marrakech) */
+            --theme-primary: #C1272D;
+            /* Morocco Green (Flag Star & Islam) */
+            --theme-secondary: #006233;
+            --theme-bg-light: #fffdfc;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #0099FF;
+            /* Blue accent for Chefchaouen/Majorelle feel */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text: Green Secondary button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        /* Gradient for Title: Red to Green */
+        .country-title {
+            background: linear-gradient(135deg, #C1272D 0%, #006233 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Morocco/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Morocco</h1>
+            <p class="country-slogan">"The Kingdom of Light"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#68;&#104;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Dirham (MAD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Arabic & Amazigh</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#9762;</div>
+                <div class="stat-label">Climate</div>
+                <div class="stat-value">Mediterranean/Desert</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Morocco</h2>
+            <p class="section-subtitle">A land of dizzying diversity, from snow-capped mountains to sweeping desert
+                dunes.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Marrakech -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/marrakech.jpg" alt="Marrakech" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Marrakech</h3>
+                        <p>The "Red City." Explore the chaotic Jemaa el-Fnaa square, intricate palaces, and the vibrant
+                            Majorelle Garden.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Chefchaouen -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/chefchaouen.jpg" alt="Chefchaouen" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chefchaouen</h3>
+                        <p>The "Blue Pearl." A mountain city famous for its striking blue-washed buildings and relaxed
+                            atmosphere.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Fes (Fez) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/fes.jpg" alt="Fes" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Fes</h3>
+                        <p>The cultural capital. Home to the world's oldest university and the massive, labyrinthine
+                            medina (Fes el Bali).</p>
+                    </div>
+                </div>
+
+                <!-- 4. Sahara Desert (Merzouga) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/sahara.jpg" alt="Sahara Desert" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Sahara</h3>
+                        <p>Ride camels into the sunset at Erg Chebbi (Merzouga) and sleep under a blanket of stars in a
+                            Berber camp.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Casablanca -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/casablanca.jpg" alt="Casablanca" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Casablanca</h3>
+                        <p>The modern economic hub. Visit the awe-inspiring Hassan II Mosque, one of the largest in the
+                            world.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Atlas Mountains -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/atlas.jpg" alt="Atlas Mountains" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Atlas Mountains</h3>
+                        <p>North Africa's highest mountain range. Perfect for trekking, visiting Berber villages, and
+                            seeing snow in Africa.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Essaouira -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/essaouira.jpg" alt="Essaouira" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Essaouira</h3>
+                        <p>A windy coastal fortress town known for its fresh seafood, Gnaoua music festival, and Game of
+                            Thrones filming.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Ait Benhaddou -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Morocco/ait-benhaddou.jpg" alt="Ait Benhaddou" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ait Benhaddou</h3>
+                        <p>A UNESCO earthen fortified village (Ksar) along the former caravan route. A famous backdrop
+                            for Gladiator.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Moroccan Mosaic</h2>
+                <p class="section-subtitle">An enchanting mix of Arab, Berber, and European influences.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Mint Tea -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Morocco/tea.jpg');">
+                        <div class="culture-icon">&#129486;</div>
+                        <div class="culture-text">
+                            <h4>Maghrebi Mint Tea</h4>
+                            <p>Known as "Berber Whiskey." Poured from a height to create froth, it's a symbol of
+                                hospitality served at every opportunity.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Souks -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Morocco/souk.jpg');">
+                        <div class="culture-icon">&#128717;</div>
+                        <div class="culture-text">
+                            <h4>The Souks</h4>
+                            <p>An assault on the senses. Markets filled with spices, rugs, leather, and lamps.
+                                Bargaining is mandatory!</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Cuisine (Tagine) -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Morocco/tagine.jpg');">
+                        <div class="culture-icon">&#127835;</div>
+                        <div class="culture-text">
+                            <h4>Tagine & Couscous</h4>
+                            <p>Tagine is the conical clay pot and the slow-cooked stew inside. Couscous is the national
+                                dish, traditionally served on Fridays.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Hammam -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Morocco/hammam.jpg');">
+                        <div class="culture-icon">&#128704;</div>
+                        <div class="culture-text">
+                            <h4>Hammam</h4>
+                            <p>The traditional steam bath. A weekly ritual of deep cleansing using distinct black soap
+                                (Savon Beldi) and scrubbing.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Zellige -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Morocco/zellige.jpg');">
+                        <div class="culture-icon">&#129696;</div> <!-- Pattern -->
+                        <div class="culture-text">
+                            <h4>Zellige (Mosaic)</h4>
+                            <p>Exquisite geometric tilework found on fountains, walls, and floors. A mastercraft of
+                                Islamic art and patience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Darija)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Darija Phrasebook</h2>
+                <p class="section-subtitle">Moroccan Arabic (Darija) is unique. French is also widely spoken.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Darija</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Salam Alaykum</td>
+                                <td>Sa-lam A-lay-kum</td>
+                                <td>Peace be upon you (Hello)</td>
+                                <td><button class="audio-btn" data-phrase="Salam Alaykum"
+                                        data-lang="ar-MA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Labas?</td>
+                                <td>La-bas</td>
+                                <td>How are you? / I'm fine</td>
+                                <td><button class="audio-btn" data-phrase="Labas" data-lang="ar-MA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Shukran</td>
+                                <td>Shook-ran</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Shukran" data-lang="ar-MA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Afak</td>
+                                <td>A-fak</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Afak" data-lang="ar-MA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Beslama</td>
+                                <td>Bes-la-ma</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Beslama" data-lang="ar-MA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inshallah</td>
+                                <td>In-shal-lah</td>
+                                <td>God willing</td>
+                                <td><button class="audio-btn" data-phrase="Inshallah" data-lang="ar-MA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bshhal hada?</td>
+                                <td>Bish-hal ha-da</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Bshhal hada"
+                                        data-lang="ar-MA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ghaly bezzaf</td>
+                                <td>Gha-lee bez-zaf</td>
+                                <td>Too expensive (for bargaining)</td>
+                                <td><button class="audio-btn" data-phrase="Ghaly bezzaf"
+                                        data-lang="ar-MA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Balak!</td>
+                                <td>Ba-lak</td>
+                                <td>Watch out! (Heard in medinas)</td>
+                                <td><button class="audio-btn" data-phrase="Balak" data-lang="ar-MA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zwin</td>
+                                <td>Zween</td>
+                                <td>Beautiful / Good</td>
+                                <td><button class="audio-btn" data-phrase="Zwin" data-lang="ar-MA">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Morocco on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Morocco</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

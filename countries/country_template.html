@@ -1,0 +1,444 @@
+<!--
+ * TerraVista - Country Page Template
+ *
+ * File:        country_template.html
+ * Author:      Wasana Karunanayaka
+ * Description: Master template for generating individual country pages.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+    TEMPLATE INSTRUCTIONS:
+    1. Replace [Country Name] with the specific country.
+    2. Adjust meta tags for SEO.
+    3. Verify file paths for images in the resources folder.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore [Country Name]</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Discover the beauty, culture, and top destinations of [Country Name] with TerraVista.">
+
+    <!-- Core External Assets -->
+    <link rel="icon" type="image/x-icon" href="main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="main/stylesMain.css"> <!-- Global Styles -->
+    <link rel="stylesheet" href="country_template.css"> <!-- Country Specific Styles -->
+
+    <!-- Font Awesome for Icons (Optional, using text/unicode fallback if not available) -->
+    <!-- You might want to include a CDN like this if allowed, otherwise we stick to images/unicode -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- HERO SECTION -->
+    <header class="country-hero">
+        <!-- ... -->
+    </header>
+
+    <!-- ... -->
+    <!-- ... -->
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="main/scriptMain.js"></script>
+    <script src="main/components.js"></script>
+    <script src="country_template.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Template is in root, so path is empty
+            // BUT when copying creating new countries, this line needs to be changed to ../../
+            // For the template file itself, use empty string.
+            loadComponents('');
+        });
+    </script>
+</body>
+
+<!-- ==========================================================================
+       2. HERO SECTION
+       Parallax background with glassmorphism content box.
+       ========================================================================== -->
+<header class="country-hero">
+    <!-- 
+        TODO: Replace 'main/resourcesMain/home-hero-bg.jpg' with:
+        'resourcesCountry/[CountryName]/hero.jpg' 
+        -->
+    <div class="parallax-bg" style="background-image: url('main/resourcesMain/home-hero-bg.jpg');"></div>
+
+    <div class="hero-content-glass">
+        <h1 class="country-title">[Country Name]</h1>
+        <p class="country-slogan">"[Insert Dynamic Slogan Here]"</p>
+    </div>
+</header>
+
+<!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       Floating strip overlapping the hero.
+       ========================================================================== -->
+<section class="overview-strip">
+    <div class="stats-grid">
+        <!-- Currency -->
+        <div class="stat-card">
+            <div class="stat-icon">&#128176;</div> <!-- Unicode Money Bag -->
+            <div class="stat-label">Currency</div>
+            <div class="stat-value">[Currency]</div>
+        </div>
+
+        <!-- Language -->
+        <div class="stat-card">
+            <div class="stat-icon">&#128483;</div> <!-- Unicode Speech Bubble -->
+            <div class="stat-label">Language</div>
+            <div class="stat-value">[Language]</div>
+        </div>
+
+        <!-- Best Time -->
+        <div class="stat-card">
+            <div class="stat-icon">&#9728;</div> <!-- Unicode Sun -->
+            <div class="stat-label">Best Time to Visit</div>
+            <div class="stat-value">[Season/Month]</div>
+        </div>
+
+        <!-- Visa -->
+        <div class="stat-card">
+            <div class="stat-icon">&#128706;</div> <!-- Unicode Passport/Control -->
+            <div class="stat-label">Visa Req</div>
+            <div class="stat-value">[Type/Ease]</div>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <!-- ==========================================================================
+           4. TOP DESTINATIONS
+           Masonry-style Grid of Highlights
+           ========================================================================== -->
+    <section class="container destinations-section">
+        <h2 class="section-title">Must-Visit Destinations</h2>
+        <p class="section-subtitle">Discover the vibrant cities and breathtaking landscapes that define [Country
+            Name].</p>
+
+        <div class="masonry-grid">
+            <!-- Card 1 -->
+            <div class="dest-card">
+                <!-- TODO: Replace image src -->
+                <img src="main/resourcesMain/japan-card.jpg" alt="Destination 1" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 1]</h3>
+                    <p>Brief description of what makes this place amazing. A sentence or two about the vibe.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="dest-card">
+                <img src="main/resourcesMain/france-card.jpg" alt="Destination 2" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 2]</h3>
+                    <p>Highlighting distinctive architecture, history, or natural beauty.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="dest-card">
+                <img src="main/resourcesMain/italy-card.jpg" alt="Destination 3" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 3]</h3>
+                    <p>Known for its culinary delights, bustling markets, or serene temples.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="dest-card">
+                <img src="main/resourcesMain/japan-card.jpg" alt="Destination 4" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 4]</h3>
+                    <p>A hidden gem offering a quieter, more authentic experience.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="dest-card">
+                <img src="main/resourcesMain/france-card.jpg" alt="Destination 5" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 5]</h3>
+                    <p>Famous for its breathtaking natural landscapes and outdoor adventures.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="dest-card">
+                <img src="main/resourcesMain/italy-card.jpg" alt="Destination 6" class="dest-img">
+                <div class="dest-overlay">
+                    <h3>[City/Place 6]</h3>
+                    <p>The perfect spot for history buffs and architecture lovers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS
+           Icon-based list of traditions.
+           ========================================================================== -->
+    <section class="culture-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Cultural Highlights</h2>
+            <p class="section-subtitle">Immerse yourself in the unique traditions and etiquette.</p>
+
+            <div class="culture-grid">
+                <!-- Item 1 -->
+                <div class="culture-item">
+                    <div class="culture-icon">&#127882;</div> <!-- Confetti -->
+                    <div class="culture-text">
+                        <h4>[Feature 1: Festivals]</h4>
+                        <p>Description of a major festival or event that happens annually.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="culture-item">
+                    <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                    <div class="culture-text">
+                        <h4>[Feature 2: Etiquette]</h4>
+                        <p>Important tip about bowing, tipping, or greeting locals.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="culture-item">
+                    <div class="culture-icon">&#127963;</div> <!-- Building -->
+                    <div class="culture-text">
+                        <h4>[Feature 3: Heritage]</h4>
+                        <p>Insight into the historical significance of famous landmarks.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="culture-item">
+                    <div class="culture-icon">&#127869;</div> <!-- Fork and Knife -->
+                    <div class="culture-text">
+                        <h4>[Feature 4: Cuisine]</h4>
+                        <p>Must-try national dishes and the best local street food spots.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT
+           Table of essential phrases.
+           ========================================================================== -->
+    <section class="toolkit-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Traveler's Toolkit</h2>
+            <p class="section-subtitle">Learn a few local phrases to help you connect.</p>
+
+            <div class="phrase-table-container">
+                <table class="phrase-table">
+                    <thead>
+                        <tr>
+                            <th>Native Phrase</th>
+                            <th>English Translation</th>
+                            <th>Listen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Phrase 1 -->
+                        <tr>
+                            <td>[Native Hello]</td>
+                            <td>Hello</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Hello" aria-label="Play Hello">
+                                    &#9658; <!-- Play Icon -->
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 2 -->
+                        <tr>
+                            <td>[Native TY]</td>
+                            <td>Thank You</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Thank You" aria-label="Play Thank You">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 3 -->
+                        <tr>
+                            <td>[Native Yes]</td>
+                            <td>Yes</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Yes" aria-label="Play Yes">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 4 -->
+                        <tr>
+                            <td>[Native No]</td>
+                            <td>No</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="No" aria-label="Play No">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 5 -->
+                        <tr>
+                            <td>[Native Bye]</td>
+                            <td>Goodbye</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Goodbye" aria-label="Play Goodbye">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 6 -->
+                        <tr>
+                            <td>[Native Please]</td>
+                            <td>Please</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Please" aria-label="Play Please">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 7 -->
+                        <tr>
+                            <td>[Native Excuse Me]</td>
+                            <td>Excuse Me</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Excuse Me" aria-label="Play Excuse Me">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 8 -->
+                        <tr>
+                            <td>[Native How Much?]</td>
+                            <td>How much is this?</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="How much is this?"
+                                    aria-label="Play How much is this?">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 9 -->
+                        <tr>
+                            <td>[Native Bathroom?]</td>
+                            <td>Where is the bathroom?</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Where is the bathroom?"
+                                    aria-label="Play Where is the bathroom?">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Phrase 10 -->
+                        <tr>
+                            <td>[Native Help]</td>
+                            <td>Help!</td>
+                            <td>
+                                <button class="audio-btn" data-phrase="Help!" aria-label="Play Help!">
+                                    &#9658;
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           "Click to Load" Placeholder.
+           ========================================================================== -->
+    <section class="container" style="padding: 4rem 0;">
+        <h2 class="section-title">Explore on Map</h2>
+
+        <div class="map-container country-map-container" id="map-placeholder">
+            <div class="map-load-button">
+                <div>
+                    <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                    <span>Click to Load Interactive Map of [Country Name]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ==========================================================================
+       8. FOOTER
+       (Identical to index.html)
+       ========================================================================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+
+            <!-- Logo -->
+            <div class="footer-section logo-section">
+                <div class="footer-logo">
+                    <img src="main/resourcesMain/TerraVistaLogo.png" alt="TerraVista Logo" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="main/index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer: Popular Destinations -->
+            <div class="footer-section destinations-section">
+                <h3 class="footer-heading">Popular Destinations</h3>
+                <ul class="footer-links destinations-grid">
+                    <li><a href="countries/Japan/japan.html">Japan</a></li>
+                    <li><a href="countries/France/france.html">France</a></li>
+                    <li><a href="countries/Brazil/brazil.html">Brazil</a></li>
+                    <li><a href="countries/Canada/canada.html">Canada</a></li>
+                    <!-- Others... -->
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="main/resourcesMain/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="main/resourcesMain/twitter.png" alt="Twitter"></a>
+                    <a href="#" target="_blank"><img src="main/resourcesMain/instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="main/resourcesMain/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 TerraVista. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCIPTS -->
+<script src="main/scriptMain.js"></script> <!-- Core Logic -->
+<script src="country_template.js"></script> <!-- Page Specific Logic -->
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore USA</title>
+
+    <meta name="description"
+        content="The Land of Opportunity. From the neon lights of Las Vegas to the natural tranquility of the Grand Canyon and the bustle of New York City.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR USA -->
+    <style>
+        :root {
+            /* Old Glory Red */
+            --theme-primary: #B22234;
+            /* Old Glory Blue */
+            --theme-secondary: #3C3B6E;
+            --theme-bg-light: #fof0f5;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #3C3B6E;
+            /* Blue blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #2a2a50 !important;
+        }
+
+        /* Gradient for Title: Red to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #B22234 0%, #3C3B6E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/USA/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">United States</h1>
+            <p class="country-slogan">"The Land of the Free"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">US Dollar (USD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127828;</div>
+                <div class="stat-label">Classic</div>
+                <div class="stat-value">Burgers & Fries</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">ESTA / Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in the USA</h2>
+            <p class="section-subtitle">A continent-sized country with everything from arctic tundra to tropical
+                beaches.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Grand Canyon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/grandcanyon.jpg" alt="Grand Canyon" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Grand Canyon</h3>
+                        <p>Arizona. A natural wonder that defies description. Hike the Rim Trail or take a helicopter
+                            tour for expansive views.</p>
+                    </div>
+                </div>
+
+                <!-- 2. New York City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/nyc.jpg" alt="New York City" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>New York City</h3>
+                        <p>The Big Apple. Visit the Statue of Liberty, catch a Broadway show, walk through Central Park,
+                            and see Times Square.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Yellowstone -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/yellowstone.jpg" alt="Yellowstone" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Yellowstone National Park</h3>
+                        <p>Wyoming. The world's first national park. Home to Old Faithful geyser, colorful hot springs,
+                            bison, and bears.</p>
+                    </div>
+                </div>
+
+                <!-- 4. San Francisco -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/sf.jpg" alt="San Francisco" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>San Francisco</h3>
+                        <p>California. Famous for the Golden Gate Bridge, Alcatraz Island, steep rolling hills, and
+                            historic cable cars.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Walt Disney World -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/disney.jpg" alt="Disney World" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Walt Disney World</h3>
+                        <p>Orlando, Florida. The Most Magical Place on Earth. Four theme parks including the Magic
+                            Kingdom and Epcot.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Las Vegas -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/vegas.jpg" alt="Las Vegas" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Las Vegas</h3>
+                        <p>Nevada. The Entertainment Capital of the World. Casinos, world-class shows, and neon lights
+                            on the famous Strip.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Hawaii Volcanoes -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/hawaii.jpg" alt="Hawaii" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hawaii</h3>
+                        <p>The Aloha State. Visit Volcanoes National Park on the Big Island to see active lava flows and
+                            lush rainforests.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Washington D.C. -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/dc.jpg" alt="Washington D.C." class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Washington D.C.</h3>
+                        <p>The Capital. Walk the National Mall to see the Capitol, Lincoln Memorial, and the Smithsonian
+                            museums.</p>
+                    </div>
+                </div>
+
+                <!-- 9. New Orleans -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/nola.jpg" alt="New Orleans" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>New Orleans</h3>
+                        <p>Louisiana. The Big Easy. Famous for Mardi Gras, jazz music on Frenchman Street, beignets, and
+                            Creole cuisine.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Yosemite -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/USA/yosemite.jpg" alt="Yosemite" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Yosemite National Park</h3>
+                        <p>California. An icon of the American West. Massive granite cliffs like El Capitan and Half
+                            Dome, plus giant sequoias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">American Culture</h2>
+                <p class="section-subtitle">A melting pot of traditions, driven by innovation and individualism.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Tipping -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/USA/tips.jpg');">
+                        <div class="culture-icon">&#128181;</div> <!-- Money -->
+                        <div class="culture-text">
+                            <h4>Tipping Culture</h4>
+                            <p>It is not optional. Waiters rely on tips. Standard is 15-20% for service. Also tip
+                                bartenders and taxi drivers.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Hollywood -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/USA/hollywood.jpg');">
+                        <div class="culture-icon">&#127909;</div> <!-- Movie -->
+                        <div class="culture-text">
+                            <h4>Hollywood</h4>
+                            <p>The global center of film and television. American pop culture exports shape the world's
+                                entertainment landscape.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Road Trips -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/USA/route66.jpg');">
+                        <div class="culture-icon">&#128663;</div> <!-- Car -->
+                        <div class="culture-text">
+                            <h4>Road Trips</h4>
+                            <p>Route 66. The freedom of the open road is a core American value. Interstate highways
+                                connect coast to coast.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Sports -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/USA/sports.jpg');">
+                        <div class="culture-icon">&#127944;</div> <!-- Football -->
+                        <div class="culture-text">
+                            <h4>American Sports</h4>
+                            <p>Football (NFL), Baseball (MLB), and Basketball (NBA). The Super Bowl is an unofficial
+                                national holiday.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Jazz & Blues -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/USA/jazz.jpg');">
+                        <div class="culture-icon">&#127927;</div> <!-- Saxophone-ish -->
+                        <div class="culture-text">
+                            <h4>Jazz & Blues</h4>
+                            <p>Born in the South (New Orleans, Memphis). Truly original American art forms that gave
+                                birth to Rock 'n' Roll.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (American Slang)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">American Slang</h2>
+                <p class="section-subtitle">English is the language, but regional slang makes it colorful.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Slang</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>What's up? / Sup?</td>
+                                <td>Wuts up</td>
+                                <td>Hello / How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Whats up" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Y'all</td>
+                                <td>Yall</td>
+                                <td>You all (Southern plural 'you')</td>
+                                <td><button class="audio-btn" data-phrase="Yall" data-lang="en-US">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Awesome</td>
+                                <td>Ah-sum</td>
+                                <td>Great / Amazing</td>
+                                <td><button class="audio-btn" data-phrase="Awesome" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Check</td>
+                                <td>Chek</td>
+                                <td>The bill (at a restaurant)</td>
+                                <td><button class="audio-btn" data-phrase="Check please"
+                                        data-lang="en-US">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Restroom</td>
+                                <td>Rest-room</td>
+                                <td>Toilet / Bathroom</td>
+                                <td><button class="audio-btn" data-phrase="Restroom" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bucks</td>
+                                <td>Buks</td>
+                                <td>Dollars (Money)</td>
+                                <td><button class="audio-btn" data-phrase="Bucks" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gridlock</td>
+                                <td>Grid-lok</td>
+                                <td>Bad traffic jam</td>
+                                <td><button class="audio-btn" data-phrase="Gridlock" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>To-go box</td>
+                                <td>To go boks</td>
+                                <td>Container for leftover food</td>
+                                <td><button class="audio-btn" data-phrase="To go box" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>My bad</td>
+                                <td>My bad</td>
+                                <td>My mistake / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="My bad" data-lang="en-US">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cool</td>
+                                <td>Kool</td>
+                                <td>Good / Okay / Stylish</td>
+                                <td><button class="audio-btn" data-phrase="Cool" data-lang="en-US">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore the USA on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of USA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

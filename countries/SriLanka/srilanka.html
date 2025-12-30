@@ -1,0 +1,391 @@
+<!--
+ * TerraVista - Sri Lanka Page
+ *
+ * File:        srilanka.html
+ * Author:      Wasana Karunanayaka
+ * Description: Explore Sri Lanka - The Pearl of the Indian Ocean.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Sri Lanka</title>
+
+    <meta name="description"
+        content="Discover the Pearl of the Indian Ocean. Climb Sigiriya, ride the train to Ella, spot leopards in Yala, and relax on pristine beaches.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SRI LANKA -->
+    <style>
+        :root {
+            /* Sri Lanka Maroon (Flag Background) */
+            --theme-primary: #8D153A;
+            /* Sri Lanka Gold (Lion/Border) */
+            --theme-secondary: #FFBE29;
+            --theme-bg-light: #fffcf5;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #FFBE29;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Gold button, Maroon text for contrast */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #8D153A !important;
+            font-weight: 700;
+        }
+
+        /* Gradient for Title: Maroon to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #8D153A 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/SriLanka/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Sri Lanka</h1>
+            <p class="country-slogan">"The Pearl of the Indian Ocean"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#82;&#115;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Sri Lankan Rupee (LKR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Languages</div>
+                <div class="stat-value">Sinhala & Tamil</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127796;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">Highest Leopard Density</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">ETA (Online)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Sri Lanka</h2>
+            <p class="section-subtitle">An island compact in size but infinite in variety, from ancient ruins to misty
+                mountains.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Sigiriya -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/sigiriya.jpg" alt="Sigiriya" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sigiriya</h3>
+                        <p>The "Lion Rock." An ancient rock fortress and palace built by King Kashyapa, famous for its
+                            frescoes and mirror wall.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Ella -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/ella.jpg" alt="Ella" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ella</h3>
+                        <p>A backpacker's paradise in the hill country. Famous for the Nine Arch Bridge, hiking Little
+                            Adam's Peak, and the scenic train ride.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Mirissa -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/mirissa.jpg" alt="Mirissa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mirissa</h3>
+                        <p>A stunning beach town on the south coast, world-famous for Blue Whale watching and coconut
+                            tree hills.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Galle Fort -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/galle.jpg" alt="Galle Fort" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Galle Fort</h3>
+                        <p>A UNESCO World Heritage site. A perfectly preserved colonial Dutch fort city with chic cafes
+                            and rampart walks.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Yala National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/yala.jpg" alt="Yala National Park" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Yala National Park</h3>
+                        <p>The best place to spot leopards in the wild. Also home to elephants, sloth bears, and
+                            crocodiles.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Kandy -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/kandy.jpg" alt="Kandy" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kandy</h3>
+                        <p>The cultural capital. Home to the Temple of the Sacred Tooth Relic and the Esala Perahera
+                            festival.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Nuwara Eliya -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/nuwara-eliya.jpg" alt="Nuwara Eliya" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nuwara Eliya</h3>
+                        <p>"Little England." A cool climate city surrounded by miles of rolling tea plantations and
+                            colonial bungalows.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Polonnaruwa -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SriLanka/polonnaruwa.jpg" alt="Polonnaruwa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Polonnaruwa</h3>
+                        <p>The ancient royal capital (11th Century). Explore the well-preserved ruins of palaces,
+                            stupas, and Buddha statues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Island Heritage</h2>
+                <p class="section-subtitle">A culture shaped by Buddhism, colonial history, and tropical abundance.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Ceylon Tea -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/SriLanka/tea.jpg');">
+                        <div class="culture-icon">&#127867;</div> <!-- Teacup -->
+                        <div class="culture-text">
+                            <h4>Ceylon Tea</h4>
+                            <p>Hand-picked from the misty hills. It's the lifeblood of the economy and a daily ritual.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Cricket -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SriLanka/cricket.jpg');">
+                        <div class="culture-icon">&#127951;</div>
+                        <div class="culture-text">
+                            <h4>Cricket</h4>
+                            <p>More than a sport, it's a religion. Stop by any street or beach to see a match in
+                                progress.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Stilt Fishing -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/SriLanka/stilt.jpg');">
+                        <div class="culture-icon">&#127907;</div>
+                        <div class="culture-text">
+                            <h4>Stilt Fishing</h4>
+                            <p>An iconic traditional method where fishermen balance on poles in the shallow waters of
+                                the south coast.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Ayurveda -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SriLanka/ayurveda.jpg');">
+                        <div class="culture-icon">&#129496;</div> <!-- Lotus/Yoga -->
+                        <div class="culture-text">
+                            <h4>Ayurveda</h4>
+                            <p>Ancient holistic healing using herbs, oils, and massages. Wellness retreats are found
+                                island-wide.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Esala Perahera -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SriLanka/perahera.jpg');">
+                        <div class="culture-icon">&#128024;</div> <!-- Elephant -->
+                        <div class="culture-text">
+                            <h4>Esala Perahera</h4>
+                            <p>One of the oldest Buddhist festivals featuring fire-dancers, drummers, and elaborately
+                                decorated elephants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Sinhala)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Sinhala Phrasebook</h2>
+                <p class="section-subtitle">Sinhala is the most widely spoken language. "Ayubowan" is the magic word.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Sinhala</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ayubowan</td>
+                                <td>Ah-yoo-boh-wan</td>
+                                <td>May you live long (Hello/Welcome)</td>
+                                <td><button class="audio-btn" data-phrase="Ayubowan" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Istuti</td>
+                                <td>Is-too-tee</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Istuti" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kohomada?</td>
+                                <td>Ko-ho-ma-da</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Kohomada" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ow / Naa</td>
+                                <td>Ow / Nah</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ow Naa" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hari</td>
+                                <td>Ha-ree</td>
+                                <td>Okay / Correct</td>
+                                <td><button class="audio-btn" data-phrase="Hari" data-lang="si-LK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lassanai</td>
+                                <td>Las-sa-nai</td>
+                                <td>Beautiful</td>
+                                <td><button class="audio-btn" data-phrase="Lassanai" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Keeyada?</td>
+                                <td>Kee-ya-da</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Keeyada" data-lang="si-LK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mata udaw karanna</td>
+                                <td>Ma-ta oo-dow ka-ran-na</td>
+                                <td>Please help me</td>
+                                <td><button class="audio-btn" data-phrase="Mata udaw karanna"
+                                        data-lang="si-LK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Epa</td>
+                                <td>Eh-pa</td>
+                                <td>I don't want / Don't</td>
+                                <td><button class="audio-btn" data-phrase="Epa" data-lang="si-LK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hodai</td>
+                                <td>Ho-dai</td>
+                                <td>Good</td>
+                                <td><button class="audio-btn" data-phrase="Hoda" data-lang="si-LK">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Sri Lanka on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

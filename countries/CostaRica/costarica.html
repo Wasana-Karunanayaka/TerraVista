@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Costa Rica</title>
+
+    <meta name="description"
+        content="Experience 'Pura Vida' in Costa Rica. Explore lush rainforests, active volcanoes, pristine beaches, and exotic wildlife.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR COSTA RICA -->
+    <style>
+        :root {
+            /* Rainforest Green (Pura Vida Nature) */
+            --theme-primary: #1A5E3A;
+            /* Heritage Red (Flag & Oxcarts) */
+            --theme-secondary: #CE1126;
+            --theme-bg-light: #f4fbf4;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #1A5E3A;
+            /* Green blob for nature feel */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text for contrast */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+        }
+
+        /* Specific gradient for Costa Rica Title */
+        .country-title {
+            background: linear-gradient(135deg, #1A5E3A 0%, #CE1126 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/CostaRica/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Costa Rica</h1>
+            <p class="country-slogan">"Pura Vida: Pure Life"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8353;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Colón (CRC)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#129436;</div>
+                <div class="stat-label">Biodiversity</div>
+                <div class="stat-value">5% of World's Total</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (90 Days)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Costa Rica</h2>
+            <p class="section-subtitle">A paradise of microclimates, from misty cloud forests to sun-drenched coasts.
+            </p>
+
+            <div class="masonry-grid">
+                <!-- 1. Manuel Antonio -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/manuel-antonio.jpg" alt="Manuel Antonio"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Manuel Antonio</h3>
+                        <p>A stunning national park where the rainforest meets white sand beaches. Famous for monkeys
+                            and sloths.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Arenal Volcano -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/arenal.jpg" alt="Arenal Volcano" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Arenal Volcano</h3>
+                        <p>A perfectly conical volcano surrounded by hot springs, waterfalls, and adventure activities
+                            in La Fortuna.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Monteverde Cloud Forest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/monteverde.jpg" alt="Monteverde" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Monteverde</h3>
+                        <p>Explore the mystical high-altitude cloud forest, walk across hanging bridges, and spot the
+                            rare Quetzal bird.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Tortuguero -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/tortuguero.jpg" alt="Tortuguero" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tortuguero</h3>
+                        <p>The "Amazon of Costa Rica," accessible only by boat/plane. A prime nesting site for Green Sea
+                            Turtles.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Corcovado National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/corcovado.jpg" alt="Corcovado" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Corcovado</h3>
+                        <p>Located on the Osa Peninsula, this biologically intense park is home to tapirs, jaguars, and
+                            scarlet macaws.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Puerto Viejo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/puerto-viejo.jpg" alt="Puerto Viejo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Puerto Viejo</h3>
+                        <p>A laid-back Caribbean town with reggae vibes, surfing spots like Salsa Brava, and jaguar
+                            rescue centers.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Tamarindo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/tamarindo.jpg" alt="Tamarindo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tamarindo</h3>
+                        <p>A top destination for surfing, nightlife, and beautiful sunsets on the Gold Coast of
+                            Guanacaste.</p>
+                    </div>
+                </div>
+
+                <!-- 8. La Fortuna Waterfall -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CostaRica/waterfall.jpg" alt="La Fortuna Waterfall"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>La Fortuna Waterfall</h3>
+                        <p>A breathtaking 70-meter drop into an emerald pool, surrounded by lush tropical jungle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Tico Culture & Traditions</h2>
+                <p class="section-subtitle">A peaceful nation that abolished its army to invest in education and nature.
+                </p>
+
+                <div class="culture-grid">
+                    <!-- 1. Pura Vida -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CostaRica/pura-vida.jpg');">
+                        <div class="culture-icon">&#127796;</div>
+                        <div class="culture-text">
+                            <h4>Pura Vida</h4>
+                            <p>The national motto meaning "Pure Life." It's a greeting, a goodbye, and a philosophy of
+                                optimism and gratitude.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Coffee -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CostaRica/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div>
+                        <div class="culture-text">
+                            <h4>Golden Bean (Coffee)</h4>
+                            <p>Costa Rica produces some of the world's best Arabica coffee. Coffee played a key role in
+                                the country's development.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Oxcarts -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CostaRica/oxcart.jpg');">
+                        <div class="culture-icon">&#128668;</div>
+                        <div class="culture-text">
+                            <h4>Sarchí Oxcarts</h4>
+                            <p>Colorful, intricately painted oxcarts are a UNESCO masterpiece and a symbol of rural
+                                Costa Rican work ethic.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Gallo Pinto -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CostaRica/food.jpg');">
+                        <div class="culture-icon">&#127835;</div>
+                        <div class="culture-text">
+                            <h4>Gallo Pinto</h4>
+                            <p>The national breakfast dish of rice and black beans, fried together with spices and
+                                served with eggs and plantains.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Blue Zones -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CostaRica/longevity.jpg');">
+                        <div class="culture-icon">&#129331;</div>
+                        <div class="culture-text">
+                            <h4>Nicoya Blue Zone</h4>
+                            <p>The Nicoya Peninsula is one of five global "Blue Zones" where people live significantly
+                                longer, healthier lives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Tico Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Tico Phrasebook</h2>
+                <p class="section-subtitle">Costa Ricans ("Ticos") have a warm, polite, and slang-rich dialect.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Tico Spanish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>¡Pura Vida!</td>
+                                <td>Poo-rah Vee-dah</td>
+                                <td>Hello / Goodbye / Great / OK</td>
+                                <td><button class="audio-btn" data-phrase="Pura Vida" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¡Mae!</td>
+                                <td>Mah-eh</td>
+                                <td>Dude / Bro (Very common)</td>
+                                <td><button class="audio-btn" data-phrase="Mae" data-lang="es-CR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tuanis</td>
+                                <td>Twah-nees</td>
+                                <td>Cool / Nice</td>
+                                <td><button class="audio-btn" data-phrase="Tuanis" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Con mucho gusto</td>
+                                <td>Kon moo-choh goos-toh</td>
+                                <td>With pleasure (replaces "de nada")</td>
+                                <td><button class="audio-btn" data-phrase="Con mucho gusto"
+                                        data-lang="es-CR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>A cachete</td>
+                                <td>Ah kah-cheh-teh</td>
+                                <td>Everything is great</td>
+                                <td><button class="audio-btn" data-phrase="A cachete" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Una birra</td>
+                                <td>Oo-nah bee-rah</td>
+                                <td>A beer</td>
+                                <td><button class="audio-btn" data-phrase="Una birra" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hola</td>
+                                <td>Oh-lah</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hola" data-lang="es-CR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Grah-syahs</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¿Cuánto cuesta?</td>
+                                <td>Kwahn-toh kwehs-tah</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="¿Cuánto cuesta?"
+                                        data-lang="es-CR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>La cuenta</td>
+                                <td>Lah kwehn-tah</td>
+                                <td>The bill</td>
+                                <td><button class="audio-btn" data-phrase="La cuenta" data-lang="es-CR">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Costa Rica on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Costa Rica</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

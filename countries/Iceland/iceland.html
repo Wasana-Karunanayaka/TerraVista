@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Iceland</title>
+
+    <meta name="description"
+        content="The Land of Fire and Ice. Chase waterfalls, hunt for the Northern Lights, and relax in geothermal lagoons in this Nordic wonderland.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR ICELAND -->
+    <style>
+        :root {
+            /* Iceland Blue */
+            --theme-primary: #02529C;
+            /* Iceland Red */
+            --theme-secondary: #DC1E35;
+            --theme-bg-light: #f0f8ff;
+            --theme-text-dark: #122233;
+        }
+
+        .culture-section::before {
+            background: #02529C;
+            /* Blue blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #b01526 !important;
+        }
+
+        /* Gradient for Title: Blue to Red */
+        .country-title {
+            background: linear-gradient(135deg, #02529C 0%, #DC1E35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Iceland/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Iceland</h1>
+            <p class="country-slogan">"The Land of Fire and Ice"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#107;&#114;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Icelandic Króna (ISK)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Icelandic</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127755;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">Volcanoes & Glaciers</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Iceland</h2>
+            <p class="section-subtitle">A landscape so dramatic it feels like another planet. Waterfalls, geysers, and
+                black sand.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Blue Lagoon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/bluelagoon.jpg" alt="Blue Lagoon" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Blue Lagoon</h3>
+                        <p>A world-famous geothermal spa located in a lava field. Bathing in its milky blue,
+                            mineral-rich waters is a must.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Gullfoss -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/gullfoss.jpg" alt="Gullfoss Waterfall" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Gullfoss</h3>
+                        <p>"Golden Falls." A massive, two-tiered waterfall that plunges into a deep canyon. Part of the
+                            Golden Circle.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Reynoldsfjara (Black Sand Beach) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/blacksand.jpg" alt="Reynisfjara Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Reynisfjara Beach</h3>
+                        <p>The famous black sand beach with towering basalt columns and roaring waves. Beautiful but
+                            dangerous.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Jökulsárlón -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/glacier.jpg" alt="Jökulsárlón" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jökulsárlón Glacier Lagoon</h3>
+                        <p>Watch blue icebergs break off the Vatnajökull glacier and float out to sea to wash up on
+                            "Diamond Beach."</p>
+                    </div>
+                </div>
+
+                <!-- 5. Geysir -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/geysir.jpg" alt="Geysir" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Geysir Geothermal Area</h3>
+                        <p>Home to the original Geysir. Watch the active Strokkur geyser erupt boiling water 30 meters
+                            into the air every few minutes.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Thingvellir National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/thingvellir.jpg" alt="Thingvellir National Park"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Thingvellir National Park</h3>
+                        <p>A UNESCO site where the North American and Eurasian tectonic plates meet. You can literally
+                            walk between continents.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Skógafoss -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/skogafoss.jpg" alt="Skógafoss" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Skógafoss</h3>
+                        <p>One of the biggest and beautiful waterfalls in the country. Legend says a Viking chest of
+                            gold is hidden behind it.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Kirkjufell -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/kirkjufell.jpg" alt="Kirkjufell" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kirkjufell</h3>
+                        <p>"Church Mountain." The most photographed mountain in Iceland, often seen with waterfalls or
+                            auroras in the background.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Ice Caves -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/icecave.jpg" alt="Ice Caves" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Vatnajökull Ice Caves</h3>
+                        <p>Explore the crystal blue ice caves beneath Europe's largest glacier. Accessible only in
+                            winter with a guide.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Hallgrímskirkja (Reykjavik) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Iceland/reykjavik.jpg" alt="Reykjavik" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Reykjavik</h3>
+                        <p>The world's northernmost capital. Don't miss the views from the Hallgrímskirkja church tower.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Nordic Culture</h2>
+                <p class="section-subtitle">A resilient society defined by swimming pools, sagas, and folklore.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Northern Lights -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Iceland/aurora.jpg');">
+                        <div class="culture-icon">&#10024;</div> <!-- Sparkles -->
+                        <div class="culture-text">
+                            <h4>The Northern Lights</h4>
+                            <p>The Aurora Borealis. Seeing the green and purple lights dance across the arctic sky is a
+                                bucket list experience.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Pool Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Iceland/pool.jpg');">
+                        <div class="culture-icon">&#129346;</div> <!-- Swim -->
+                        <div class="culture-text">
+                            <h4>Sundlaugar (Pools)</h4>
+                            <p>Every town has a geothermal heated pool. It is the community hub where locals gossip and
+                                relax. Shower naked first!</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Elves -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Iceland/elf.jpg');">
+                        <div class="culture-icon">&#129501;</div> <!-- Elf -->
+                        <div class="culture-text">
+                            <h4>Huldufólk (Hidden People)</h4>
+                            <p>Many Icelanders believe in elves. Roads have even been diverted to avoid disturbing rocks
+                                where elves supposedly live.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. The Sagas -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Iceland/book.jpg');">
+                        <div class="culture-icon">&#128214;</div>
+                        <div class="culture-text">
+                            <h4>The Sagas</h4>
+                            <p>Medieval prose narratives illustrating history and legends. Iceland has a 99% literacy
+                                rate and loves books.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Cuisine -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Iceland/food.jpg');">
+                        <div class="culture-icon">&#129373;</div> <!-- Pot of food -->
+                        <div class="culture-text">
+                            <h4>Icelandic Cuisine</h4>
+                            <p>From the delicious Skyr (yogurt) and free-range lamb to the challenging Hákarl (fermented
+                                shark).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Icelandic)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Icelandic Phrasebook</h2>
+                <p class="section-subtitle">Descended from Old Norse. It's unchanged enough that they can still read
+                    1000-year-old texts.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Icelandic</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Halló</td>
+                                <td>Ha-loh</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Halló" data-lang="is-IS">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Takk</td>
+                                <td>Tahk</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Takk" data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Góðan daginn</td>
+                                <td>Go-than die-in</td>
+                                <td>Good day</td>
+                                <td><button class="audio-btn" data-phrase="Góðan daginn"
+                                        data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bless</td>
+                                <td>Bless</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Bless" data-lang="is-IS">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Já / Nei</td>
+                                <td>Yow / Nay</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Já Nei" data-lang="is-IS">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hvað segir þú?</td>
+                                <td>Kvath say-ir thoo</td>
+                                <td>How are you? (What do you say?)</td>
+                                <td><button class="audio-btn" data-phrase="Hvað segir þú"
+                                        data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Einn bjór, takk</td>
+                                <td>Aydn byor takk</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Einn bjór takk"
+                                        data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Skál!</td>
+                                <td>Skowl</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Skál" data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hvar er...?</td>
+                                <td>Kvar air</td>
+                                <td>Where is...?</td>
+                                <td><button class="audio-btn" data-phrase="Hvar er" data-lang="is-IS">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ég tala ekki íslensku</td>
+                                <td>Yeh tala eh-ki ees-len-skoo</td>
+                                <td>I don't speak Icelandic</td>
+                                <td><button class="audio-btn" data-phrase="Ég tala ekki íslensku"
+                                        data-lang="is-IS">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Iceland on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Iceland</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Netherlands</title>
+
+    <meta name="description"
+        content="Discover the land of tulips, windmills, and canals. Cycle through Amsterdam, admire Dutch Masters, and explore charming historic cities.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR NETHERLANDS -->
+    <style>
+        :root {
+            /* Dutch Orange (Oranje) */
+            --theme-primary: #FF9B00;
+            /* Delft Blue / Flag Blue */
+            --theme-secondary: #1D4E89;
+            --theme-bg-light: #fbfdff;
+            --theme-text-dark: #1b2a3a;
+        }
+
+        .culture-section::before {
+            background: #FF9B00;
+            /* Orange blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Blue button, Orange text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #FF9B00 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #143a66 !important;
+        }
+
+        /* Gradient for Title: Orange to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #FF9B00 0%, #1D4E89 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Netherlands/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">The Netherlands</h1>
+            <p class="country-slogan">"Create Your Own History"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Dutch</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128690;</div>
+                <div class="stat-label">Bicycles</div>
+                <div class="stat-value">More bikes than people</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in the Netherlands</h2>
+            <p class="section-subtitle">Beyond Amsterdam lies a country of rich history, modern art, and ingenious water
+                management.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Amsterdam Canals -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/amsterdam.jpg" alt="Amsterdam Canals" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amsterdam Canals</h3>
+                        <p>The Grachtengordel. Cruise the UNESCO-listed 17th-century canals, lined with narrow merchant
+                            houses and houseboats.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Keukenhof -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/tulips.jpg" alt="Keukenhof Gardens" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Keukenhof Gardens</h3>
+                        <p>The Garden of Europe. Visit in spring to see millions of tulips, hyacinths, and daffodils in
+                            full bloom.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Rijksmuseum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/rijks.jpg" alt="Rijksmuseum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rijksmuseum</h3>
+                        <p>Home to the Dutch Masters. See Rembrandt's "The Night Watch" and Vermeer's "The Milkmaid" in
+                            person.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Kinderdijk -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/mills.jpg" alt="Kinderdijk Windmills" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kinderdijk Windmills</h3>
+                        <p>A UNESCO site featuring 19 innovative 18th-century windmills built to drain the polders and
+                            keep the land dry.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Van Gogh Museum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/vangogh.jpg" alt="Van Gogh Museum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Van Gogh Museum</h3>
+                        <p>Dedicated to the works of Vincent van Gogh and his contemporaries. Contains the largest
+                            collection of his paintings.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Zaanse Schans -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/zaanse.jpg" alt="Zaanse Schans" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zaanse Schans</h3>
+                        <p>A living open-air museum. See working windmills, wooden clog workshops, and cheese farms just
+                            north of Amsterdam.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Giethoorn -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/giethoorn.jpg" alt="Giethoorn" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Giethoorn</h3>
+                        <p>"The Venice of the North." A car-free village where transport is only by boat on the peaceful
+                            canals.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Rotterdam -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/rotterdam.jpg" alt="Rotterdam" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rotterdam</h3>
+                        <p>A modern powerhouse. Famous for its futuristic architecture, the Cube Houses, and the massive
+                            Erasmus Bridge.</p>
+                    </div>
+                </div>
+
+                <!-- 9. The Hague (Den Haag) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/hague.jpg" alt="The Hague" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Hague</h3>
+                        <p>The seat of government and the King. Visit the Binnenhof, the Mauritshuis museum, and
+                            Scheveningen beach.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Maastricht -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Netherlands/maastricht.jpg" alt="Maastricht" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Maastricht</h3>
+                        <p>one of the oldest cities in the country. Known for its lively squares, medieval architecture,
+                            and André Rieu concerts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Dutch Culture</h2>
+                <p class="section-subtitle">Tolerant, direct, and famously flat (the country, not the culture!).</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Cycling -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Netherlands/bike.jpg');">
+                        <div class="culture-icon">&#128690;</div>
+                        <div class="culture-text">
+                            <h4>Cycling (Fietsen)</h4>
+                            <p>The preferred mode of transport for everyone from toddlers to the Prime Minister. There
+                                are over 35,000km of bike paths.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Cheese -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Netherlands/cheese.jpg');">
+                        <div class="culture-icon">&#129472;</div> <!-- Cheese -->
+                        <div class="culture-text">
+                            <h4>Gouda & Edam</h4>
+                            <p>Dutch cheese is world-famous. Visit the traditional cheese markets in Alkmaar or Gouda to
+                                see wheels being weighed.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. King's Day -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Netherlands/kingsday.jpg');">
+                        <div class="culture-icon">&#128081;</div> <!-- Crown -->
+                        <div class="culture-text">
+                            <h4>King's Day (Koningsdag)</h4>
+                            <p>April 27th. The whole country turns orange. Streets become flea markets (vrijmarkt) and
+                                parties erupt on canals.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Stroopwafel -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Netherlands/waffle.jpg');">
+                        <div class="culture-icon">&#129374;</div> <!-- Waffle -->
+                        <div class="culture-text">
+                            <h4>Stroopwafel</h4>
+                            <p>The ultimate treat. Two thin waffles stuck together with caramel syrup. Best eaten warm
+                                over a coffee cup.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Directness -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Netherlands/talk.jpg');">
+                        <div class="culture-icon">&#128483;</div>
+                        <div class="culture-text">
+                            <h4>Dutch Directness</h4>
+                            <p>The Dutch value honesty and directness. They speak their mind ("bespreekbaarheid"), which
+                                is not meant to be rude.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Dutch)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Dutch Phrasebook</h2>
+                <p class="section-subtitle">Almost everyone speaks English, but trying Dutch is appreciated.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Dutch</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hallo / Hoi</td>
+                                <td>Ha-loh / Hoy</td>
+                                <td>Hello / Hi</td>
+                                <td><button class="audio-btn" data-phrase="Hallo Hoi" data-lang="nl-NL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dank je wel</td>
+                                <td>Dank yeh vel</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Dank je wel"
+                                        data-lang="nl-NL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Alstublieft</td>
+                                <td>Als-too-bleeft</td>
+                                <td>Please / Here you go</td>
+                                <td><button class="audio-btn" data-phrase="Alstublieft"
+                                        data-lang="nl-NL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Goedemorgen</td>
+                                <td>Ghoo-deh-mor-ghen</td>
+                                <td>Good morning</td>
+                                <td><button class="audio-btn" data-phrase="Goedemorgen"
+                                        data-lang="nl-NL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tot ziens</td>
+                                <td>Tot zeens</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Tot ziens" data-lang="nl-NL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hoe gaat het?</td>
+                                <td>Hoo ghaat het</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Hoe gaat het"
+                                        data-lang="nl-NL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lekker</td>
+                                <td>Leh-ker</td>
+                                <td>Tasty / Nice / Good</td>
+                                <td><button class="audio-btn" data-phrase="Lekker" data-lang="nl-NL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Spreekt u Engels?</td>
+                                <td>Spraykt oo Eng-els</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Spreekt u Engels"
+                                        data-lang="nl-NL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gezellig</td>
+                                <td>Ghe-zel-ligh</td>
+                                <td>Cozy / Fun / Nice atmosphere (Untranslatable!)</td>
+                                <td><button class="audio-btn" data-phrase="Gezellig" data-lang="nl-NL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Proost!</td>
+                                <td>Prohst</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Proost" data-lang="nl-NL">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Netherlands on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Netherlands</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

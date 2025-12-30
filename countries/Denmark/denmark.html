@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Denmark</title>
+
+    <meta name="description"
+        content="Discover Denmark, the land of Hygge. Explore colorful Copenhagen, Viking history, Lego wonders, and seaside towns.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR DENMARK -->
+    <style>
+        :root {
+            /* Dannebrog Red (Primary) using official Pantone 186 C approx */
+            --theme-primary: #C60C30;
+            /* White/Silver contrast for Nordic Minimalism */
+            --theme-secondary: #2F2F2F;
+            /* Very light grey bg for 'clean' look */
+            --theme-bg-light: #f8f8f8;
+            --theme-text-dark: #212121;
+        }
+
+        .culture-section::before {
+            background: #C60C30;
+            /* Red blob */
+            opacity: 0.08;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+        }
+
+        .cta-button:hover {
+            background: #a00a26 !important;
+        }
+
+        /* Gradient for Title: Red to Dark Grey (Modern) */
+        .country-title {
+            background: linear-gradient(135deg, #C60C30 0%, #2F2F2F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Denmark/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Denmark</h1>
+            <p class="country-slogan">"The Happiest Place on Earth"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#75;&#114;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Danish Krone (DKK)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Danish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128690;</div>
+                <div class="stat-label">Transport</div>
+                <div class="stat-value">World's Best Cycling</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Denmark</h2>
+            <p class="section-subtitle">From fairy-tale castles and colorful harbors to Lego wonders.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Copenhagen (Nyhavn) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/copenhagen.jpg" alt="Copenhagen" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Copenhagen</h3>
+                        <p>The cool capital. Stroll through Nyhavn's colorful houses, visit the Little Mermaid, and
+                            enjoy Tivoli Gardens.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Legoland Billund -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/legoland.jpg" alt="Legoland Billund" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Legoland Billund</h3>
+                        <p>The original Legoland, located next to the Lego factory. A dream world for kids and adults
+                            alike.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Aarhus -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/aarhus.jpg" alt="Aarhus" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Aarhus</h3>
+                        <p>A cultural hub known for the ARoS Art Museum (rainbow panorama) and 'Den Gamle By' open-air
+                            museum.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Odense -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/odense.jpg" alt="Odense" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Odense</h3>
+                        <p>The birthplace of Hans Christian Andersen. A charming city filled with statues and museums
+                            dedicated to the storyteller.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Skagen -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/skagen.jpg" alt="Skagen" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Skagen</h3>
+                        <p>The northernmost tip of Denmark where the Baltic and North Seas meet. Famous for its yellow
+                            houses and light.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Kronborg Castle (Helsingør) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/kronborg.jpg" alt="Kronborg Castle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kronborg Castle</h3>
+                        <p>A UNESCO World Heritage site and the setting for Shakespeare's Hamlet ("Elsinore").</p>
+                    </div>
+                </div>
+
+                <!-- 7. Roskilde -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/roskilde.jpg" alt="Roskilde" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Roskilde</h3>
+                        <p>Former Viking capital. Home to the Viking Ship Museum and a famous annual rock festival.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Bornholm -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Denmark/bornholm.jpg" alt="Bornholm" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bornholm</h3>
+                        <p>The "Sunshine Island" in the Baltic Sea, known for its round medieval churches, smoked fish,
+                            and dramatic cliffs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Danish Culture & Hygge</h2>
+                <p class="section-subtitle">Comfort, design, and a balanced lifestyle are at the core of Danish life.
+                </p>
+
+                <div class="culture-grid">
+                    <!-- 1. Hygge -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Denmark/hygge.jpg');">
+                        <div class="culture-icon">&#128367;</div> <!-- Candle option -->
+                        <div class="culture-text">
+                            <h4>Hygge</h4>
+                            <p>More than "cozy." It's a feeling of wellness and contentment, often enjoyed with candles,
+                                wool socks, and friends.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Design -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Denmark/design.jpg');">
+                        <div class="culture-icon">&#129681;</div> <!-- Chair -->
+                        <div class="culture-text">
+                            <h4>Danish Design</h4>
+                            <p>Functional, minimalistic, and beautiful. From Arne Jacobsen's Egg Chair to Sydney Opera
+                                House (Jørn Utzon).</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Bicycles -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Denmark/bikes.jpg');">
+                        <div class="culture-icon">&#128690;</div>
+                        <div class="culture-text">
+                            <h4>Cycling Culture</h4>
+                            <p>9 out of 10 Danes own a bike. It's the primary mode of transport, rain or shine, in
+                                cities like Copenhagen.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Smørrebrød -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Denmark/food.jpg');">
+                        <div class="culture-icon">&#129386;</div> <!-- Sandwich -->
+                        <div class="culture-text">
+                            <h4>Smørrebrød</h4>
+                            <p>The classic open-faced sandwich, usually on Rye bread, piled high with herring, meat,
+                                eggs, and herbs.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Viking Heritage -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Denmark/viking.jpg');">
+                        <div class="culture-icon">&#9876;</div> <!-- Swords -->
+                        <div class="culture-text">
+                            <h4>Viking Heritage</h4>
+                            <p>Denmark was the heart of the Viking age. Runic stones and burial mounds can be found
+                                across the landscape.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Danish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Danish Phrasebook</h2>
+                <p class="section-subtitle">Danish can be tricky to pronounce (the "soft D"), but everyone speaks
+                    excellent English.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Danish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hej</td>
+                                <td>Hi</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hej" data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tak</td>
+                                <td>Tack</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Tak" data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hygge</td>
+                                <td>Hoo-gah</td>
+                                <td>Cozy/Nice atmosphere</td>
+                                <td><button class="audio-btn" data-phrase="Hygge" data-lang="da-DK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Skål</td>
+                                <td>Skohl</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Skål" data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Undskyld</td>
+                                <td>Un-skool</td>
+                                <td>Sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Undskyld" data-lang="da-DK">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hvor er toilettet?</td>
+                                <td>Vor air toy-let-et</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Hvor er toilettet?"
+                                        data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>En øl, tak</td>
+                                <td>En ool, tack</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="En øl, tak"
+                                        data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Det var så lidt</td>
+                                <td>Deh var so lit</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Det var så lidt"
+                                        data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hvad koster det?</td>
+                                <td>Vad cost-er deh</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Hvad koster det?"
+                                        data-lang="da-DK">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Farvel</td>
+                                <td>Far-vel</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Farvel" data-lang="da-DK">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Denmark on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Denmark</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

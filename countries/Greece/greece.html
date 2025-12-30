@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Greece</title>
+
+    <meta name="description"
+        content="The Cradle of Western Civilization. Discover ancient ruins, turquoise islands, mouth-watering cuisine, and legendary hospitality.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR GREECE -->
+    <style>
+        :root {
+            /* Aegean Blue */
+            --theme-primary: #001489;
+            /* Pure White */
+            --theme-secondary: #004C98;
+            /* Darker blue */
+            --theme-bg-light: #f5f9ff;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #001489;
+            /* Blue blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #000c5c !important;
+        }
+
+        /* Gradient for Title: Blue to Lighter Blue */
+        .country-title {
+            background: linear-gradient(135deg, #001489 0%, #007FFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Greece/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Greece</h1>
+            <p class="country-slogan">"All Time Classic"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Greek (Elliniká)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127963;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">History & Islands</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Islands & Antiquity</h2>
+            <p class="section-subtitle">From the Acropolis to the deep blue Aegean Sea.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Athens -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/athens.jpg" alt="Acropolis" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Athens</h3>
+                        <p>The Capital. Dominated by the 5th-century BC landmarks like the Acropolis and Parthenon. A
+                            bustling mix of ancient and modern.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Santorini -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/santorini.jpg" alt="Santorini Oia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Santorini</h3>
+                        <p>The honeymoon island. Famous for its whitewashed cubic buildings with blue domes, stunning
+                            sunsets in Oia, and volcanic beaches.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Meteora -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/meteora.jpg" alt="Meteora Monasteries" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Meteora</h3>
+                        <p>A surreal landscape of immense natural rock pillars with Eastern Orthodox monasteries
+                            precariously perched on top.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Mykonos -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/mykonos.jpg" alt="Mykonos Windmills" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mykonos</h3>
+                        <p>The party island. Known for its summer party atmosphere, iconic windmills, Little Venice, and
+                            luxury beach clubs.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Delphi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/delphi.jpg" alt="Delphi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Delphi</h3>
+                        <p>The Navel of the Earth. Once the home of the Oracle of Apollo, it is one of the most
+                            important archaeological sites in Greece.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Crete -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/crete.jpg" alt="Crete Balos" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Crete</h3>
+                        <p>The largest island. Home to the Minoan Palace of Knossos, pink sand beaches like Elafonissi,
+                            and rugged gorges.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Zakynthos -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/zakynthos.jpg" alt="Shipwreck Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zakynthos</h3>
+                        <p>Navigation Island. Famous for "Navagio" (Shipwreck Beach), spectacular blue caves, and
+                            loggerhead sea turtles.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Rhodes -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/rhodes.jpg" alt="Rhodes Old Town" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rhodes</h3>
+                        <p>The Island of the Knights. Features one of the best-preserved medieval towns in Europe and
+                            the ancient Acropolis of Lindos.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Olympia -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Greece/olympia.jpg" alt="Ancient Olympia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Olympia</h3>
+                        <p>Birthplace of the Olympic Games. See the ancient stadium, the Temple of Zeus, and the spot
+                            where the Olympic flame is lit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Hellenic Spirit</h2>
+                <p class="section-subtitle">Philoxenia, Food, and Philosophy.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Philoxenia -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Greece/hospitality.jpg');">
+                        <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                        <div class="culture-text">
+                            <h4>Philoxenia</h4>
+                            <p>Literally "friend of the stranger." A deep-rooted ancient tradition of hospitality where
+                                guests are treated like royalty.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Coffee Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Greece/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Frappé & Freddo</h4>
+                            <p>Coffee is a ritual. Greeks spend hours sipping iced Frappés or Freddo Espressos at cafes,
+                                debating politics and life.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mythology -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Greece/mythology.jpg');">
+                        <div class="culture-icon">&#127963;</div> <!-- Temple -->
+                        <div class="culture-text">
+                            <h4>Mythology</h4>
+                            <p>The stories of Zeus, Athena, and Hercules aren't just fairy tales; they are woven into
+                                the names of streets, ferries, and companies.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Panigiria -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Greece/dance.jpg');">
+                        <div class="culture-icon">&#128131;</div> <!-- Dancer -->
+                        <div class="culture-text">
+                            <h4>Panigiria</h4>
+                            <p>Traditional village festivals usually held in summer. There is live music, circle dancing
+                                (Ikariotikos), and endless food and wine.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Megedes -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Greece/food.jpg');">
+                        <div class="culture-icon">&#129368;</div> <!-- Food -->
+                        <div class="culture-text">
+                            <h4>Mezedes & Ouzo</h4>
+                            <p>Sharing small plates (tzatziki, calamari, feta) accompanied by Ouzo or Tsipouro is the
+                                standard way to eat socially.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Greek)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Greek Phrasebook</h2>
+                <p class="section-subtitle">The alphabet is different, but learning a few words opens many doors.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Greek</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Γειά σου</td>
+                                <td>YAH soo</td>
+                                <td>Hello / Goodbye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Geia sou" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Καλημέρα</td>
+                                <td>Kal-ee-MEH-rah</td>
+                                <td>Good morning</td>
+                                <td><button class="audio-btn" data-phrase="Kalimera" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Καλησπέρα</td>
+                                <td>Kal-ee-SPEH-rah</td>
+                                <td>Good evening</td>
+                                <td><button class="audio-btn" data-phrase="Kalispera" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ευχαριστώ</td>
+                                <td>Ef-kha-ri-STO</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Efcharisto"
+                                        data-lang="el-GR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Παρακαλώ</td>
+                                <td>Pa-ra-ka-LO</td>
+                                <td>Please / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Parakalo" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ναι / Όχι</td>
+                                <td>Neh / O-khee</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Nai Ochi" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Συγνώμη</td>
+                                <td>Sig-NO-mee</td>
+                                <td>Sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Signomi" data-lang="el-GR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Μια μπύρα παρακαλώ</td>
+                                <td>Mia beera pa-ra-ka-lo</td>
+                                <td>One beer please</td>
+                                <td><button class="audio-btn" data-phrase="Mia bira parakalo"
+                                        data-lang="el-GR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Πού είναι η τουαλέτα;</td>
+                                <td>Poo ee-neh ee tua-le-ta</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Pou einai i toualeta"
+                                        data-lang="el-GR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Στην υγειά μας!</td>
+                                <td>Steen ee-YAH mas</td>
+                                <td>Cheers! (To our health)</td>
+                                <td><button class="audio-btn" data-phrase="Stin ygeia mas"
+                                        data-lang="el-GR">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Greece on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Greece</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

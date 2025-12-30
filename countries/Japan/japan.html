@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Japan</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Discover the Land of the Rising Sun. Explore Tokyo's neon streets, Kyoto's ancient temples, and the majestic Mount Fuji with TerraVista.">
+
+    <!-- Core External Assets (Paths adjusted for subdirectory) -->
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR JAPAN -->
+    <style>
+        :root {
+            --theme-primary: #BC002D;
+            /* Japan Flag Red */
+            --theme-secondary: #f07588;
+            /* Sakura Pink (slightly darker for visibility) */
+            --theme-bg-light: #fffcfc;
+            /* Very subtle warm white */
+            --theme-text-dark: #2c2c2c;
+        }
+
+        /* Specific overrides for this theme */
+        .culture-section::before {
+            background: #FFC0CB;
+            /* Soft Pink for background blob */
+            opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Japan/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Japan</h1>
+            <p class="country-slogan">"Where Tradition Meets the Future"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#165;</div> <!-- Yen Symbol -->
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Japanese Yen (JPY)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#26085;</div> <!-- kanji for day/sun/japan -->
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Japanese</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127800;</div> <!-- Flower -->
+                <div class="stat-label">Best Time to Visit</div>
+                <div class="stat-value">Spring (Sakura) & Autumn</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Japan</h2>
+            <p class="section-subtitle">From the neon lights of Tokyo to the serene temples of Kyoto, explore the
+                essential stops.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Tokyo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/tokyo.jpg" alt="Tokyo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tokyo</h3>
+                        <p>The dazzling capital mixing neon-lit skyscrapers, historic temples, and cutting-edge pop
+                            culture.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Kyoto -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/kyoto.jpg" alt="Kyoto" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kyoto</h3>
+                        <p>The cultural heart of Japan, famous for its classical Buddhist temples, gardens, majestic
+                            palaces, and geisha.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Osaka -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/osaka.jpg" alt="Osaka" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Osaka</h3>
+                        <p>Known for its modern architecture, nightlife, and hearty street food like Takoyaki and
+                            Okonomiyaki.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Mount Fuji -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/fuji.jpg" alt="Mount Fuji" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Fuji</h3>
+                        <p>Japan's highest peak and an iconic active volcano, revered as a sacred symbol of the nation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Hiroshima -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/hiroshima.jpg" alt="Hiroshima" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hiroshima</h3>
+                        <p>A city of peace and resilience, home to the Peace Memorial Park and the floating torii gate
+                            of Miyajima.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Nara -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Japan/nara.jpg" alt="Nara" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nara</h3>
+                        <p>The first permanent capital, famous for its giant Buddha statue and friendly free-roaming
+                            deer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Culture & Traditions</h2>
+                <p class="section-subtitle">Immerse yourself in the unique customs that define the Japanese way of life.
+                </p>
+
+                <div class="culture-grid">
+                    <!-- 1. Hanami -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Japan/hanami.jpg');">
+                        <div class="culture-icon">&#127800;</div>
+                        <div class="culture-text">
+                            <h4>Hanami (Flower Viewing)</h4>
+                            <p>The traditional custom of enjoying the transient beauty of flowers, traditionally
+                                'sakura' (cherry blossoms), in spring.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Omotenashi -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Japan/culture-gen.jpg');">
+                        <div class="culture-icon">&#128583;</div>
+                        <div class="culture-text">
+                            <h4>Omotenashi (Hospitality)</h4>
+                            <p>A unique approach to hospitality that involves anticipating a guest's needs before they
+                                are even expressed.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Tea Ceremony -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Japan/tea.jpg');">
+                        <div class="culture-icon">&#127867;</div>
+                        <div class="culture-text">
+                            <h4>Sadō (Tea Ceremony)</h4>
+                            <p>The ceremonial way of preparing and drinking green tea (Matcha), focusing on mindfulness,
+                                aesthetics, and harmony.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Cuisine -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Japan/food.jpg');">
+                        <div class="culture-icon">&#127843;</div>
+                        <div class="culture-text">
+                            <h4>Washoku (Cuisine)</h4>
+                            <p>UNESCO-recognized traditional dietary cultures, featuring Sushi, Ramen, Tempura, and the
+                                multi-course Kaiseki dining.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Onsen -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Japan/onsen.jpg');">
+                        <div class="culture-icon">&#9832;</div>
+                        <div class="culture-text">
+                            <h4>Onsen (Hot Springs)</h4>
+                            <p>Volcanic hot spring baths are a central part of Japanese culture, offering relaxation and
+                                claimed health benefits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Japanese Phrases)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Japanese Phrasebook</h2>
+                <p class="section-subtitle">Essential phrases to help you navigate and show respect.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Japanese</th>
+                                <th>Pronunciation</th>
+                                <th>English</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>こんにちは</td>
+                                <td>Konnichiwa</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Konnichiwa"
+                                        data-lang="ja-JP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>ありがとう</td>
+                                <td>Arigatou</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Arigatou" data-lang="ja-JP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>はい</td>
+                                <td>Hai</td>
+                                <td>Yes</td>
+                                <td><button class="audio-btn" data-phrase="Hai" data-lang="ja-JP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>いいえ</td>
+                                <td>Iie</td>
+                                <td>No</td>
+                                <td><button class="audio-btn" data-phrase="Iie" data-lang="ja-JP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>さようなら</td>
+                                <td>Sayounara</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Sayounara" data-lang="ja-JP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ください</td>
+                                <td>Kudasai</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Kudasai" data-lang="ja-JP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>すみません</td>
+                                <td>Sumimasen</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Sumimasen" data-lang="ja-JP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>いくらですか</td>
+                                <td>Ikura desu ka?</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Ikura desu ka?"
+                                        data-lang="ja-JP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>トイレはどこですか</td>
+                                <td>Toire wa doko desu ka?</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Toire wa doko desu ka?"
+                                        data-lang="ja-JP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>助けて</td>
+                                <td>Tasukete!</td>
+                                <td>Help!</td>
+                                <td><button class="audio-btn" data-phrase="Tasukete!" data-lang="ja-JP">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Japan on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Japan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       8. FOOTER
+       ========================================================================== -->
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+
+</body>
+
+</html>

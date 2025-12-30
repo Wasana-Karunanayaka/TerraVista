@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Spain</title>
+
+    <meta name="description"
+        content="Passion in every step. From the architectural wonders of Barcelona to the beaches of the Mediterranean and the rhythm of Flamenco.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SPAIN -->
+    <style>
+        :root {
+            /* Spain Red */
+            --theme-primary: #AA151B;
+            /* Spain Gold */
+            --theme-secondary: #F1BF00;
+            --theme-bg-light: #fffdf5;
+            --theme-text-dark: #201a1a;
+        }
+
+        .culture-section::before {
+            background: #AA151B;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, Gold text? No, Gold button, Red text looks regal */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #AA151B !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #d4a700 !important;
+        }
+
+        /* Gradient for Title: Red to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #AA151B 0%, #F1BF00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Spain/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Spain</h1>
+            <p class="country-slogan">"España: Part of You"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish (Castilian)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127863;</div>
+                <div class="stat-label">Dining</div>
+                <div class="stat-value">Dinner after 9 PM</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Spain</h2>
+            <p class="section-subtitle">A tapestry of regions, each with its own flavor, history, and architectural
+                marvels.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Sagrada Familia -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/sagrada.jpg" alt="Sagrada Familia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sagrada Família</h3>
+                        <p>Barcelona. Gaudí's unfinished masterpiece. A basilica that looks like it was grown from
+                            nature, not built.</p>
+                    </div>
+                </div>
+
+                <!-- 2. The Alhambra -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/alhambra.jpg" alt="The Alhambra" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Alhambra</h3>
+                        <p>Granada. A stunning palace and fortress complex that showcases the finest Islamic
+                            architecture in Europe.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Park Güell -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/parkguell.jpg" alt="Park Güell" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Park Güell</h3>
+                        <p>Another Gaudí whimsical wonder in Barcelona. Famous for its colorful mosaic salamander and
+                            undulating benches.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Seville Cathedral -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/seville.jpg" alt="Seville Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Seville Cathedral</h3>
+                        <p>The largest Gothic cathedral in the world. Climb the Giralda tower (originally a minaret) for
+                            city views.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Prado Museum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/prado.jpg" alt="Prado Museum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>El Prado Museum</h3>
+                        <p>Madrid. One of the world's finest art collections, featuring masters like Velázquez, Goya,
+                            and El Greco.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Ibiza -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/ibiza.jpg" alt="Ibiza" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ibiza</h3>
+                        <p>The White Isle. World-famous for its nightlife, but also for its tranquil yoga retreats and
+                            stunning coves.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Cordoba Mosque-Cathedral -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/cordoba.jpg" alt="Mezquita" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Great Mosque of Córdoba</h3>
+                        <p>La Mezquita. A dazzling forest of candy-cane arches inside a mosque that was converted into a
+                            cathedral at its center.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Toledo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/toledo.jpg" alt="Toledo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Toledo</h3>
+                        <p>The City of Three Cultures. Christians, Muslims, and Jews lived here in peace. A living
+                            museum of medieval swords and art.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Costa del Sol -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/costa.jpg" alt="Costa del Sol" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Costa del Sol</h3>
+                        <p>The Sun Coast. Malaga and Marbella offer endless beaches, sunshine, and luxury resorts on the
+                            Mediterranean.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Santiago de Compostela -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Spain/santiago.jpg" alt="Santiago" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Santiago de Compostela</h3>
+                        <p>The final stop of the Camino de Santiago pilgrimage. The cathedral holds the shrine of St.
+                            James the Apostle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Spanish Life</h2>
+                <p class="section-subtitle">Life is lived outdoors, often late into the night, revolving around food and
+                    family.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Tapas -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Spain/tapas.jpg');">
+                        <div class="culture-icon">&#127844;</div> <!-- Skewer -->
+                        <div class="culture-text">
+                            <h4>Tapas Culture</h4>
+                            <p>Small plates shared with drinks. It's not just food, it's a social activity
+                                ("Tapeo")â€”hopping from bar to bar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Flamenco -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Spain/flamenco.jpg');">
+                        <div class="culture-icon">&#128131;</div> <!-- Dancer -->
+                        <div class="culture-text">
+                            <h4>Flamenco</h4>
+                            <p>Born in Andalusia. A passionate art form combining singing (cante), dance (baile), and
+                                guitar (toque).</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Siesta -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Spain/siesta.jpg');">
+                        <div class="culture-icon">&#128716;</div> <!-- Bed -->
+                        <div class="culture-text">
+                            <h4>The Siesta</h4>
+                            <p>The afternoon break. Shops may close from 2-5 PM during the hottest part of the day,
+                                allowing for a long lunch and rest.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Paella -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Spain/paella.jpg');">
+                        <div class="culture-icon">&#129368;</div> <!-- Paella pan -->
+                        <div class="culture-text">
+                            <h4>Paella</h4>
+                            <p>The pride of Valencia. Saffron-infused rice cooked with rabbit, chicken, or seafood in a
+                                wide pan. Never eat it for dinner!</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Fiestas -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Spain/fiesta.jpg');">
+                        <div class="culture-icon">&#127881;</div> <!-- Party -->
+                        <div class="culture-text">
+                            <h4>Fiestas</h4>
+                            <p>Spain loves to party. From the tomato fight of La Tomatina to the Running of the Bulls,
+                                festivals are wild and colorful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Spanish Phrasebook</h2>
+                <p class="section-subtitle">Castilian Spanish is the standard, though regions have their own dialects.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Spanish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hola</td>
+                                <td>Oh-la</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hola" data-lang="es-ES">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fa-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-ES">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Gra-thyas (Spain lisp)</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-ES">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Buenos días</td>
+                                <td>Bweh-nos dee-as</td>
+                                <td>Good morning</td>
+                                <td><button class="audio-btn" data-phrase="Buenos días"
+                                        data-lang="es-ES">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Qué tal?</td>
+                                <td>Ke tal</td>
+                                <td>How's it going?</td>
+                                <td><button class="audio-btn" data-phrase="¿Qué tal" data-lang="es-ES">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Perdón</td>
+                                <td>Per-don</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Perdón" data-lang="es-ES">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Una caña, por favor</td>
+                                <td>Oo-na kan-ya</td>
+                                <td>A small draft beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Una caña por favor"
+                                        data-lang="es-ES">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>La cuenta, por favor</td>
+                                <td>La kwen-ta</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="La cuenta por favor"
+                                        data-lang="es-ES">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mañana</td>
+                                <td>Man-ya-na</td>
+                                <td>Tomorrow / Morning</td>
+                                <td><button class="audio-btn" data-phrase="Mañana" data-lang="es-ES">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¡Vale!</td>
+                                <td>Ba-le</td>
+                                <td>Okay / Cool / Fine</td>
+                                <td><button class="audio-btn" data-phrase="Vale" data-lang="es-ES">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Spain on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Spain</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

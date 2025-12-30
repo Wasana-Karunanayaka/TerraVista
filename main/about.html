@@ -1,0 +1,143 @@
+<!--
+ * TerraVista - About Us Page
+ *
+ * File:        about.html
+ * Author:      Wasana Karunanayaka
+ * Description: Information about the project vision, objectives, and technology stack.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About TerraVista - Our Journey</title>
+    <meta name="description"
+        content="Learn about TerraVista's mission to make cultural exploration accessible and engaging for everyone.">
+
+    <link rel="icon" type="image/x-icon" href="resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="stylesMain.css">
+
+    <!-- Custom styles have been moved to stylesMain.css -->
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+
+        <!-- 1. PARALLAX HERO -->
+        <section class="hero" id="hero">
+            <!-- Reusing main hero image or a specific about image -->
+            <img src="resourcesMain/home-hero-bg.jpg" alt="About Adventure" class="hero-background-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">About TerraVista</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Bridging Cultures, One Click at a Time</p>
+            </div>
+        </section>
+
+        <!-- 2. OUR VISION -->
+        <section class="vision-section">
+            <div class="container">
+                <div class="vision-content">
+                    <div class="vision-image">
+                        <img src="resourcesMain/canada-card.jpg" alt="Vision" loading="lazy">
+                    </div>
+                    <div class="vision-text">
+                        <h2 class="section-title" style="text-align: left;">Our Vision</h2>
+                        <p class="section-subtitle" style="text-align: left; margin-bottom: 1.5rem;">To create the
+                            world's most accessible and immersive digital travel encyclopedia.</p>
+                        <p>At TerraVista, we believe that understanding the world's diverse cultures fosters empathy and
+                            connection. Our vision is to move beyond static travel guides and offer a platform where
+                            users can truly "feel" a destination before they even pack their bags—through native
+                            languages, local traditions, and stunning visual storytelling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. OUR OBJECTIVES -->
+        <section class="objectives-section">
+            <div class="container">
+                <h2 class="section-title">Our Objectives</h2>
+                <p class="section-subtitle">What drives our development every single day.</p>
+
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <div class="objective-icon">&#127760;</div>
+                        <h3>Cultural Depth</h3>
+                        <p>To provide more than just tourist spots. We dive deep into festivals, etiquette, and local
+                            slang that true travelers appreciate.</p>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="objective-icon">&#128187;</div>
+                        <h3>Modern Experience</h3>
+                        <p>To reject outdated, text-heavy layouts in favor of masonry grids, interactive maps, and
+                            dynamic theming that delights the eye.</p>
+                    </div>
+
+                    <div class="objective-card">
+                        <div class="objective-icon">&#128266;</div>
+                        <h3>Accessibility</h3>
+                        <p>To ensure everyone can experience the world through high-contrast designs, semantic HTML, and
+                            native audio phrasebooks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TECHNOLOGY STACK -->
+        <section class="tech-section">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Powered By</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Built with clean, modern, vanilla web
+                    technologies.</p>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <span class="tech-icon">&#128196;</span> <!-- HTML5 -->
+                        <div class="tech-name">Semantic HTML5</div>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-icon">&#127912;</span> <!-- CSS3 -->
+                        <div class="tech-name">Modern CSS3</div>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-icon">&#9889;</span> <!-- JS -->
+                        <div class="tech-name">Vanilla JavaScript</div>
+                    </div>
+
+                    <div class="tech-card">
+                        <span class="tech-icon">&#128241;</span> <!-- Mobile -->
+                        <div class="tech-name">Responsive Design</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="scriptMain.js"></script>
+    <script src="../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../');
+        });
+    </script>
+</body>
+
+</html>

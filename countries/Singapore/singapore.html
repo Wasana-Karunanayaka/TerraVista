@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Singapore</title>
+
+    <meta name="description"
+        content="The Lion City. A futuristic garden city where diverse cultures, world-class food, and cutting-edge architecture blend seamlessly.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SINGAPORE -->
+    <style>
+        :root {
+            /* Singapore Red (Flag) */
+            --theme-primary: #EF3340;
+            /* Garden Green (City in a Garden) */
+            --theme-secondary: #008f53;
+            --theme-bg-light: #fbfdfc;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #EF3340;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Green button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #006b3e !important;
+        }
+
+        /* Gradient for Title: Red to Green */
+        .country-title {
+            background: linear-gradient(135deg, #EF3340 0%, #008f53 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Singapore/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Singapore</h1>
+            <p class="country-slogan">"Passion Made Possible"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Singapore Dollar (SGD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English, Malay, Mandarin, Tamil</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127807;</div>
+                <div class="stat-label">Concept</div>
+                <div class="stat-value">City in a Garden</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Most)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Singapore</h2>
+            <p class="section-subtitle">A small island with huge attractions, from vertical gardens to colonial history.
+            </p>
+
+            <div class="masonry-grid">
+                <!-- 1. Marina Bay Sands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/mbs.jpg" alt="Marina Bay Sands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Marina Bay Sands</h3>
+                        <p>The iconic ship-shaped hotel. enjoy the Skypark Observation Deck for the best views of the
+                            skyline and the Formula 1 circuit.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Gardens by the Bay -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/gardens.jpg" alt="Gardens by the Bay" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Gardens by the Bay</h3>
+                        <p>A futuristic park featuring the alien-like Supertrees, the Cloud Forest with its indoor
+                            waterfall, and the Flower Dome.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sentosa Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/sentosa.jpg" alt="Sentosa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sentosa Island</h3>
+                        <p>The State of Fun. Home to Universal Studios Singapore, S.E.A. Aquarium, and sandy beaches
+                            like Siloso and Palawan.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Chinatown -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/chinatown.jpg" alt="Chinatown" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chinatown</h3>
+                        <p>A historic district. Visit the Buddha Tooth Relic Temple, buy souvenirs on Pagoda Street, and
+                            eat at Maxwell Food Centre.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Little India -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/littleindia.jpg" alt="Little India" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Little India</h3>
+                        <p>A vibrant explosion of color, scent, and sound. Shop at Mustafa Centre (open 24/7) and visit
+                            the Sri Veeramakaliamman Temple.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Singapore Botanic Gardens -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/botanic.jpg" alt="Botanic Gardens" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Singapore Botanic Gardens</h3>
+                        <p>A UNESCO World Heritage Site. Stroll through the lush greenery and see thousands of orchids
+                            at the National Orchid Garden.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Jewel Changi Airport -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/jewel.jpg" alt="Jewel Changi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jewel Changi</h3>
+                        <p>The world's best airport. Famous for the Rain Vortex, the world's tallest indoor waterfall,
+                            surrounded by a forest terrace.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Singapore Zoo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/zoo.jpg" alt="Singapore Zoo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Singapore Zoo / Night Safari</h3>
+                        <p>An "open concept" zoo where animals roam in naturalistic habitats. The Night Safari offers a
+                            unique tram ride in the dark.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Kampong Glam -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/kampong.jpg" alt="Kampong Glam" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kampong Gelam</h3>
+                        <p>The Malay heritage district. Dominated by the golden dome of Sultan Mosque and lined with
+                            trendy cafes and carpet shops on Haji Lane.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Merlion Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Singapore/merlion.jpg" alt="Merlion" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Merlion Park</h3>
+                        <p>Snap a photo with the national mascotâ€”half-lion, half-fishâ€”spouting water into the bay
+                            with the CBD skyline in the back.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Singaporean Culture</h2>
+                <p class="section-subtitle">A melting pot of Chinese, Malay, Indian, and Eurasian influences.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Hawker Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Singapore/hawker.jpg');">
+                        <div class="culture-icon">&#127836;</div> <!-- Noodles -->
+                        <div class="culture-text">
+                            <h4>Hawker Culture</h4>
+                            <p>UNESCO Intangible Heritage. Community dining rooms serving affordable, Michelin-quality
+                                street food like Chicken Rice and Laksa.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Peranakan -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Singapore/peranakan.jpg');">
+                        <div class="culture-icon">&#128088;</div> <!-- Kimono/Dress -->
+                        <div class="culture-text">
+                            <h4>Peranakan Heritage</h4>
+                            <p>Straits-born Chinese. A unique hybrid culture with distinctive colorful architecture
+                                (shophouses), kebaya clothing, and spicy food.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Singlish -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Singapore/singlish.jpg');">
+                        <div class="culture-icon">&#128483;</div> <!-- Speak -->
+                        <div class="culture-text">
+                            <h4>Singlish</h4>
+                            <p>The colloquial English. peppered with dialect words like "Lah" (emphasis), "Kiasu" (fear
+                                of missing out), and "Chope" (reserve a seat).</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Rule of Law -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Singapore/clean.jpg');">
+                        <div class="culture-icon">&#128695;</div> <!-- No littering sign-ish -->
+                        <div class="culture-text">
+                            <h4>The "Fine" City</h4>
+                            <p>Known for safety and cleanliness. Strict laws (no chewing gum sales, no durians on
+                                trains) keep the city orderly and spotless.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Durian -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Singapore/durian.jpg');">
+                        <div class="culture-icon">&#129380;</div> <!-- Melon/Fruit -->
+                        <div class="culture-text">
+                            <h4>King of Fruits</h4>
+                            <p>Durian. You either love it or hate it. It smells like gym socks but tastes like creamy
+                                custard. Banned in hotels!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Singlish / Malay)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Singlish & Local Terms</h2>
+                <p class="section-subtitle">English is the main language, but these local slangs will help you blend in.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Shiok!</td>
+                                <td>She-oak</td>
+                                <td>Delicious / Amazing feeling</td>
+                                <td><button class="audio-btn" data-phrase="Shiok" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Can or not?</td>
+                                <td>Can or not</td>
+                                <td>Is this possible?</td>
+                                <td><button class="audio-btn" data-phrase="Can or not"
+                                        data-lang="en-SG">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Can lah</td>
+                                <td>Can la</td>
+                                <td>Yes, it's possible / Sure</td>
+                                <td><button class="audio-btn" data-phrase="Can lah" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kopi-O</td>
+                                <td>Ko-pee Oh</td>
+                                <td>Black Coffee with sugar</td>
+                                <td><button class="audio-btn" data-phrase="Kopi O" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Teh-C</td>
+                                <td>Tay See</td>
+                                <td>Tea with evaporated milk</td>
+                                <td><button class="audio-btn" data-phrase="Teh C" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chope</td>
+                                <td>Cho-p</td>
+                                <td>To reserve a seat (usually with a tissue packet)</td>
+                                <td><button class="audio-btn" data-phrase="Chope" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Terima Kasih (Malay)</td>
+                                <td>Te-ree-ma Ka-seh</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Terima Kasih"
+                                        data-lang="ms-SG">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Makan</td>
+                                <td>Mah-kan</td>
+                                <td>To eat / Food</td>
+                                <td><button class="audio-btn" data-phrase="Makan" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paiseh</td>
+                                <td>Pie-say</td>
+                                <td>Embarrassed / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Paiseh" data-lang="en-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abang</td>
+                                <td>Ah-bang</td>
+                                <td>Brother (polite way to address Malay men)</td>
+                                <td><button class="audio-btn" data-phrase="Abang" data-lang="ms-SG">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Singapore on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Singapore</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Colombia</title>
+
+    <meta name="description"
+        content="The only risk is wanting to stay. Discover Colombia's Caribbean beaches, coffee plantations, Andean peaks, and vibrant culture.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR COLOMBIA -->
+    <style>
+        :root {
+            /* Colombian Yellow */
+            --theme-primary: #FCD116;
+            /* Colombian Blue */
+            --theme-secondary: #003893;
+            /* Colombian Red (Accent) */
+            --accent-color: #CE1126;
+
+            --theme-bg-light: #fffdf5;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #FCD116;
+            /* Yellow blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #002566 !important;
+        }
+
+        /* Gradient for Title: Yellow to Blue to Red */
+        .country-title {
+            background: linear-gradient(135deg, #FCD116 0%, #003893 50%, #CE1126 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Specific overrides for Yellow Text Legibility */
+        .section-title {
+            color: #dcb300 !important;
+            /* A slightly darker yellow/gold for readability on white */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Colombia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Colombia</h1>
+            <p class="country-slogan">"The Rhythm of Latin America"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Peso (COP)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#9749;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Coffee & Salsa</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa Free / OA</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Magical Realism</h2>
+            <p class="section-subtitle">From the Andes to the Caribbean, Colombia is a country of incredible diversity.
+            </p>
+
+            <div class="masonry-grid">
+                <!-- 1. Cartagena -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/cartagena.jpg" alt="Cartagena Old Town" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cartagena</h3>
+                        <p>The Jewel of the Caribbean. A preserved colonial walled city with colorful balconies,
+                            cobblestone streets, and a vibrant night life.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Bogota -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/bogota.jpg" alt="Monserrate Bogota" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bogotá</h3>
+                        <p>The Capital. A high-altitude metropolis. Visit the Gold Museum, climb Monserrate for views,
+                            and explore the historic La Candelaria.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Medellin -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/medellin.jpg" alt="Medellin Cable Car" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Medellín</h3>
+                        <p>City of Eternal Spring. Famous for its flower festival, cable cars connecting neighborhoods,
+                            and impressive urban transformation.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Coffee Triangle -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/coffee.jpg" alt="Cocora Valley" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Coffee Cultural Landscape</h3>
+                        <p>Eje Cafetero. Stay in a coffee hacienda, taste the world's best mild coffee, and hike among
+                            the giant wax palms in Cocora Valley.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Tayrona National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/tayrona.jpg" alt="Tayrona Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tayrona National Park</h3>
+                        <p>Jungle meets Ocean. Pristine beaches backed by rain forest and the Sierra Nevada mountains.
+                            Sleep in a hammock under the stars.</p>
+                    </div>
+                </div>
+
+                <!-- 6. San Andres -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/sanandres.jpg" alt="San Andres Island" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>San Andrés</h3>
+                        <p>The Sea of Seven Colors. A Caribbean island paradise famous for snorkeling, reggae culture,
+                            and duty-free shopping.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Salt Cathedral of Zipaquira -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/salt.jpg" alt="Salt Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Salt Cathedral</h3>
+                        <p>An underground Roman Catholic church built within the tunnels of a salt mine 200 meters
+                            underground.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Guatape -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/guatape.jpg" alt="Guatape Rock" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Guatapé</h3>
+                        <p>The most colorful town in the world. Climb the massive El Peñol rock for a stunning view of
+                            the surrounding lakes and islands.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Rosario Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Colombia/rosario.jpg" alt="Rosario Islands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rosario Islands</h3>
+                        <p>Archipelago paradise. Crystal clear turquoise water, white sands, and coral reefs perfect for
+                            a day trip from Cartagena.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Colombian Vibrance</h2>
+                <p class="section-subtitle">A culture defined by music, dance, and resilience.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Cumbia & Salsa -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Colombia/dance.jpg');">
+                        <div class="culture-icon">&#128131;</div> <!-- Dancer -->
+                        <div class="culture-text">
+                            <h4>Rhythm (Cumbia & Salsa)</h4>
+                            <p>Music is everywhere. Cali is the world capital of Salsa, while Cumbia is the folkloric
+                                heartbeat of the coast.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Festivals -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Colombia/carnival.jpg');">
+                        <div class="culture-icon">&#127881;</div> <!-- Confetti -->
+                        <div class="culture-text">
+                            <h4>Barranquilla Carnival</h4>
+                            <p>One of the biggest carnivals in the world. A UNESCO Masterpiece of heritage, full of
+                                color, costumes, and folklore.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Tejo -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Colombia/tejo.jpg');">
+                        <div class="culture-icon">&#128165;</div> <!-- Explosion -->
+                        <div class="culture-text">
+                            <h4>Tejo</h4>
+                            <p>The national sport. It involves throwing metal discs at paper triangles filled with
+                                gunpowder to create explosions. Usually played with beer.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Emeralds -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Colombia/emerald.jpg');">
+                        <div class="culture-icon">&#128142;</div> <!-- Gem -->
+                        <div class="culture-text">
+                            <h4>Emeralds</h4>
+                            <p>Colombia produces 70-90% of the world's emeralds. The gem trade is a deep part of the
+                                country's history and economy.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Palenqueras -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Colombia/fruit.jpg');">
+                        <div class="culture-icon">&#127821;</div> <!-- Fruit -->
+                        <div class="culture-text">
+                            <h4>Palenqueras</h4>
+                            <p>Women in colorful dresses balancing bowls of fruit on their heads. They are symbols of
+                                San Basilio de Palenque, the first free slave town in the Americas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Colombian Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Colombian Slang</h2>
+                <p class="section-subtitle">Colombian Spanish is clear, polite, but full of unique local expressions.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>¡Hola! ¿Qué más?</td>
+                                <td>Ke mas</td>
+                                <td>Hello! How are things?</td>
+                                <td><button class="audio-btn" data-phrase="Hola Qué más"
+                                        data-lang="es-CO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Parce / Parcero</td>
+                                <td>Par-seh</td>
+                                <td>Friend / Dude / Bro</td>
+                                <td><button class="audio-btn" data-phrase="Parce" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chévere</td>
+                                <td>Che-ve-reh</td>
+                                <td>Cool / Great / Awesome</td>
+                                <td><button class="audio-btn" data-phrase="Chévere" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fa-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gracias, muy amable</td>
+                                <td>Gra-syas moy a-ma-bleh</td>
+                                <td>Thanks, very kind</td>
+                                <td><button class="audio-btn" data-phrase="Gracias muy amable"
+                                        data-lang="es-CO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>A la orden</td>
+                                <td>A la or-den</td>
+                                <td>At your service / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="A la orden"
+                                        data-lang="es-CO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tinto</td>
+                                <td>Tin-toh</td>
+                                <td>Black Coffee</td>
+                                <td><button class="audio-btn" data-phrase="Tinto" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Una pola</td>
+                                <td>Oo-na po-la</td>
+                                <td>A beer</td>
+                                <td><button class="audio-btn" data-phrase="Una pola" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¡Rumba!</td>
+                                <td>Room-bah</td>
+                                <td>Party!</td>
+                                <td><button class="audio-btn" data-phrase="Rumba" data-lang="es-CO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>No dar papaya</td>
+                                <td>No dar pa-pa-yah</td>
+                                <td>Don't make yourself an easy target</td>
+                                <td><button class="audio-btn" data-phrase="No dar papaya"
+                                        data-lang="es-CO">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Colombia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Colombia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

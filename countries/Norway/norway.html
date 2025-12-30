@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Norway</title>
+
+    <meta name="description"
+        content="Experience the land of the midnight sun. Cruise through majestic fjords, witness the northern lights, and explore vibrant Scandinavian cities.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR NORWAY -->
+    <style>
+        :root {
+            /* Fjord Blue (Flag Cross) */
+            --theme-primary: #00205B;
+            /* Norwegian Red (Flag Field) */
+            --theme-secondary: #BA0C2F;
+            --theme-bg-light: #f4f8fd;
+            --theme-text-dark: #1a202c;
+        }
+
+        .culture-section::before {
+            background: #00205B;
+            /* Blue blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #8a0923 !important;
+        }
+
+        /* Gradient for Title: Blue to Red */
+        .country-title {
+            background: linear-gradient(135deg, #00205B 0%, #BA0C2F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Norway/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Norway</h1>
+            <p class="country-slogan">"Powered by Nature"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#107;&#114;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Norwegian Krone (NOK)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Norwegian</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#10052;</div>
+                <div class="stat-label">Coastline</div>
+                <div class="stat-value">Second longest in world</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Norway</h2>
+            <p class="section-subtitle">A landscape carved by glaciers, from the deep fjords to the Arctic North.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Geirangerfjord -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/geiranger.jpg" alt="Geirangerfjord" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Geirangerfjord</h3>
+                        <p>The jewel of the fjords. A UNESCO site famous for its deep blue waters, waterfalls like the
+                            Seven Sisters, and steep mountains.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Lofoten Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/lofoten.jpg" alt="Lofoten Islands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lofoten Islands</h3>
+                        <p>An archipelago above the Arctic Circle. Known for dramatic peaks, sheltered bays, and
+                            picturesque red fishing cabins (Rorbu).</p>
+                    </div>
+                </div>
+
+                <!-- 3. Bergen -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/bergen.jpg" alt="Bergen Bryggen" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bergen</h3>
+                        <p>The Gateway to the Fjords. Explore Bryggen, the historic Hanseatic wharf, and take the
+                            funicular to Mount Fløyen.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Trolltunga -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/trolltunga.jpg" alt="Trolltunga" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Trolltunga</h3>
+                        <p>"The Troll's Tongue." A spectacular rock formation hovering 700 meters above Lake
+                            Ringedalsvatnet. A bucket-list hike.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Oslo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/oslo.jpg" alt="Oslo Opera House" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Oslo</h3>
+                        <p>The modern capital. Walk on the roof of the Opera House, visit the Viking Ship Museum, and
+                            stroll through Vigeland Park.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Preikestolen -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/pulpit.jpg" alt="Pulpit Rock" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pulpit Rock (Preikestolen)</h3>
+                        <p>A massive cliff 604 meters above Lysefjord. One of Norway's most famous hikes offering
+                            breathtaking panoramic views.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Svalbard -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/svalbard.jpg" alt="Svalbard Polar Bear" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Svalbard</h3>
+                        <p>The realm of the Polar Bear. A rugged archipelago between mainland Norway and the North Pole.
+                            Permanent midnight sun in summer.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Atlantic Ocean Road -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/road.jpg" alt="Atlantic Ocean Road" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Atlantic Ocean Road</h3>
+                        <p>One of the world's most scenic drives. A rollercoaster road that hops from island to island
+                            across the open sea.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Flåm Railway -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/flam.jpg" alt="Flåm Railway" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Flåm Railway</h3>
+                        <p>One of the steepest train lines in the world. A stunning 1-hour journey from sea level at the
+                            fjord up to the mountains.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Northern Lights (Tromsø) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Norway/aurora.jpg" alt="Northern Lights" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Northern Lights</h3>
+                        <p>Aurora Borealis. Tromsø is one of the best places on earth to hunt for the dancing green
+                            lights in the winter sky.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Scandinavian Soul</h2>
+                <p class="section-subtitle">A culture shaped by the cold, the sea, and a love for the outdoors.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Koselig -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Norway/koselig.jpg');">
+                        <div class="culture-icon">&#128293;</div> <!-- Fire/Candle -->
+                        <div class="culture-text">
+                            <h4>Koselig</h4>
+                            <p>More than just "cozy." It's a feeling of warmth, candles, good food, and being safe from
+                                the cold with friends.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Friluftsliv -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Norway/hiking.jpg');">
+                        <div class="culture-icon">&#127956;</div> <!-- Mountain -->
+                        <div class="culture-text">
+                            <h4>Friluftsliv</h4>
+                            <p>"Open-air living." A deep-seated philosophy that life is best lived outdoors, regardless
+                                of the weather ("No bad weather, only bad clothes").</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Vikings -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Norway/viking.jpg');">
+                        <div class="culture-icon">&#9876;</div> <!-- Swords/Shield -->
+                        <div class="culture-text">
+                            <h4>Viking Heritage</h4>
+                            <p>The legacy of the Norse explorers. Seen in the Stave Churches, ship museums, and sagas of
+                                adventure.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bunad -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Norway/bunad.jpg');">
+                        <div class="culture-icon">&#128087;</div> <!-- Dress -->
+                        <div class="culture-text">
+                            <h4>The Bunad</h4>
+                            <p>The traditional folk costume. Each region has its own design, worn with pride on
+                                Constitution Day (May 17th) and weddings.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Brown Cheese -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Norway/brunost.jpg');">
+                        <div class="culture-icon">&#129472;</div> <!-- Cheese -->
+                        <div class="culture-text">
+                            <h4>Brunost (Brown Cheese)</h4>
+                            <p>Caramelized whey cheese. It's sweet, savory, and distinctly Norwegian. Usually sliced
+                                thinly on waffles or bread.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Norwegian)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Norwegian Phrasebook</h2>
+                <p class="section-subtitle">Most Norwegians speak excellent English, but these words show you care.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Norwegian</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hei / Hallo</td>
+                                <td>Hi / Ha-lo</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hei Hallo" data-lang="no-NO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Takk</td>
+                                <td>Tahk</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Takk" data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tusen takk</td>
+                                <td>Too-sen tahk</td>
+                                <td>A thousand thanks</td>
+                                <td><button class="audio-btn" data-phrase="Tusen takk"
+                                        data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Unnskyld</td>
+                                <td>Un-shill</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Unnskyld" data-lang="no-NO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ha det bra</td>
+                                <td>Ha de bra</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Ha det bra"
+                                        data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hvordan går det?</td>
+                                <td>Vor-dan gor de</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Hvordan går det"
+                                        data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kan du hjelpe meg?</td>
+                                <td>Kan du yel-pe meg</td>
+                                <td>Can you help me?</td>
+                                <td><button class="audio-btn" data-phrase="Kan du hjelpe meg"
+                                        data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Skål!</td>
+                                <td>Skawl</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Skål" data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ja / Nei</td>
+                                <td>Ya / Niy</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ja Nei" data-lang="no-NO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hvor er toalettet?</td>
+                                <td>Vor ar toa-let-te</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Hvor er toalettet"
+                                        data-lang="no-NO">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Norway on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Norway</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

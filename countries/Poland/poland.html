@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Poland</title>
+
+    <meta name="description"
+        content="Discover the heart of Europe. From the medieval market squares of Krakow to the modern energy of Warsaw and the peaks of the Tatras.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR POLAND -->
+    <style>
+        :root {
+            /* Polish Crimson */
+            --theme-primary: #DC143C;
+            /* Silver / Gray for contrast */
+            --theme-secondary: #707070;
+            --theme-bg-light: #fefcfc;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #DC143C;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Crimson button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #a30e2b !important;
+        }
+
+        /* Gradient for Title: Crimson to Silver */
+        .country-title {
+            background: linear-gradient(135deg, #DC143C 0%, #707070 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Poland/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Poland</h1>
+            <p class="country-slogan">"Move Your Imagination"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#122;&#322;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Polish Złoty (PLN)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Polish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127984;</div>
+                <div class="stat-label">Castles</div>
+                <div class="stat-value">Over 500</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Poland</h2>
+            <p class="section-subtitle">A land of resilience, rich history, and surprising natural beauty.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Krakow -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/krakow.jpg" alt="Krakow Market Square" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Krakow</h3>
+                        <p>The cultural capital. Home to Europe's largest medieval market square, the Wawel Castle, and
+                            legends of dragons.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Warsaw -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/warsaw.jpg" alt="Warsaw Old Town" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Warsaw</h3>
+                        <p>The Phoenix City. Rebuilt from ashes after WWII, it's now a bustling metropolis mixing
+                            skyscrapers with a restored Old Town.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Wieliczka Salt Mine -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/salt.jpg" alt="Wieliczka Salt Mine" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wieliczka Salt Mine</h3>
+                        <p>An underground kingdom. Explore chapels, chandeliers, and statues all carved entirely out of
+                            salt by miners.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Auschwitz-Birkenau -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/auschwitz.jpg" alt="Auschwitz Memorial" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Auschwitz-Birkenau</h3>
+                        <p>A sobering memorial and museum. A necessary visit to witness the tragic history of the
+                            Holocaust.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Zakopane & Tatra Mountains -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/zakopane.jpg" alt="Zakopane" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zakopane</h3>
+                        <p>The winter capital. Nestled at the foot of the Tatra Mountains, it's popular for skiing,
+                            hiking, and unique wooden architecture.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Gdansk -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/gdansk.jpg" alt="Gdansk" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Gdańsk</h3>
+                        <p>A beautiful port city on the Baltic coast. Known for its colorful Dutch-style facades, amber
+                            jewelry, and maritime history.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Malbork Castle -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/malbork.jpg" alt="Malbork Castle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Malbork Castle</h3>
+                        <p>The largest castle in the world by land area. A massive Gothic brick fortress built by the
+                            Teutonic Knights.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Wroclaw -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/wroclaw.jpg" alt="Wroclaw" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wrocław</h3>
+                        <p>The city of bridges and gnomes. Hunt for hundreds of tiny bronze dwarf statues hidden
+                            throughout the historic center.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Masurian Lake District -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/lakes.jpg" alt="Masurian Lakes" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Masurian Lake District</h3>
+                        <p>The land of a thousand lakes. A paradise for sailing, kayaking, and relaxing in nature among
+                            lush forests.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Bialowieza Forest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Poland/bison.jpg" alt="Bialowieza Forest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Białowieża Forest</h3>
+                        <p>Europe's last primeval forest. Home to the free-roaming European Bison, the heaviest land
+                            animal in Europe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Polish Traditions</h2>
+                <p class="section-subtitle">Warm hospitality, hearty food, and deep historical roots.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Pierogi -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Poland/pierogi.jpg');">
+                        <div class="culture-icon">&#129375;</div> <!-- Dumpling -->
+                        <div class="culture-text">
+                            <h4>Pierogi</h4>
+                            <p>The national dish. Dumplings filled with anything from meat and sauerkraut to potato and
+                                cheese (Ruskie), or fruit.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Hospitality -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Poland/bread.jpg');">
+                        <div class="culture-icon">&#127838;</div> <!-- Bread -->
+                        <div class="culture-text">
+                            <h4>Gościnność (Hospitality)</h4>
+                            <p>"Guest in the house, God in the house." Polish hospitality is legendary; you will never
+                                leave a Polish home hungry.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Chopin -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Poland/piano.jpg');">
+                        <div class="culture-icon">&#127929;</div> <!-- Piano -->
+                        <div class="culture-text">
+                            <h4>Frédéric Chopin</h4>
+                            <p>Poland's greatest composer. In Warsaw, you can sit on benches that play his music or
+                                attend free Sunday concerts in the park.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Milk Bars -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Poland/bar.jpg');">
+                        <div class="culture-icon">&#129379;</div> <!-- Spoon -->
+                        <div class="culture-text">
+                            <h4>Bar Mleczny</h4>
+                            <p>"Milk Bars." Communist-era cafeterias that serve affordable, homemade traditional Polish
+                                food. A cult experience.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Smigus Dyngus -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Poland/water.jpg');">
+                        <div class="culture-icon">&#128166;</div> <!-- Water -->
+                        <div class="culture-text">
+                            <h4>Śmigus-Dyngus</h4>
+                            <p>Wet Monday. An Easter tradition where everyone splashes water on each other for good luck
+                                (and fun).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Polish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Polish Phrasebook</h2>
+                <p class="section-subtitle">Polish is tricky, but here are the essentials.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Polish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dzień dobry</td>
+                                <td>Jen dob-ry</td>
+                                <td>Good day / Hello</td>
+                                <td><button class="audio-btn" data-phrase="Dzień dobry"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Dziękuję</td>
+                                <td>Jen-koo-ye</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Dziękuję" data-lang="pl-PL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Proszę</td>
+                                <td>Pro-she</td>
+                                <td>Please / Here you go</td>
+                                <td><button class="audio-btn" data-phrase="Proszę" data-lang="pl-PL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Przepraszam</td>
+                                <td>Pshe-pra-sham</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Przepraszam"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Do widzenia</td>
+                                <td>Do vid-zen-ya</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Do widzenia"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jak się masz?</td>
+                                <td>Yak shye mash</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Jak się masz"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tak / Nie</td>
+                                <td>Tak / Nye</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Tak Nie" data-lang="pl-PL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Na zdrowie!</td>
+                                <td>Naz-dro-vye</td>
+                                <td>Cheers / Bless you</td>
+                                <td><button class="audio-btn" data-phrase="Na zdrowie"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Nie rozumiem</td>
+                                <td>Nye ro-zoo-myem</td>
+                                <td>I don't understand</td>
+                                <td><button class="audio-btn" data-phrase="Nie rozumiem"
+                                        data-lang="pl-PL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Smacznego</td>
+                                <td>Smatch-ne-go</td>
+                                <td>Bon appetit</td>
+                                <td><button class="audio-btn" data-phrase="Smacznego" data-lang="pl-PL">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Poland on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Poland</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

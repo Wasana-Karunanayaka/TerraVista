@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Egypt</title>
+
+    <meta name="description"
+        content="Travel back in time. Stand before the Great Pyramids, cruise the Nile, and dive into the Red Sea. Welcome to the gift of the Nile.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR EGYPT -->
+    <style>
+        :root {
+            /* Pharaonic Gold */
+            --theme-primary: #D4AF37;
+            /* Nile Blue */
+            --theme-secondary: #0F4C81;
+            --theme-bg-light: #fcfbf6;
+            --theme-text-dark: #2b2b2b;
+        }
+
+        .culture-section::before {
+            background: #D4AF37;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Blue button, Gold text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #D4AF37 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #09335a !important;
+        }
+
+        /* Gradient for Title: Gold to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #D4AF37 0%, #0F4C81 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Egypt/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Egypt</h1>
+            <p class="country-slogan">"Misr: The Mother of the World"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#163;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Egyptian Pound (EGP)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Arabic</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127964;</div>
+                <div class="stat-label">History</div>
+                <div class="stat-value">7,000+ Years</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa on Arrival (Many)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Egypt</h2>
+            <p class="section-subtitle">Home to one-third of the world's ancient antiquities and endless sunshine.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Pyramids of Giza -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/pyramids.jpg" alt="Pyramids of Giza" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Great Pyramids of Giza</h3>
+                        <p>The last surviving Wonder of the Ancient World. See the Sphinx and the massive tombs of
+                            Khufu, Khafre, and Menkaure.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Luxor (Karnak) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/luxor.jpg" alt="Luxor" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Luxor Temple & Karnak</h3>
+                        <p>The world's greatest open-air museum. Walk through the Hypostyle Hall and see the Avenue of
+                            Sphinxes.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Valley of the Kings -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/vok.jpg" alt="Valley of the Kings" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Valley of the Kings</h3>
+                        <p>Descend into the intricate, colorful tombs of New Kingdom pharaohs, including Tutankhamun and
+                            Seti I.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Abu Simbel -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/abusimbel.jpg" alt="Abu Simbel" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Abu Simbel</h3>
+                        <p>The colossal rock temples of Ramses II, famously relocated block by block to save them from
+                            the rising Nile.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Aswan (Philae) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/aswan.jpg" alt="Aswan" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Aswan & Philae Temple</h3>
+                        <p>Egypt's Nubian soul. Sail on a felucca around Elephantine Island and visit the beautiful
+                            Temple of Isis.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Hurghada / Red Sea -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/redsea.jpg" alt="Red Sea" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Red Sea Coast</h3>
+                        <p>From Hurghada to Sharm El Sheikh. World-class diving and snorkeling reefs teeming with marine
+                            life.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Alexandria -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/alexandria.jpg" alt="Alexandria" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Alexandria</h3>
+                        <p>The Pearl of the Mediterranean, founded by Alexander the Great. Visit the modern Library and
+                            the Citadel of Qaitbay.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Khan el-Khalili (Cairo) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/khan.jpg" alt="Khan el-Khalili" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Khan el-Khalili</h3>
+                        <p>Cairo's oldest bazaar. A labyrinth of spices, lanterns, jewelry, and ancient architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 9. Siwa Oasis -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Egypt/siwa.jpg" alt="Siwa Oasis" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Siwa Oasis</h3>
+                        <p>A remote, magical oasis near the Libyan border famous for its date palms, salt lakes, and
+                            oracle temple.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Life on the Nile</h2>
+                <p class="section-subtitle">A mix of ancient Pharaonic heritage, Coptic tradition, and Islamic culture.
+                </p>
+
+                <div class="culture-grid">
+                    <!-- 1. The Ahwa (Coffee House) -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Egypt/ahwa.jpg');">
+                        <div class="culture-icon">&#9749;</div>
+                        <div class="culture-text">
+                            <h4>Ahwa (Coffee House)</h4>
+                            <p>The center of social life. Men gather to drink strong Turkish coffee, play backgammon
+                                (Tawla), and smoke shisha.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Koshary -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Egypt/koshary.jpg');">
+                        <div class="culture-icon">&#127836;</div> <!-- Pasta/Rice -->
+                        <div class="culture-text">
+                            <h4>Koshary</h4>
+                            <p>The national dish. A carb-heavy mix of rice, macaroni, lentils, and chickpeas topped with
+                                spicy tomato sauce.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ramadan -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Egypt/ramadan.jpg');">
+                        <div class="culture-icon">&#127769;</div> <!-- Moon -->
+                        <div class="culture-text">
+                            <h4>Ramadan</h4>
+                            <p>A special time in Egypt. Streets are decorated with Fanoos (lanterns) and come alive at
+                                night after Iftar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bargaining -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Egypt/souq.jpg');">
+                        <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                        <div class="culture-text">
+                            <h4>The Art of Bargaining</h4>
+                            <p>In the souq, the first price is never the real price. Negotiating is expected, social,
+                                and done with a smile.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Belly Dance -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Egypt/dance.jpg');">
+                        <div class="culture-icon">&#128131;</div>
+                        <div class="culture-text">
+                            <h4>Raqs Sharqi</h4>
+                            <p>Egyptian belly dance is a classical art form with deep roots, often performed at weddings
+                                and celebrations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Arabic)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Egyptian Arabic Phrasebook</h2>
+                <p class="section-subtitle">Egyptians are known for their humor ("Damalo khafeef") and friendliness.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Arabic</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Salam 'alaykum</td>
+                                <td>Sa-lam a-lay-kum</td>
+                                <td>Peace be upon you (Hello)</td>
+                                <td><button class="audio-btn" data-phrase="As-salamu alaykum"
+                                        data-lang="ar-EG">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Shukran</td>
+                                <td>Shook-ran</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Shukran" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Afwan</td>
+                                <td>Af-wan</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Afwan" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Izzayak? / Izzayik?</td>
+                                <td>Iz-zay-ak</td>
+                                <td>How are you? (M/F)</td>
+                                <td><button class="audio-btn" data-phrase="Izzayak" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aywa / La</td>
+                                <td>Ay-wa / La</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Aywa La" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Min fadlak</td>
+                                <td>Min fad-lak</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Min fadlak"
+                                        data-lang="ar-EG">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bikam da?</td>
+                                <td>Bi-kam da</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Bikam da" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Yalla</td>
+                                <td>Yal-la</td>
+                                <td>Let's go / Hurry</td>
+                                <td><button class="audio-btn" data-phrase="Yalla" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Habibi</td>
+                                <td>Ha-bee-bee</td>
+                                <td>My love / My friend</td>
+                                <td><button class="audio-btn" data-phrase="Habibi" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Khalas</td>
+                                <td>Kha-las</td>
+                                <td>Enough / Finished / Okay</td>
+                                <td><button class="audio-btn" data-phrase="Khalas" data-lang="ar-EG">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Egypt on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Egypt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

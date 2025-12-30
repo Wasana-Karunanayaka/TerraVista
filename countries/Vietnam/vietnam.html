@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Vietnam</title>
+
+    <meta name="description"
+        content="Timeless charm. From the limestone karsts of Ha Long Bay to the bustling streets of Hanoi and the lantern-lit alleys of Hoi An.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR VIETNAM -->
+    <style>
+        :root {
+            /* Vietnam Red */
+            --theme-primary: #DA251D;
+            /* Star Yellow */
+            --theme-secondary: #FFFF00;
+            --theme-bg-light: #fffdf5;
+            --theme-text-dark: #201313;
+        }
+
+        .culture-section::before {
+            background: #DA251D;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, Yellow text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #FFFF00 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #b51a14 !important;
+        }
+
+        /* Gradient for Title: Red to Yellow */
+        .country-title {
+            background: linear-gradient(135deg, #DA251D 0%, #d4d400 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Vietnam/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Vietnam</h1>
+            <p class="country-slogan">"Timeless Charm"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8363;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Dong (VND)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Vietnamese</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#9749;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Coffee & Pho</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">E-Visa / Exemption</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Vietnam</h2>
+            <p class="section-subtitle">A dragon-shaped country full of natural wonders, deep history, and culinary
+                delights.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Ha Long Bay -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/halong.jpg" alt="Ha Long Bay" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ha Long Bay</h3>
+                        <p>Bay of Descending Dragons. Cruise through thousands of towering limestone islands topping
+                            emerald waters. UNESCO site.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Hoi An -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/hoian.jpg" alt="Hoi An" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hoi An</h3>
+                        <p>Ancient Town. Famous for its yellow colonial buildings, colorful silk lanterns, and tailors
+                            who make custom clothes in a day.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Ho Chi Minh City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/hcmc.jpg" alt="Ho Chi Minh City" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ho Chi Minh City</h3>
+                        <p>Saigon. The energetic commercial hub involves French colonial architecture, war museums, and
+                            vibrant nightlife.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Hanoi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/hanoi.jpg" alt="Hanoi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hanoi</h3>
+                        <p>The Capital. Navigate the chaotic motorcycle traffic of the Old Quarter, visit the Ho Chi
+                            Minh Mausoleum, and sip egg coffee.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Phong Nha-Ke Bang -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/caves.jpg" alt="Phong Nha Caves" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Phong Nha-Ke Bang</h3>
+                        <p>Cave Kingdom. Home to Son Doong, the world's largest cave. A paradise for spelunkers and
+                            jungle trekkers.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Hue -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/hue.jpg" alt="Hue Imperial City" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hue</h3>
+                        <p>The Imperial City. The former royal capital features a massive citadel, royal tombs, and the
+                            Perfume River.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Sa Pa -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/sapa.jpg" alt="Sa Pa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sa Pa</h3>
+                        <p>High in the mountains. Trek through misty rice terraces, meet ethnic minority tribes in
+                            colorful dress, and climb Mount Fansipan.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Mekong Delta -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/mekong.jpg" alt="Mekong Delta" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mekong Delta</h3>
+                        <p>The Rice Bowl. A maze of rivers, swamps, and islands. Take a boat tour to see floating
+                            markets and fruit orchards.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Golden Bridge (Da Nang) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/danang.jpg" alt="Golden Bridge" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Golden Bridge</h3>
+                        <p>Da Nang (Ba Na Hills). Walk along the famous pedestrian bridge held up by two giant stone
+                            hands in the clouds.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Phu Quoc -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Vietnam/phuquoc.jpg" alt="Phu Quoc" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Phu Quoc Island</h3>
+                        <p>Tropical Paradise. Famous for white sand beaches, clear waters, and the world's longest cable
+                            car ride over the sea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Vietnamese Life</h2>
+                <p class="section-subtitle">A culture built on resilience, family values, and incredible flavors.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Coffee Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Vietnam/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Coffee Culture</h4>
+                            <p>Vietnam is the world's #2 coffee producer. Try *Cà phê sữa đá* (iced milk coffee) or
+                                Hanoi's famous Egg Coffee.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Motorbikes -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Vietnam/moto.jpg');">
+                        <div class="culture-icon">&#128757;</div> <!-- Scooter -->
+                        <div class="culture-text">
+                            <h4>Motorbike Chaos</h4>
+                            <p>Crossing the street is an extreme sport. Walk slowly and steadily; bikes will flow around
+                                you like water.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ao Dai -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Vietnam/aodai.jpg');">
+                        <div class="culture-icon">&#128087;</div> <!-- Kimono/Dress -->
+                        <div class="culture-text">
+                            <h4>Áo Dài</h4>
+                            <p>The national dress. A long, split silk tunic worn over trousers. Elegant and timeless,
+                                often white for students.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Street Food -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Vietnam/pho.jpg');">
+                        <div class="culture-icon">&#127836;</div> <!-- Noodles -->
+                        <div class="culture-text">
+                            <h4>Street Food</h4>
+                            <p>Plastic stools on the sidewalk are where the best meals happen. Phở (soup), Bánh Mì
+                                (baguette), and Bún Chả.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Tet Holiday -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Vietnam/tet.jpg');">
+                        <div class="culture-icon">&#129511;</div> <!-- Firecracker -->
+                        <div class="culture-text">
+                            <h4>Tết (Lunar New Year)</h4>
+                            <p>The biggest holiday. Families reunite, clean houses, give lucky money (Li Xi), and eat
+                                Bánh Chưng (sticky rice cake).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Vietnamese)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Vietnamese Phrasebook</h2>
+                <p class="section-subtitle">Vietnamese is tonal, so pronunciation is key. But locals love it when you
+                    try!</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Vietnamese</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Xin chào</td>
+                                <td>Sin chow</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Xin chào" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cảm ơn</td>
+                                <td>Gam uhn</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Cảm ơn" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Xin lỗi</td>
+                                <td>Sin loy</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Xin lỗi" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tạm biệt</td>
+                                <td>Tam byet</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Tạm biệt" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bao nhiêu?</td>
+                                <td>Bow nyew</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Bao nhiêu" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Đắt quá!</td>
+                                <td>Dat kwa</td>
+                                <td>Too expensive!</td>
+                                <td><button class="audio-btn" data-phrase="Đắt quá" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ngon</td>
+                                <td>Ngon</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="Ngon" data-lang="vi-VN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Một, Hai, Ba, Dô!</td>
+                                <td>Mot, Hi, Ba, Yo!</td>
+                                <td>1, 2, 3, Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Một Hai Ba Dô"
+                                        data-lang="vi-VN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Không có chi</td>
+                                <td>Kong ko chee</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Không có chi"
+                                        data-lang="vi-VN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Cà phê</td>
+                                <td>Ka fey</td>
+                                <td>Coffee</td>
+                                <td><button class="audio-btn" data-phrase="Cà phê" data-lang="vi-VN">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Vietnam on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Vietnam</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

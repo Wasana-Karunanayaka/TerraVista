@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Nepal</title>
+
+    <meta name="description"
+        content="Journey to the roof of the world. Trek to Everest Base Camp, explore ancient temples in Kathmandu, and find peace in the birthplace of Buddha.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR NEPAL -->
+    <style>
+        :root {
+            /* Crimson Red (National Color/Rhododendron) */
+            --theme-primary: #DC143C;
+            /* Himalayan Blue (Border Color/Peace) */
+            --theme-secondary: #003893;
+            --theme-bg-light: #fdfbfb;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #DC143C;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #00235e !important;
+        }
+
+        /* Gradient for Title: Red to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #DC143C 0%, #003893 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Nepal/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Nepal</h1>
+            <p class="country-slogan">"The Roof of the World"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8360;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Nepalese Rupee (NPR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Nepali</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127956;</div>
+                <div class="stat-label">Highest Point</div>
+                <div class="stat-value">Mt. Everest (8848m)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa on Arrival (Most)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Nepal</h2>
+            <p class="section-subtitle">Home to 8 of the world's 10 highest peaks and ancient spirituality.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Mt. Everest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/everest.jpg" alt="Mount Everest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Everest Region</h3>
+                        <p>Sagarmatha. Trek to Everest Base Camp through Sherpa villages to stand at the foot of the
+                            highest mountain on Earth.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Kathmandu Durbar Square -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/kathmandu.jpg" alt="Kathmandu Durbar Square"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kathmandu Durbar Square</h3>
+                        <p>The historic heart of the capital. A UNESCO World Heritage site known for its stunning Newari
+                            architecture and temples.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Pokhara -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/pokhara.jpg" alt="Pokhara" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pokhara</h3>
+                        <p>The gateway to the Annapurna Circuit. Famous for its serene Phewa Lake and the reflection of
+                            Mt. Machhapuchhre.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Chitwan National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/chitwan.jpg" alt="Chitwan National Park" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chitwan National Park</h3>
+                        <p>The jungle lowlands. Go on a safari to spot one-horned rhinoceroses, Bengal tigers, and
+                            elephants in the wild.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Swayambhunath -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/swayambhunath.jpg" alt="Monkey Temple" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Swayambhunath</h3>
+                        <p>The "Monkey Temple." An ancient stupa atop a hill in the Kathmandu Valley, offering panoramic
+                            views and cheeky residents.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Boudhanath Stupa -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/boudhanath.jpg" alt="Boudhanath Stupa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Boudhanath Stupa</h3>
+                        <p>One of the largest stupas in the world. The center of Tibetan Buddhism in Nepal, surrounded
+                            by monasteries.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Lumbini -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/lumbini.jpg" alt="Lumbini" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lumbini</h3>
+                        <p>The birthplace of Lord Buddha. A sacred pilgrimage site with the Maya Devi Temple and
+                            monasteries from around the world.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Bhaktapur -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/bhaktapur.jpg" alt="Bhaktapur" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bhaktapur</h3>
+                        <p>"City of Devotees." Known for its well-preserved medieval art, pottery square, and the
+                            exquisite 55-Window Palace.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Annapurna Circuit -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/annapurna.jpg" alt="Annapurna Circuit" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Annapurna Circuit</h3>
+                        <p>One of the wold's classic long-distance treks, circling the Annapurna Massif and crossing the
+                            Thorong La Pass.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Nagarkot -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Nepal/nagarkot.jpg" alt="Nagarkot" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nagarkot</h3>
+                        <p>A hill station near Kathmandu famous for its sunrise views over the Himalayas, including
+                            Everest on a clear day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Nepalese Culture</h2>
+                <p class="section-subtitle">A harmonious blend of Hinduism, Buddhism, and mountain resilience.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Namaste -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Nepal/namaste.jpg');">
+                        <div class="culture-icon">&#128591;</div> <!-- Praying hands -->
+                        <div class="culture-text">
+                            <h4>Namaste</h4>
+                            <p>The universal greeting. Palms pressed together near the heart, meaning "The divine in me
+                                bows to the divine in you."</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Dal Bhat -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Nepal/dalbhat.jpg');">
+                        <div class="culture-icon">&#127835;</div> <!-- Rice -->
+                        <div class="culture-text">
+                            <h4>Dal Bhat Power</h4>
+                            <p>"Dal Bhat Power, 24 Hour!" The staple meal of lentil soup, rice, and curry eaten twice a
+                                day by locals.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Sherpa Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Nepal/sherpa.jpg');">
+                        <div class="culture-icon">&#129495;</div> <!-- Climber-ish/Person -->
+                        <div class="culture-text">
+                            <h4>The Sherpas</h4>
+                            <p>Renowned for their mountaineering skills and unmatched endurance at high altitudes, they
+                                are the guardians of the Himalayas.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kumari -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Nepal/kumari.jpg');">
+                        <div class="culture-icon">&#128081;</div> <!-- Crown -->
+                        <div class="culture-text">
+                            <h4>The Kumari</h4>
+                            <p>The Living Goddess. A young girl selected from the Newar community who is worshipped as
+                                the incarnation of Taleju.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Prayer Flags -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Nepal/flags.jpg');">
+                        <div class="culture-icon">&#127884;</div> <!-- Bunting/Flags -->
+                        <div class="culture-text">
+                            <h4>Prayer Flags</h4>
+                            <p>Colorful flags (blue, white, red, green, yellow) hung in high places to spread prayers
+                                and compassion on the wind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Nepali)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Nepali Phrasebook</h2>
+                <p class="section-subtitle">Nepali is written in the Devanagari script. It is polite and expressive.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Nepali</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Namaste</td>
+                                <td>Na-mas-tay</td>
+                                <td>Hello / Greetings</td>
+                                <td><button class="audio-btn" data-phrase="Namaste" data-lang="ne-NP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dhanyabad</td>
+                                <td>Dhan-ya-baad</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Dhanyabad" data-lang="ne-NP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sanchai hunuहुन्छ?</td>
+                                <td>San-chai hu-nu-hun-cha</td>
+                                <td>How are you? (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Sanchai hunuहुन्छ"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ma sanchai chu</td>
+                                <td>Ma san-chai chu</td>
+                                <td>I am fine</td>
+                                <td><button class="audio-btn" data-phrase="Ma sanchai chu"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ho / Haina</td>
+                                <td>Ho / Hai-na</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ho Haina" data-lang="ne-NP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Malai thaha chaina</td>
+                                <td>Ma-lai tha-ha chai-na</td>
+                                <td>I don't know</td>
+                                <td><button class="audio-btn" data-phrase="Malai thaha chaina"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kati paisa ho?</td>
+                                <td>Ka-ti pai-sa ho</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Kati paisa ho"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mahango bhayo</td>
+                                <td>Ma-han-go bha-yo</td>
+                                <td>It's too expensive</td>
+                                <td><button class="audio-btn" data-phrase="Mahango bhayo"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mitho cha</td>
+                                <td>Mee-tho cha</td>
+                                <td>It is tasty</td>
+                                <td><button class="audio-btn" data-phrase="Mitho cha" data-lang="ne-NP">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Feri bhetaula</td>
+                                <td>Fe-ri bhay-tau-la</td>
+                                <td>See you again</td>
+                                <td><button class="audio-btn" data-phrase="Feri bhetaula"
+                                        data-lang="ne-NP">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Nepal on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Nepal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

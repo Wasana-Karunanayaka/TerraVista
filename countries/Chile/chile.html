@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Chile</title>
+
+    <meta name="description"
+        content="Discover Chile, the longest country in the world. From the arid Atacama Desert to the glaciers of Patagonia and the mysteries of Easter Island.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR CHILE -->
+    <style>
+        :root {
+            /* Chile Red (Primary) - Distinct from Home/France Blue */
+            --theme-primary: #D52B1E;
+            /* Chile Blue (Secondary/Accent) */
+            --theme-secondary: #0039A6;
+            --theme-bg-light: #fofcfc;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #0039A6;
+            /* Blue blob for contrast against Red theme */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text for contrast on Blue secondary if needed, 
+           but our secondary is Dark Blue, so white text is good. */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+        }
+
+        /* Specific gradient for Chile Title */
+        .country-title {
+            background: linear-gradient(135deg, #D52B1E 0%, #0039A6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Chile/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Chile</h1>
+            <p class="country-slogan">"Where the Impossible is Possible"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Chilean Peso (CLP)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127757;</div>
+                <div class="stat-label">Geography</div>
+                <div class="stat-value">Longest Country (N-S)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (90 Days)</div>
+            </div>
+
+            <!-- Flag Card -->
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Chile</h2>
+            <p class="section-subtitle">A land of extremes, featuring the driest deserts, tallest volcanoes, and ancient
+                glaciers.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Torres del Paine -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/torres.jpg" alt="Torres del Paine" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Torres del Paine</h3>
+                        <p>The crown jewel of Patagonia. Famous for its granite towers, turquoise lakes, and the 'W'
+                            Trek.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Easter Island (Rapa Nui) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/easter-island.jpg" alt="Easter Island" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rapa Nui</h3>
+                        <p>One of the most isolated places on Earth, home to the mysterious and massive Moai statues.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. San Pedro de Atacama -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/atacama.jpg" alt="Atacama Desert" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Atacama Desert</h3>
+                        <p>The driest non-polar desert in the world. Explore the Moon Valley, geysers, and world-class
+                            stargazing.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Santiago -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/santiago.jpg" alt="Santiago" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Santiago</h3>
+                        <p>The cosmopolitan capital surrounded by the Andes. A blend of colonial history and modern
+                            skyscrapers.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Valparaíso -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/valparaiso.jpg" alt="Valparaíso" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Valparaíso</h3>
+                        <p>A bohemian port city known for its colorful cliffside homes, funicular elevators, and street
+                            art.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Chiloé Archipelago -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/chiloe.jpg" alt="Chiloé" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chiloé</h3>
+                        <p>A misty island of myths, unique wooden churches (UNESCO), and houses on stilts (Palafitos).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7. Lake District (Pucón) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/pucon.jpg" alt="Pucón" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pucón & Lake District</h3>
+                        <p>The adventure capital. Climb the active Villarrica Volcano, relax in hot springs, or ski in
+                            winter.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Wine Valleys (Colchagua/Maipo) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Chile/wine.jpg" alt="Wine Valley" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wine Valleys</h3>
+                        <p>World-renowned vineyards producing Chile's signature Carmenère and Cabernet Sauvignon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Chilean Culture</h2>
+                <p class="section-subtitle">A culture shaped by isolation, poetry, and resilience.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Wine Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Chile/wine-culture.jpg');">
+                        <div class="culture-icon">&#127863;</div>
+                        <div class="culture-text">
+                            <h4>Vino Chileno</h4>
+                            <p>Chile is a wine paradise. The rediscovery of the Carmenère grape, long thought extinct,
+                                is a national pride.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Cueca (Dance) -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Chile/cueca.jpg');">
+                        <div class="culture-icon">&#128131;</div>
+                        <div class="culture-text">
+                            <h4>La Cueca</h4>
+                            <p>The national dance mimicking the courtship of a rooster and hen. Essential during
+                                independence celebrations.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Land of Poets -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Chile/poetry.jpg');">
+                        <div class="culture-icon">&#9997;</div>
+                        <div class="culture-text">
+                            <h4>Land of Poets</h4>
+                            <p>Home to two Nobel laureates in Literature: Pablo Neruda and Gabriela Mistral. Poetry is
+                                deeply revered.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Fiestas Patrias -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Chile/fiestas.jpg');">
+                        <div class="culture-icon">&#127881;</div>
+                        <div class="culture-text">
+                            <h4>Fiestas Patrias (Dieciocho)</h4>
+                            <p>Every September 18th, the country stops for a week of BBQ (Asado), fondas (parties), and
+                                national pride.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Mapuche Heritage -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Chile/mapuche.jpg');">
+                        <div class="culture-icon">&#129696;</div> <!-- Drum/Cultural symbol -->
+                        <div class="culture-text">
+                            <h4>Mapuche Heritage</h4>
+                            <p>The "People of the Earth" have a rich resilient culture, famous for silver jewelry,
+                                textiles, and medicine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Chilean Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Chilean Phrasebook</h2>
+                <p class="section-subtitle">Chilean Spanish is fast and full of unique slang ("Chilenismos").</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Chilean Spanish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>¡Hola! / ¡Aló!</td>
+                                <td>Oh-lah / Ah-loh</td>
+                                <td>Hello / Hello (Phone)</td>
+                                <td><button class="audio-btn" data-phrase="Hola Aló" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¿Cachai?</td>
+                                <td>Kah-chai</td>
+                                <td>Do you understand? (Get it?)</td>
+                                <td><button class="audio-btn" data-phrase="¿Cachai?" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bacán</td>
+                                <td>Bah-kahn</td>
+                                <td>Cool / Awesome</td>
+                                <td><button class="audio-btn" data-phrase="Bacán" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Al tiro</td>
+                                <td>Al tee-roh</td>
+                                <td>Right away / Immediately</td>
+                                <td><button class="audio-btn" data-phrase="Al tiro" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¿Cómo estai?</td>
+                                <td>Koh-moh ehs-tai</td>
+                                <td>How are you? (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="¿Cómo estai?"
+                                        data-lang="es-CL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sí apo</td>
+                                <td>See ah-poh</td>
+                                <td>Yes, indeed / Yeah sure</td>
+                                <td><button class="audio-btn" data-phrase="Sí apo" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fome</td>
+                                <td>Foh-meh</td>
+                                <td>Boring / Lame</td>
+                                <td><button class="audio-btn" data-phrase="Fome" data-lang="es-CL">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Grah-syahs</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>La micro</td>
+                                <td>Lah mee-kro</td>
+                                <td>The city bus</td>
+                                <td><button class="audio-btn" data-phrase="La micro" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fah-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-CL">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Chile on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Chile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore South Africa</title>
+
+    <meta name="description"
+        content="The Rainbow Nation. Experience the ultimate safari, stunning coastal drives, world-class vineyards, and a vibrant cultural heritage.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SOUTH AFRICA -->
+    <style>
+        :root {
+            /* SA Flag Green */
+            --theme-primary: #007749;
+            /* SA Flag Gold */
+            --theme-secondary: #FFB81C;
+            --theme-bg-light: #f4fdf8;
+            --theme-text-dark: #1a2e1a;
+        }
+
+        .culture-section::before {
+            background: #007749;
+            /* Green blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Gold button, Dark text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #1a2e1a !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e5a500 !important;
+        }
+
+        /* Gradient for Title: Green to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #007749 0%, #FFB81C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/SouthAfrica/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">South Africa</h1>
+            <p class="country-slogan">"Inspiring New Ways"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#82;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">South African Rand (ZAR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Languages</div>
+                <div class="stat-value">11 Official Languages</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#129425;</div>
+                <div class="stat-label">Wildlife</div>
+                <div class="stat-value">The Big Five</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in South Africa</h2>
+            <p class="section-subtitle">A world in one country. From deserts and savannas to mountains and beaches.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Cape Town & Table Mountain -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/capetown.jpg" alt="Table Mountain" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Table Mountain</h3>
+                        <p>One of the New 7 Wonders of Nature. Take the cable car or hike to the top for panoramic views
+                            of Cape Town and the ocean.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Kruger National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/kruger.jpg" alt="Kruger National Park"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kruger National Park</h3>
+                        <p>One of Africa's largest game reserves. The best place to see the Big Five: Lion, Leopard,
+                            Rhino, Elephant, and Buffalo.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Cape Winelands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/winelands.jpg" alt="Stellenbosch" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cape Winelands</h3>
+                        <p>Stellenbosch and Franschhoek. World-class vineyards set against dramatic mountains. Try the
+                            local Pinotage.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Garden Route -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/gardenroute.jpg" alt="Garden Route" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Garden Route</h3>
+                        <p>A scenic 300km stretch of coast. Lush forests, lagoons, and sandy beaches. Don't miss the
+                            Knysna Heads and Tsitsikamma.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Robben Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/robben.jpg" alt="Robben Island" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Robben Island</h3>
+                        <p>A UNESCO site. The prison island where Nelson Mandela was held for 18 years. A poignant
+                            symbol of the triumph of democracy.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Blyde River Canyon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/blyde.jpg" alt="Blyde River Canyon" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Blyde River Canyon</h3>
+                        <p>One of the largest green canyons in the world. Famous for the "Three Rondavels" rock
+                            formations and Bourke's Luck Potholes.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Boulders Beach -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/penguins.jpg" alt="Penguins" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Boulders Beach</h3>
+                        <p>Simon's Town. The only place in the world where you can get close to a colony of African
+                            Penguins in the wild.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Drakensberg Mountains -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/drakensberg.jpg" alt="Drakensberg" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Drakensberg</h3>
+                        <p>"Mountain of Dragons." The highest mountain range in Southern Africa, offering incredible
+                            hiking and ancient San rock art.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Soweto -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/soweto.jpg" alt="Soweto" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Soweto</h3>
+                        <p>South Western Townships. Visit Vilakazi Street (home to two Nobel laureates) and learn about
+                            the anti-apartheid struggle.</p>
+                    </div>
+                </div>
+
+                <!-- 10. V&A Waterfront -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/SouthAfrica/waterfront.jpg" alt="V&A Waterfront" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>V&A Waterfront</h3>
+                        <p>Cape Town's working harbor. A hub for shopping, dining, and entertainment, with the Zeitz
+                            MOCAA art museum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">The Rainbow Nation</h2>
+                <p class="section-subtitle">A vibrant mix of African, European, and Asian cultures born from a complex
+                    history.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Ubuntu -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SouthAfrica/ubuntu.jpg');">
+                        <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                        <div class="culture-text">
+                            <h4>Ubuntu</h4>
+                            <p>"I am because we are." A philosophy of human interconnectedness, compassion, and
+                                community spirit.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Braai -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SouthAfrica/braai.jpg');">
+                        <div class="culture-icon">&#127830;</div> <!-- Meat on bone -->
+                        <div class="culture-text">
+                            <h4>The Braai</h4>
+                            <p>Barbecue. It's a religion. Wood fires (not gas!), Boerewors (sausage), and gathering with
+                                friends is essential.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Beadwork -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SouthAfrica/beads.jpg');">
+                        <div class="culture-icon">&#128187;</div> <!-- Arts -->
+                        <div class="culture-text">
+                            <h4>Beadwork</h4>
+                            <p>Traditional Zulu and Ndebele beadwork is complex art. Different colors and patterns
+                                convey messages of love and status.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Rugby -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SouthAfrica/rugby.jpg');">
+                        <div class="culture-icon">&#127944;</div> <!-- Rugby ball -->
+                        <div class="culture-text">
+                            <h4>Springboks</h4>
+                            <p>Rugby unites the nation. Winning the World Cup are moments of massive national pride and
+                                celebration.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Cape Malay Cuisine -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/SouthAfrica/food.jpg');">
+                        <div class="culture-icon">&#127798;</div> <!-- Spice -->
+                        <div class="culture-text">
+                            <h4>Cape Malay Cuisine</h4>
+                            <p>A fusion of Dutch and Eastern influences. Famous for aromatic curries, bobotie (minced
+                                meat bake), and koeksisters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Mix)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">South African Slang</h2>
+                <p class="section-subtitle">English is widely spoken, but these words from Afrikaans/Zulu/Xhosa are
+                    omnipresent.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Slang / Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Howzit?</td>
+                                <td>How-zit</td>
+                                <td>Hello / How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Howzit" data-lang="en-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sawubona (Zulu)</td>
+                                <td>Sa-wu-bo-na</td>
+                                <td>Hello (I see you)</td>
+                                <td><button class="audio-btn" data-phrase="Sawubona" data-lang="zu-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lekker</td>
+                                <td>Lekk-ah</td>
+                                <td>Great / Good / Tasty</td>
+                                <td><button class="audio-btn" data-phrase="Lekker" data-lang="af-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dankie (Afrikaans)</td>
+                                <td>Dun-key</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Dankie" data-lang="af-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ngiyabonga (Zulu)</td>
+                                <td>N-gi-ya-bong-a</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Ngiyabonga"
+                                        data-lang="zu-ZA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Yebo</td>
+                                <td>Yeh-bo</td>
+                                <td>Yes</td>
+                                <td><button class="audio-btn" data-phrase="Yebo" data-lang="zu-ZA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Just now / Now now</td>
+                                <td>Just now</td>
+                                <td>Later / undefined time (Not actually now!)</td>
+                                <td><button class="audio-btn" data-phrase="Just now" data-lang="en-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Robot</td>
+                                <td>Ro-bot</td>
+                                <td>Traffic Light</td>
+                                <td><button class="audio-btn" data-phrase="Robot" data-lang="en-ZA">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Eish!</td>
+                                <td>Aysh</td>
+                                <td>Oh no / Wow (Expresses surprise or resignation)</td>
+                                <td><button class="audio-btn" data-phrase="Eish" data-lang="en-ZA">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sharp Sharp</td>
+                                <td>Sharp Sharp</td>
+                                <td>Goodbye / All good / Okay</td>
+                                <td><button class="audio-btn" data-phrase="Sharp Sharp"
+                                        data-lang="en-ZA">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore South Africa on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of South Africa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

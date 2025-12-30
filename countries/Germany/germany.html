@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Germany</title>
+
+    <meta name="description"
+        content="Discover the heart of Europe. From the fairytale Neuschwanstein Castle to the vibrant streets of Berlin and the traditions of Bavaria.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR GERMANY -->
+    <style>
+        :root {
+            /* German Red */
+            --theme-primary: #DD0000;
+            /* German Gold */
+            --theme-secondary: #FFCE00;
+            --theme-bg-light: #fefdfa;
+            --theme-text-dark: #1a1a1a;
+        }
+
+        .culture-section::before {
+            background: #FFCE00;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #b30000 !important;
+        }
+
+        /* Gradient for Title: Black to Red to Gold (Flag Colors) */
+        .country-title {
+            background: linear-gradient(135deg, #000000 0%, #DD0000 50%, #FFCE00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Germany/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Germany</h1>
+            <p class="country-slogan">"Land of Poets and Thinkers"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">German (Deutsch)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127984;</div>
+                <div class="stat-label">Castles</div>
+                <div class="stat-value">25,000+</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Germany</h2>
+            <p class="section-subtitle">A country of fairytale villages, vibrant metropolises, and deep forests.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Brandenburg Gate (Berlin) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/berlin.jpg" alt="Brandenburg Gate" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Berlin</h3>
+                        <p>The hip, historic capital. Walk through the Brandenburg Gate, see the remains of the Berlin
+                            Wall, and visit Museum Island.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Neuschwanstein Castle -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/neuschwanstein.jpg" alt="Neuschwanstein Castle"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Neuschwanstein Castle</h3>
+                        <p>The real-life Disney castle. King Ludwig II's hilltop palace in Bavaria is the ultimate
+                            romantic fairytale architecture.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Cologne Cathedral -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/cologne.jpg" alt="Cologne Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cologne Cathedral</h3>
+                        <p>A masterpiece of Gothic architecture. Its twin spires dominate the skyline and survived WWII.
+                            Climb the 533 steps for a view.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Munich (Marienplatz) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/munich.jpg" alt="Munich" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Munich</h3>
+                        <p>The capital of Bavaria. Famous for Marienplatz, English Garden, and beer halls like the
+                            Hofbräuhaus.</p>
+                    </div>
+                </div>
+
+                <!-- 5. The Black Forest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/blackforest.jpg" alt="Black Forest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Black Forest</h3>
+                        <p>A region of dense pines, cuckoo clocks, and hiking trails. The setting for many Brothers
+                            Grimm fairytales.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Heidelberg -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/heidelberg.jpg" alt="Heidelberg" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Heidelberg</h3>
+                        <p>Germany's oldest university town. A romantic cityscape featuring a red sandstone castle ruin
+                            and a baroque Old Town.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Hamburg -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/hamburg.jpg" alt="Hamburg" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hamburg</h3>
+                        <p>The "Gateway to the World." Explore the massive port, the historic Speicherstadt warehouses,
+                            and the Elbphilharmonie.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Rothenburg ob der Tauber -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/rothenburg.jpg" alt="Rothenburg ob der Tauber"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rothenburg ob der Tauber</h3>
+                        <p>The best-preserved medieval walled town in Germany. Walking its cobblestone streets feels
+                            like stepping back 500 years.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Dresden -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Germany/dresden.jpg" alt="Dresden" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dresden</h3>
+                        <p>"Florence on the Elbe." restored to its former glory. See the Frauenkirche and the Zwinger
+                            Palace art galleries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">German Culture</h2>
+                <p class="section-subtitle">A blend of efficiency, deep traditions, and Gemütlichkeit (coziness).</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Oktoberfest -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Germany/beer.jpg');">
+                        <div class="culture-icon">&#127867;</div>
+                        <div class="culture-text">
+                            <h4>Beer Culture</h4>
+                            <p>Germany has 5,000+ beer brands. Oktoberfest is the world's largest folk festival,
+                                celebrating Bavarian purity laws.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Christmas Markets -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Germany/christmas.jpg');">
+                        <div class="culture-icon">&#127876;</div>
+                        <div class="culture-text">
+                            <h4>Weihnachtsmärkte</h4>
+                            <p>Christmas Markets are pure magic. Stalls sell Glühwein (mulled wine), gingerbread, and
+                                crafts in every town square.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Bread -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Germany/bread.jpg');">
+                        <div class="culture-icon">&#129366;</div> <!-- Bread -->
+                        <div class="culture-text">
+                            <h4>Brotkultur</h4>
+                            <p>UNESCO-recognized. With over 3,000 varieties, bread is serious business. Dinner is often
+                                "Abendbrot" (Evening Bread).</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Autobahn -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Germany/autobahn.jpg');">
+                        <div class="culture-icon">&#128663;</div>
+                        <div class="culture-text">
+                            <h4>The Autobahn</h4>
+                            <p>Famous for having sections with no speed limit. It represents German engineering and the
+                                love for high-performance cars.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Ordnung -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Germany/clock.jpg');">
+                        <div class="culture-icon">&#9200;</div>
+                        <div class="culture-text">
+                            <h4>Ordnung & Punctuality</h4>
+                            <p>"Order must be." Punctuality is a sign of respect. Don't be late, and definitely don't
+                                jaywalk at a red light!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (German)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">German Phrasebook</h2>
+                <p class="section-subtitle">German can sound harsh, but it's very logical. Plurals often end in -en.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>German</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hallo / Guten Tag</td>
+                                <td>Ha-loh / Goo-ten Tahg</td>
+                                <td>Hello / Good Day</td>
+                                <td><button class="audio-btn" data-phrase="Hallo Guten Tag"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Danke schön</td>
+                                <td>Dan-keh shurn</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Danke schön"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bitte schön</td>
+                                <td>Bit-teh shurn</td>
+                                <td>You're welcome / Please</td>
+                                <td><button class="audio-btn" data-phrase="Bitte schön"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tschüss</td>
+                                <td>Ch-uuss</td>
+                                <td>Bye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Tschüss" data-lang="de-DE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Entschuldigung</td>
+                                <td>Ent-shool-di-goong</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Entschuldigung"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sprechen Sie Englisch?</td>
+                                <td>Shprek-en zee Eng-lish</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Sprechen Sie Englisch"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Wie geht's?</td>
+                                <td>Vee gates</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Wie geht's"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ein Bier, bitte</td>
+                                <td>Ine beer bit-teh</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Ein Bier bitte"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Prost!</td>
+                                <td>Prohst</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Prost" data-lang="de-DE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Zahlen, bitte</td>
+                                <td>Tzah-len bit-teh</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="Zahlen bitte"
+                                        data-lang="de-DE">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Germany on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Germany</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

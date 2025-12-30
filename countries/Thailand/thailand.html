@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Thailand</title>
+
+    <meta name="description"
+        content="The Land of Smiles. Discover ornate temples, tropical beaches, bustling night markets, and the world's best street food.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR THAILAND -->
+    <style>
+        :root {
+            /* Siam Gold */
+            --theme-primary: #F4C430;
+            /* Royal Purple (Orchid) */
+            --theme-secondary: #9932CC;
+            --theme-bg-light: #fefcf5;
+            --theme-text-dark: #201a05;
+        }
+
+        .culture-section::before {
+            background: #F4C430;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Purple button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #6a1b9a !important;
+        }
+
+        /* Gradient for Title: Gold to Purple */
+        .country-title {
+            background: linear-gradient(135deg, #F4C430 0%, #9932CC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Thailand/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Thailand</h1>
+            <p class="country-slogan">"The Land of Smiles"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#3647;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Thai Baht (THB)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Thai</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128024;</div>
+                <div class="stat-label">Icon</div>
+                <div class="stat-value">Elephant</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Thailand</h2>
+            <p class="section-subtitle">From the chaotic energy of Bangkok to the serene islands of the Andaman Sea.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Grand Palace -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/palace.jpg" alt="Grand Palace" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Grand Palace</h3>
+                        <p>Bangkok. The spiritual heart of the Kingdom. A dazzling complex of gold spires and the home
+                            of the Emerald Buddha.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Chiang Mai -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/chiangmai.jpg" alt="Chiang Mai" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chiang Mai</h3>
+                        <p>The Rose of the North. Famous for its misty mountains, hundreds of ancient temples, and
+                            ethical elephant sanctuaries.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Phi Phi Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/phiphi.jpg" alt="Phi Phi Islands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Phi Phi Islands</h3>
+                        <p>The ultimate tropical paradise. Turquoise waters, limestone cliffs, and the famous Maya Bay
+                            (The Beach).</p>
+                    </div>
+                </div>
+
+                <!-- 4. Wat Arun -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/watarun.jpg" alt="Wat Arun" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wat Arun</h3>
+                        <p>The Temple of Dawn. An iconic riverside temple in Bangkok encrusted with colorful porcelain.
+                            Best viewed at sunset.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Ayutthaya -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/ayutthaya.jpg" alt="Ayutthaya" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ayutthaya</h3>
+                        <p>The ancient capital. Explore the UNESCO ruins of the Siamese kingdom, including the Buddha
+                            head trapped in tree roots.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Railay Beach -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/railay.jpg" alt="Railay Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Railay Beach</h3>
+                        <p>Krabi. Accessible only by boat. Famous for its towering limestone karsts which attract rock
+                            climbers from around the globe.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Khao Sok National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/khaosok.jpg" alt="Khao Sok" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Khao Sok National Park</h3>
+                        <p>A jungle older than the Amazon. Stay in a floating bungalow on Cheow Lan Lake and spot wild
+                            elephants and gibbons.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Floating Markets -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/market.jpg" alt="Floating Market" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Damnoen Saduak</h3>
+                        <p>The famous floating market. Boats piled high with tropical fruits, coconut pancakes, and
+                            noodles navigate the canals.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Sukhothai -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/sukhothai.jpg" alt="Sukhothai" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sukhothai</h3>
+                        <p>Dawn of Happiness. The first capital of Siam. Rent a bike and cycle through the peaceful
+                            historical park.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Pai -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Thailand/pai.jpg" alt="Pai" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pai</h3>
+                        <p>A bohemian mountain village. Known for its relaxed vibe, waterfalls, hot springs, and Pai
+                            Canyon sunsets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Thai Culture</h2>
+                <p class="section-subtitle">Deeply spiritual, famously friendly, and obsessed with food.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Street Food -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Thailand/padthai.jpg');">
+                        <div class="culture-icon">&#127836;</div> <!-- Noodles -->
+                        <div class="culture-text">
+                            <h4>Street Food</h4>
+                            <p>Bangkok is the street food capital of the world. From Pad Thai to Mango Sticky Rice, it's
+                                cheap, safe, and delicious.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Wai -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Thailand/wai.jpg');">
+                        <div class="culture-icon">&#128591;</div> <!-- Praying hands -->
+                        <div class="culture-text">
+                            <h4>The Wai</h4>
+                            <p>The traditional greeting. Palms pressed together with a slight bow. It shows respect
+                                ("Sawasdee"). Use it interacting with elders.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Buddhism -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Thailand/monk.jpg');">
+                        <div class="culture-icon">&#128330;</div> <!-- Temple -->
+                        <div class="culture-text">
+                            <h4>Buddhism</h4>
+                            <p>95% of Thais are Buddhist. Monks in orange robes are revered. Always dress modestly
+                                (cover shoulders/knees) in temples.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Muay Thai -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Thailand/muaythai.jpg');">
+                        <div class="culture-icon">&#129354;</div> <!-- Boxing glove -->
+                        <div class="culture-text">
+                            <h4>Muay Thai</h4>
+                            <p>The Art of Eight Limbs. The national sport utilizing fists, elbows, knees, and shins.
+                                Watch a match at Lumpinee Stadium.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Songkran -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Thailand/songkran.jpg');">
+                        <div class="culture-icon">&#128166;</div> <!-- Water -->
+                        <div class="culture-text">
+                            <h4>Songkran</h4>
+                            <p>Thai New Year (April). The world's biggest water fight. Originally a cleansing ritual,
+                                now a nationwide party.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Thai)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Thai Phrasebook</h2>
+                <p class="section-subtitle">Tones are hard, but a smile goes a long way. End sentences with "Khrup"
+                    (male) or "Ka" (female).</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sawasdee (-khrup/ka)</td>
+                                <td>Sa-wat-dee</td>
+                                <td>Hello / Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Sawasdee" data-lang="th-TH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kob khun (-khrup/ka)</td>
+                                <td>Kob-koon</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Kob khun" data-lang="th-TH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chai / Mai Chai</td>
+                                <td>Chai / My Chai</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Chai Mai Chai"
+                                        data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sabai dee mai?</td>
+                                <td>Sa-bai dee my</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Sabai dee mai"
+                                        data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mai pen rai</td>
+                                <td>My pen ry</td>
+                                <td>No worries / It's okay (Very important phrase!)</td>
+                                <td><button class="audio-btn" data-phrase="Mai pen rai"
+                                        data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tao rai?</td>
+                                <td>Tow ry</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Tao rai" data-lang="th-TH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aroi</td>
+                                <td>A-roy</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="Aroi" data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Nam</td>
+                                <td>Num</td>
+                                <td>Water</td>
+                                <td><button class="audio-btn" data-phrase="Nam" data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hong nam</td>
+                                <td>Hong num</td>
+                                <td>Toilet / Bathroom</td>
+                                <td><button class="audio-btn" data-phrase="Hong nam" data-lang="th-TH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phet</td>
+                                <td>Pet</td>
+                                <td>Spicy</td>
+                                <td><button class="audio-btn" data-phrase="Phet" data-lang="th-TH">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Thailand on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Thailand</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

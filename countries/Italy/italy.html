@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Italy</title>
+
+    <meta name="description"
+        content="La Dolce Vita. The land of art, history, food, and fashion. Explore the ruins of Rome, the canals of Venice, and the hills of Tuscany.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR ITALY -->
+    <style>
+        :root {
+            /* Italian Green */
+            --theme-primary: #009246;
+            /* Italian Red */
+            --theme-secondary: #CE2B37;
+            /* Off White */
+            --theme-bg-light: #f9fdf9;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #009246;
+            /* Green blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Green button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #006b33 !important;
+        }
+
+        /* Gradient for Title: Green to Red */
+        .country-title {
+            background: linear-gradient(135deg, #009246 0%, #CE2B37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Italy/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Italy</h1>
+            <p class="country-slogan">"Il Bel Paese" (The Beautiful Country)</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Italian</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127829;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Art & Food</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">An Open-Air Museum</h2>
+            <p class="section-subtitle">Home to the most UNESCO World Heritage Sites in the world.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Rome -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/rome.jpg" alt="Colosseum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rome (Roma)</h3>
+                        <p>The Eternal City. Step back in time at the Colosseum and Roman Forum, and throw a coin into
+                            the Trevi Fountain.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Venice -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/venice.jpg" alt="Venice Canals" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Venice (Venezia)</h3>
+                        <p>The Floating City. A marvel of engineering built on lagoons. Ride a gondola through the Grand
+                            Canal and visit St. Mark's Square.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Florence -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/florence.jpg" alt="Duomo Florence" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Florence (Firenze)</h3>
+                        <p>Cradle of the Renaissance. Home to Michelangelo's David, the Uffizi Gallery, and the iconic
+                            Duomo.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Amalfi Coast -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/amalfi.jpg" alt="Positano" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amalfi Coast</h3>
+                        <p>A vertical landscape. Dramatic cliffs, pastel-colored villages like Positano, and the
+                            glamorous island of Capri nearby.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Cinque Terre -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/cinqueterre.jpg" alt="Manarola" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cinque Terre</h3>
+                        <p>Five Lands. Five colorful fishing villages perched on rugged cliffs, connected by scenic
+                            hiking trails and trains.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Vatican City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/vatican.jpg" alt="St Peters Basilica" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Vatican City</h3>
+                        <p>The smallest country in the world (inside Rome). See the Sistine Chapel ceiling by
+                            Michelangelo and St. Peter's Basilica.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pompeii -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/pompeii.jpg" alt="Pompeii Ruins" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pompeii</h3>
+                        <p>Frozen in time. An ancient Roman city buried by the ash of Mt. Vesuvius in 79 AD, offering a
+                            unique glimpse into the past.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Milan -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/milan.jpg" alt="Milan Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Milan (Milano)</h3>
+                        <p>Fashion & Finance. The global capital of design and fashion, home to the massive Gothic Duomo
+                            and Da Vinci's Last Supper.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Sicily -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Italy/sicily.jpg" alt="Taormina" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sicily</h3>
+                        <p>The crossroads of the Mediterranean. Ancient Greek valleys of temples, Mt. Etna volcano, and
+                            distinct street food.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Italian Lifestyle</h2>
+                <p class="section-subtitle">Food, Art, and "La Dolce Vita".</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Culinary Art -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Italy/pasta.jpg');">
+                        <div class="culture-icon">&#127837;</div> <!-- Pasta -->
+                        <div class="culture-text">
+                            <h4>Culinary Art</h4>
+                            <p>Food is sacred. Every region has specialties (Pizza in Naples, Carbonara in Rome). Meals
+                                are long, social events.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. La Dolce Vita -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Italy/vespa.jpg');">
+                        <div class="culture-icon">&#128757;</div> <!-- Scooter -->
+                        <div class="culture-text">
+                            <h4>La Dolce Vita</h4>
+                            <p>"The Sweet Life." A philosophy of enjoying life's pleasures: good food, good company, and
+                                taking time to relax.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Coffee Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Italy/espresso.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Espresso Rules</h4>
+                            <p>Coffee is drunk standing at the bar. Cappuccino is strictly for breakfast; ordering one
+                                after 11 AM is a tourist sin.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Renaissance Art -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Italy/art.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Palette -->
+                        <div class="culture-text">
+                            <h4>Art & Architecture</h4>
+                            <p>Italy holds the greatest number of UNESCO sites. The legacy of Da Vinci, Michelangelo,
+                                and Raphael is visible everywhere.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Passeggiata -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Italy/walk.jpg');">
+                        <div class="culture-icon">&#128694;</div> <!-- Walking -->
+                        <div class="culture-text">
+                            <h4>La Passeggiata</h4>
+                            <p>The evening stroll. Between 5 PM and 8 PM, locals dress up and walk through the main
+                                streets to socialize and be seen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Italian)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Italian Phrasebook</h2>
+                <p class="section-subtitle">Italian is spoken with the hands as much as the mouth.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Italian</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ciao</td>
+                                <td>Chow</td>
+                                <td>Hello / Goodbye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Ciao" data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Buongiorno</td>
+                                <td>Bwon-jor-no</td>
+                                <td>Good morning/day</td>
+                                <td><button class="audio-btn" data-phrase="Buongiorno"
+                                        data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Buonasera</td>
+                                <td>Bwona-seh-ra</td>
+                                <td>Good evening</td>
+                                <td><button class="audio-btn" data-phrase="Buonasera" data-lang="it-IT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Grazie</td>
+                                <td>Grat-zee-eh</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Grazie" data-lang="it-IT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prego</td>
+                                <td>Preh-go</td>
+                                <td>You're welcome / Please</td>
+                                <td><button class="audio-btn" data-phrase="Prego" data-lang="it-IT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Per favore</td>
+                                <td>Pehr fa-vo-reh</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Per favore"
+                                        data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Scusi</td>
+                                <td>Skoo-zee</td>
+                                <td>Excuse me (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Scusi" data-lang="it-IT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Il conto, per favore</td>
+                                <td>Eel kon-to per fa-vo-reh</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="Il conto per favore"
+                                        data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Dov'è il bagno?</td>
+                                <td>Doh-veh eel ban-yo</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Dov'è il bagno"
+                                        data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Non capisco</td>
+                                <td>Non ka-pee-sko</td>
+                                <td>I don't understand</td>
+                                <td><button class="audio-btn" data-phrase="Non capisco"
+                                        data-lang="it-IT">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Italy on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Italy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

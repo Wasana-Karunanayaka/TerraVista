@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Peru</title>
+
+    <meta name="description"
+        content="The heart of the Inca Empire. Explore Machu Picchu, the Amazon Rainforest, ancient culinary traditions, and vibrant Andean culture.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR PERU -->
+    <style>
+        :root {
+            /* Inca Red (Flag) */
+            --theme-primary: #D91023;
+            /* Andean Gold */
+            --theme-secondary: #C6A935;
+            --theme-bg-light: #fffdf7;
+            --theme-text-dark: #2b1d0e;
+        }
+
+        .culture-section::before {
+            background: #D91023;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Gold button, Dark text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #2b1d0e !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #a88d26 !important;
+        }
+
+        /* Gradient for Title: Red to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #D91023 0%, #C6A935 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Peru/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Peru</h1>
+            <p class="country-slogan">"Land of the Incas"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#83;&#47;&#46;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Peruvian Sol (PEN)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish & Quechua</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#129429;</div>
+                <div class="stat-label">Icon</div>
+                <div class="stat-value">Llama & Alpaca</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Peru</h2>
+            <p class="section-subtitle">A country of extreme biodiversity, from the dry coastal deserts to the high
+                Andes and lush Amazon.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Machu Picchu -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/machu.jpg" alt="Machu Picchu" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Machu Picchu</h3>
+                        <p>The Lost City of the Incas. Hidden in the misty Andes, this wonder of the world is a
+                            testament to ancient engineering.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Cusco -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/cusco.jpg" alt="Cusco" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cusco</h3>
+                        <p>The Imperial City. Once the capital of the Inca Empire, now a stunning blend of Inca walls
+                            and Spanish colonial architecture.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sacred Valley -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/valley.jpg" alt="Sacred Valley" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Sacred Valley</h3>
+                        <p>Urubamba. Dotted with ancient citadel ruins like Pisac and Ollantaytambo, and colorful local
+                            markets.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Rainbow Mountain -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/rainbow.jpg" alt="Rainbow Mountain" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rainbow Mountain</h3>
+                        <p>Vinicunca. A geological marvel where mineral deposits have striped the mountain in seven
+                            vibrant colors.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Lake Titicaca -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/titicaca.jpg" alt="Lake Titicaca" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lake Titicaca</h3>
+                        <p>The highest navigable lake in the world. Home to the Uros people who live on floating islands
+                            made of dried reeds.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Amazon Rainforest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/amazon.jpg" alt="Amazon Rainforest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amazon Rainforest</h3>
+                        <p>Enter via Puerto Maldonado or Iquitos. Explore the lungs of the Earth, incredible wildlife,
+                            and jungle lodges.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Huacachina -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/huacachina.jpg" alt="Huacachina" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Huacachina</h3>
+                        <p>A desert oasis west of Ica. A village surrounding a green lagoon, surrounded by massive sand
+                            dunes perfect for sandboarding.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Nazca Lines -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/nazca.jpg" alt="Nazca Lines" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nazca Lines</h3>
+                        <p>Mysterious ancient geoglyphs etched into the desert floor. Best viewed from a small plane to
+                            see the hummingbird, monkey, and spider.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Colca Canyon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/colca.jpg" alt="Colca Canyon" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Colca Canyon</h3>
+                        <p>Deeper than the Grand Canyon. The best place to watch gigantic Andean Condors soar on thermal
+                            currents.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Lima -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Peru/lima.jpg" alt="Lima" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lima</h3>
+                        <p>The Gastronomic Capital of the Americas. Visit the historic center, the seaside district of
+                            Miraflores, and world-class restaurants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Peruvian Heritage</h2>
+                <p class="section-subtitle">A fusion of Pre-Columbian roots, Spanish influence, and modern flair.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Ceviche -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Peru/ceviche.jpg');">
+                        <div class="culture-icon">&#127869;</div>
+                        <div class="culture-text">
+                            <h4>Ceviche</h4>
+                            <p>The national dish. Raw fish cured in fresh lime juice, spiced with ají peppers, and
+                                served with corn (choclo) and sweet potato.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Textiles -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Peru/textile.jpg');">
+                        <div class="culture-icon">&#129526;</div> <!-- Yarn/Thread -->
+                        <div class="culture-text">
+                            <h4>Andean Textiles</h4>
+                            <p>Woven by hand using alpaca or llama wool. The intricate patterns tell stories of the
+                                community and the cosmos.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Pachamama -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Peru/earth.jpg');">
+                        <div class="culture-icon">&#127757;</div> <!-- Earth -->
+                        <div class="culture-text">
+                            <h4>Pachamama</h4>
+                            <p>Mother Earth. Indigenous spirituality deeply respects the land. Offerings (pagos) are
+                                still made to ask for protection and harvest.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Alpacas & Llamas -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Peru/llama.jpg');">
+                        <div class="culture-icon">&#129429;</div> <!-- Llama -->
+                        <div class="culture-text">
+                            <h4>Camelids</h4>
+                            <p>Llamas were pack animals for the Incas; Alpacas are prized for their soft wool. You will
+                                see them everywhere in the highlands.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Inti Raymi -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Peru/inti.jpg');">
+                        <div class="culture-icon">&#9728;</div> <!-- Sun -->
+                        <div class="culture-text">
+                            <h4>Inti Raymi</h4>
+                            <p>The Festival of the Sun. Reenacted every June solstice in Cusco, celebrating the Inca sun
+                                god with massive processions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Spanish / Quechua)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Peruvian Spanish Phrases</h2>
+                <p class="section-subtitle">Peruvians speak clear Spanish with some local slang.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Spanish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hola</td>
+                                <td>Oh-la</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hola" data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Grah-see-as</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-PE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Buenos días</td>
+                                <td>Bweh-nos dee-as</td>
+                                <td>Good morning</td>
+                                <td><button class="audio-btn" data-phrase="Buenos días"
+                                        data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Cómo estás?</td>
+                                <td>Ko-mo es-tas</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="¿Cómo estás?"
+                                        data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Chévere / Bacán</td>
+                                <td>Che-ve-re / Ba-kan</td>
+                                <td>Cool / Awesome (Slang)</td>
+                                <td><button class="audio-btn" data-phrase="Chévere" data-lang="es-PE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¿Cuánto cuesta?</td>
+                                <td>Kwan-to kwes-ta</td>
+                                <td>How much does it cost?</td>
+                                <td><button class="audio-btn" data-phrase="¿Cuánto cuesta?"
+                                        data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fa-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-PE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>La cuenta, por favor</td>
+                                <td>La kwen-ta por fa-vor</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="La cuenta por favor"
+                                        data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¡Salud!</td>
+                                <td>Sa-lood</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="¡Salud!" data-lang="es-PE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hasta luego</td>
+                                <td>As-ta lwe-go</td>
+                                <td>See you later</td>
+                                <td><button class="audio-btn" data-phrase="Hasta luego"
+                                        data-lang="es-PE">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Peru on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Peru</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

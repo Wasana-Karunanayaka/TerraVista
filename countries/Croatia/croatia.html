@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Croatia</title>
+
+    <meta name="description"
+        content="Discover the Pearl of the Adriatic. From the walls of Dubrovnik and the waterfalls of Plitvice to the sun-soaked islands of Hvar and Korčula.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR CROATIA -->
+    <style>
+        :root {
+            /* Croatian Blue (Sea/Flag) */
+            --theme-primary: #171796;
+            /* Checkerboard Red */
+            --theme-secondary: #FF0000;
+            --theme-bg-light: #f4f8fb;
+            --theme-text-dark: #20202d;
+        }
+
+        .culture-section::before {
+            background: #FF0000;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #cc0000 !important;
+        }
+
+        /* Gradient for Title: Blue to Red */
+        .country-title {
+            background: linear-gradient(135deg, #171796 0%, #FF0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Croatia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Croatia</h1>
+            <p class="country-slogan">"Full of Life"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Croatian (Hrvatski)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127965;</div>
+                <div class="stat-label">Coastline</div>
+                <div class="stat-value">1,000+ Islands</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Croatia</h2>
+            <p class="section-subtitle">A stunning blend of Central European charm and Mediterranean magic.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Dubrovnik -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/dubrovnik.jpg" alt="Dubrovnik" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dubrovnik</h3>
+                        <p>The "Pearl of the Adriatic." Walk the massive medieval walls of this UNESCO city, famous as
+                            King's Landing.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Plitvice Lakes -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/plitvice.jpg" alt="Plitvice Lakes" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Plitvice Lakes</h3>
+                        <p>Croatia's most famous national park. 16 cascading terraced lakes ranging from azure to green,
+                            grey to blue.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Split -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/split.jpg" alt="Split" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Split</h3>
+                        <p>A living museum. The city center is built inside the ancient Palace of the Roman Emperor
+                            Diocletian.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Hvar Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/hvar.jpg" alt="Hvar" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hvar</h3>
+                        <p>The sunniest spot in Europe. Famous for lavender fields, Venetian architecture, and a
+                            glamorous nightlife scene.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Zadar -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/zadar.jpg" alt="Zadar" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zadar</h3>
+                        <p>Ancient history meets modern art. Listen to the Sea Organ played by the waves and watch the
+                            Sun Salutation light show.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Rovinj -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/rovinj.jpg" alt="Rovinj" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rovinj</h3>
+                        <p>The star of Istria. A colorful, cobblestoned fishing port dominated by the hilltop creation
+                            of St. Euphemia church.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pula -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/pula.jpg" alt="Pula" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pula</h3>
+                        <p>Home to the Pula Arena, one of the best-preserved Roman amphitheaters in the world, still
+                            used for concerts.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Krka National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/krka.jpg" alt="Krka National Park" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Krka National Park</h3>
+                        <p>Famous for the Skradinski Buk, a massive, clear natural pool with high waterfalls at one end.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 9. Zagreb -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/zagreb.jpg" alt="Zagreb" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zagreb</h3>
+                        <p>The capital city. Explore the medieval Upper Town (Gornji Grad), the vibrant markets, and
+                            unique museums.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Korčula -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Croatia/korcula.jpg" alt="Korčula" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Korčula</h3>
+                        <p>"Little Dubrovnik." A fortified medieval town on an island, reputed to be the birthplace of
+                            Marco Polo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Croatian Lifestyle</h2>
+                <p class="section-subtitle">Relaxed rhythms, ancient stones, and a love for the finer things.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Coffee Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Croatia/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div>
+                        <div class="culture-text">
+                            <h4>Kava (Coffee) Culture</h4>
+                            <p>It's not just a drink; it's a social ritual. Croatians can sit for hours with a single
+                                espresso on a sunny terrace ("Špica").</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Cravat -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Croatia/cravat.jpg');">
+                        <div class="culture-icon">&#128084;</div> <!-- Tie -->
+                        <div class="culture-text">
+                            <h4>The Cravat</h4>
+                            <p>The tie originated here! Croatian mercenaries in the 17th century wore knotted
+                                neckerchiefs, sparking a global fashion trend.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Klapa Singing -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Croatia/klapa.jpg');">
+                        <div class="culture-icon">&#127908;</div> <!-- Microwave/Radio/Mic -->
+                        <div class="culture-text">
+                            <h4>Klapa Singing</h4>
+                            <p>A UNESCO-protected style of traditional a cappella singing from Dalmatia, celebrating
+                                love, wine, and the sea.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Olive Oil & Truffles -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Croatia/truffle.jpg');">
+                        <div class="culture-icon">&#127812;</div> <!-- Mushroom -->
+                        <div class="culture-text">
+                            <h4>Istrian Gastronomy</h4>
+                            <p>Istria is world-famous for its white truffles and award-winning olive oils, often
+                                considered the best in the world.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. The Checkerboard -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Croatia/checkerboard.jpg');">
+                        <div class="culture-icon">&#9822;</div> <!-- Chess Knight -->
+                        <div class="culture-text">
+                            <h4>The Šahovnica</h4>
+                            <p>The red and white checkerboard is the symbol of Croatia. It adorns jerseys, the flag, and
+                                national pride.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Croatian)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Croatian Phrasebook</h2>
+                <p class="section-subtitle">Pronounce every letter. 'C' is 'ts', 'Č' is 'ch', 'J' is 'y'.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Croatian</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bok</td>
+                                <td>Bohk</td>
+                                <td>Hi / Bye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Bok" data-lang="hr-HR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Dobar dan</td>
+                                <td>Doh-bar dahn</td>
+                                <td>Good day (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Dobar dan" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hvala</td>
+                                <td>Hva-lah</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Hvala" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Molim</td>
+                                <td>Moh-leem</td>
+                                <td>Please / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Molim" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Da / Ne</td>
+                                <td>Da / Neh</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Da Ne" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kako si?</td>
+                                <td>Ka-koh see</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Kako si" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jedno pivo, molim</td>
+                                <td>Yed-noh pee-voh moh-leem</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Jedno pivo molim"
+                                        data-lang="hr-HR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Koliko to košta?</td>
+                                <td>Koh-lee-koh toh kosh-tah</td>
+                                <td>How much does it cost?</td>
+                                <td><button class="audio-btn" data-phrase="Koliko to košta"
+                                        data-lang="hr-HR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Živjeli!</td>
+                                <td>Zheev-yeh-lee</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Živjeli" data-lang="hr-HR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Govorite li engleski?</td>
+                                <td>Go-vo-ree-teh lee eng-les-kee</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Govorite li engleski"
+                                        data-lang="hr-HR">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Croatia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Croatia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

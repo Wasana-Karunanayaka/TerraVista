@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Malaysia</title>
+
+    <meta name="description"
+        content="Experience Malaysia, Truly Asia. From the Petronas Towers to the rainforests of Borneo and the street food of Penang.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR MALAYSIA -->
+    <style>
+        :root {
+            /* Malaysia Blue (Unity) */
+            --theme-primary: #010066;
+            /* Malaysia Yellow (Royal Sovereignty) */
+            --theme-secondary: #FFCC00;
+            --theme-bg-light: #fdfdfd;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #FFCC00;
+            /* Yellow blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Yellow button, Dark text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #2c2c2c !important;
+            font-weight: 700;
+        }
+
+        /* Gradient for Title: Blue to Red (Flag colors) */
+        .country-title {
+            background: linear-gradient(135deg, #010066 0%, #CC0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Malaysia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Malaysia</h1>
+            <p class="country-slogan">"Malaysia, Truly Asia"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#82;&#77;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Ringgit (MYR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Malay (Bahasa)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127777;</div>
+                <div class="stat-label">Climate</div>
+                <div class="stat-value">Tropical Rainforest</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Malaysia</h2>
+            <p class="section-subtitle">A mix of modern skyscrapers, colonial architecture, and some of the world's
+                oldest rainforests.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Kuala Lumpur -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/kl.jpg" alt="Kuala Lumpur" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kuala Lumpur</h3>
+                        <p>The capital home to the iconic Petronas Twin Towers, Batu Caves, and vibrant street markets.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Penang (George Town) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/penang.jpg" alt="Penang" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Penang</h3>
+                        <p>The food capital. George Town is a UNESCO site famous for its street art, hawker food, and
+                            colonial buildings.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Langkawi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/langkawi.jpg" alt="Langkawi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Langkawi</h3>
+                        <p>An archipelago of 99 islands known for tax-free shopping, the Sky Bridge, and pristine
+                            beaches.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Malacca (Melaka) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/malacca.jpg" alt="Malacca" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Malacca</h3>
+                        <p>A historic port city with Portuguese, Dutch, and British influences. Don't miss the Jonker
+                            Walk market.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Cameron Highlands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/cameron.jpg" alt="Cameron Highlands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cameron Highlands</h3>
+                        <p>A cool hill station famous for rolling tea plantations, strawberry farms, and jungle trails.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. Borneo (Sabah & Sarawak) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/borneo.jpg" alt="Borneo Rainforest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Borneo</h3>
+                        <p>Home to orangutans, pygmy elephants, and massive caves. Climb Mount Kinabalu, the highest
+                            peak in SE Asia.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Perhentian Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/perhentian.jpg" alt="Perhentian Islands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Perhentian Islands</h3>
+                        <p>Tropical paradise with crystal clear waters perfect for snorkeling and diving with turtles
+                            and sharks.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Taman Negara -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/taman-negara.jpg" alt="Taman Negara" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Taman Negara</h3>
+                        <p>One of the world's oldest rainforests (130 million years old), featuring a massive canopy
+                            walkway.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Ipoh -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Malaysia/ipoh.jpg" alt="Ipoh" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ipoh</h3>
+                        <p>Known for its white coffee, limestone cave temples, and colonial architecture. An underrated
+                            gem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Malaysian Mosaic</h2>
+                <p class="section-subtitle">A harmonious blend of Malay, Chinese, Indian, and indigenous cultures.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Food (Nasi Lemak) -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Malaysia/food.jpg');">
+                        <div class="culture-icon">&#127834;</div>
+                        <div class="culture-text">
+                            <h4>Nasi Lemak</h4>
+                            <p>The national dish. Coconut milk rice served with sambal (spicy paste), anchovies,
+                                peanuts, and egg.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Festivals -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Malaysia/festivals.jpg');">
+                        <div class="culture-icon">&#127878;</div>
+                        <div class="culture-text">
+                            <h4>Open House</h4>
+                            <p>During Hari Raya, Chinese New Year, and Deepavali, Malaysians hold "Open Houses" to
+                                welcome everyone to feast.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Batik -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Malaysia/batik.jpg');">
+                        <div class="culture-icon">&#128087;</div>
+                        <div class="culture-text">
+                            <h4>Malaysian Batik</h4>
+                            <p>Differing from Javanese style, Malaysian batik features larger floral motifs and vibrant,
+                                lighter colors.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Wau (Kites) -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Malaysia/wau.jpg');">
+                        <div class="culture-icon">&#129697;</div>
+                        <div class="culture-text">
+                            <h4>Wau (Kites)</h4>
+                            <p>Intricate traditional moon-kites flown in Kelantan and Terengganu, a symbol of Malaysian
+                                heritage.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Durian -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Malaysia/durian.jpg');">
+                        <div class="culture-icon">&#127818;</div> <!-- closest fruit -->
+                        <div class="culture-text">
+                            <h4>Durian (King of Fruits)</h4>
+                            <p>Love it or hate it. Musang King is the most prized variety. Rich, custard-like, and
+                                pungent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Malay)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Malay Phrasebook</h2>
+                <p class="section-subtitle">Simpler than many Asian languages. "Bahasa Jiwa Bangsa" (Language is the
+                    Soul of the Nation).</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Malay</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selamat Pagi</td>
+                                <td>Suh-lah-mat Pah-gee</td>
+                                <td>Good Morning</td>
+                                <td><button class="audio-btn" data-phrase="Selamat Pagi"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Terima Kasih</td>
+                                <td>Tuh-ree-mah Kah-seh</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Terima Kasih"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sama-sama</td>
+                                <td>Sah-mah sah-mah</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Sama sama" data-lang="ms-MY">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apa Khabar?</td>
+                                <td>Ah-pah Kah-bar</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Apa Khabar"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ya / Tidak</td>
+                                <td>Yah / Tee-dak</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ya Tidak" data-lang="ms-MY">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maafkan saya</td>
+                                <td>Mah-af-kan sah-yah</td>
+                                <td>I'm sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Maafkan saya"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Berapa harga?</td>
+                                <td>Buh-rah-pah har-gah</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Berapa harga"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sedap!</td>
+                                <td>Suh-dap</td>
+                                <td>Delicious!</td>
+                                <td><button class="audio-btn" data-phrase="Sedap" data-lang="ms-MY">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Di mana tandas?</td>
+                                <td>Dee mah-nah tan-das</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Di mana tandas"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jalan-jalan</td>
+                                <td>Jah-lan jah-lan</td>
+                                <td>Just walking/sightseeing</td>
+                                <td><button class="audio-btn" data-phrase="Jalan jalan"
+                                        data-lang="ms-MY">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Malaysia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Malaysia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

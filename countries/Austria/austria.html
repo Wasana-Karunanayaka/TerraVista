@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Austria</title>
+
+    <meta name="description"
+        content="The heart of classical music and alpine beauty. Discover Vienna's imperial palaces, Salzburg's musical heritage, and the stunning Austrian Alps.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR AUSTRIA -->
+    <style>
+        :root {
+            /* Austrian Red */
+            --theme-primary: #EF3340;
+            /* Imperial Gold */
+            --theme-secondary: #D4AF37;
+            --theme-bg-light: #fefcfc;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #D4AF37;
+            /* Gold blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, Gold/White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #c21a26 !important;
+        }
+
+        /* Gradient for Title: Red to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #EF3340 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Austria/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Austria</h1>
+            <p class="country-slogan">"Arrive and Revive"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">German</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127925;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Music & Alps</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Imperial Cities & Alpine Peaks</h2>
+            <p class="section-subtitle">A land where history, culture, and nature blend in perfect harmony.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Vienna (Schonbrunn) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/vienna.jpg" alt="Schonbrunn Palace" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Vienna (Wien)</h3>
+                        <p>The Capital. Walk in the footsteps of emperors at Schönbrunn Palace, see Klimt's 'The Kiss'
+                            at Belvedere, and enjoy a coffee house.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Salzburg -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/salzburg.jpg" alt="Salzburg Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Salzburg</h3>
+                        <p>The Stage of the World. Birthplace of Mozart and setting for "The Sound of Music," with a
+                            Baroque old town overseen by a fortress.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Hallstatt -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/hallstatt.jpg" alt="Hallstatt" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hallstatt</h3>
+                        <p>The Pearl of Austria. A fairytale village nestled between a dark blue lake and soaring
+                            mountains. Explore the world's oldest salt mine.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Innsbruck -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/innsbruck.jpg" alt="Golden Roof" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Innsbruck</h3>
+                        <p>Capital of the Alps. Famous for the Golden Roof, futuristic architecture by Zaha Hadid, and
+                            world-class winter sports.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Grossglockner High Alpine Road -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/road.jpg" alt="Grossglockner" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Grossglockner Road</h3>
+                        <p>Austria's highest mountain pass. A scenic drive that takes you into the heart of the Hohe
+                            Tauern National Park and glaciers.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Graz -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/graz.jpg" alt="Graz Clock Tower" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Graz</h3>
+                        <p>The Culinary Capital. Austria's second city blends Renaissance courtyards with modern design
+                            like the "Friendly Alien" Kunsthaus.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Melk Abbey -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/melk.jpg" alt="Melk Abbey" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Melk Abbey</h3>
+                        <p>A Baroque Masterpiece. This massive Benedictine abbey sits high above the Danube River in the
+                            scenic Wachau Valley.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Eisriesenwelt -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/icecave.jpg" alt="Ice Cave" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Eisriesenwelt</h3>
+                        <p>World of the Ice Giants. The largest ice cave system in the world, located near Werfen. A
+                            frozen underground spectacle.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Zell am See -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Austria/zell.jpg" alt="Zell am See" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zell am See</h3>
+                        <p>Lake and Glacier. A picturesque town offering crystal clear water in summer and glacier
+                            skiing on the Kitzsteinhorn in winter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Austrian Culture</h2>
+                <p class="section-subtitle">Gemütlichkeit, Tradition, and High Art.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Coffee House Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Austria/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Kaffeehaus (Coffee House)</h4>
+                            <p>An institution. It's not just a cafe; it's a living room. Order a 'Melange', read a
+                                newspaper, and stay as long as you like.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Classical Music -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Austria/music.jpg');">
+                        <div class="culture-icon">&#127932;</div> <!-- Violin/Note -->
+                        <div class="culture-text">
+                            <h4>Classical Heritage</h4>
+                            <p>The land of Mozart, Haydn, Schubert, and Strauss. The Vienna Philharmonic's New Year's
+                                Concert is world-famous.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ball Season -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Austria/ball.jpg');">
+                        <div class="culture-icon">&#128131;</div> <!-- Dancer -->
+                        <div class="culture-text">
+                            <h4>Viennese Ball Season</h4>
+                            <p>From January to March, over 400 balls take place in Vienna. The Opera Ball is the
+                                highlight of the social calendar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Apres Ski -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Austria/ski.jpg');">
+                        <div class="culture-icon">&#9975;</div> <!-- Skier -->
+                        <div class="culture-text">
+                            <h4>Skiing & Après-Ski</h4>
+                            <p>Skiing is the national sport. But the party after the slopes (Après-Ski) with schnapps
+                                and Schlager music is equally important.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Krampus -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Austria/krampus.jpg');">
+                        <div class="culture-icon">&#128127;</div> <!-- Ogre/Devil -->
+                        <div class="culture-text">
+                            <h4>Krampus</h4>
+                            <p>A darker Christmas tradition. On Dec 5th, this horned beast roams the streets to punish
+                                naughty children, contrasting St. Nicholas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (German)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Austrian German</h2>
+                <p class="section-subtitle">Standard German is understood, but the Austrian dialect ("Österreichisch")
+                    has its own charm.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>German (Austrian)</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grüß Gott</td>
+                                <td>Groos Got</td>
+                                <td>Hello (Formal/Standard)</td>
+                                <td><button class="audio-btn" data-phrase="Grüß Gott" data-lang="de-AT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Servus</td>
+                                <td>Ser-voos</td>
+                                <td>Hi / Bye (Casual)</td>
+                                <td><button class="audio-btn" data-phrase="Servus" data-lang="de-AT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Danke schön</td>
+                                <td>Dan-ke shurn</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Danke schön"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bitte</td>
+                                <td>Bit-te</td>
+                                <td>Please / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Bitte" data-lang="de-AT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Entschuldigung</td>
+                                <td>Ent-shool-de-goong</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Entschuldigung"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Auf Wiedersehen</td>
+                                <td>Ow-f vee-der-zeyn</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Auf Wiedersehen"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ein Bier, bitte</td>
+                                <td>Ine beer, bit-te</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Ein Bier bitte"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Die Rechnung, bitte</td>
+                                <td>Dee reck-noong, bit-te</td>
+                                <td>The check, please</td>
+                                <td><button class="audio-btn" data-phrase="Die Rechnung bitte"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lecker</td>
+                                <td>Lek-er</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="Lecker" data-lang="de-AT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Passt schon</td>
+                                <td>Past shon</td>
+                                <td>It's fine / Keep the change</td>
+                                <td><button class="audio-btn" data-phrase="Passt schon"
+                                        data-lang="de-AT">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Austria on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Austria</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

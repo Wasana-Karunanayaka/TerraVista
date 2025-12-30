@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Brazil</title>
+
+    <meta name="description"
+        content="Welcome to Brazil. Experience the rhythm of Samba, the vastness of the Amazon, the thundering Iguazu Falls, and the joy of Carnival.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR BRAZIL -->
+    <style>
+        :root {
+            /* Brazil Green (Forests) */
+            --theme-primary: #009C3B;
+            /* Brazil Yellow (Gold/Wealth) */
+            --theme-secondary: #FFDF00;
+            --theme-bg-light: #fefef5;
+            --theme-text-dark: #222222;
+        }
+
+        .culture-section::before {
+            background: #FFDF00;
+            /* Yellow blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Yellow button, Green text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #009C3B !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e6c900 !important;
+        }
+
+        /* Gradient for Title: Green to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #009C3B 0%, #002776 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Brazil/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Brazil</h1>
+            <p class="country-slogan">"O País do Futebol e do Samba"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#82;&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Brazilian Real (BRL)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Portuguese</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127795;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">Amazon Jungle</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Brazil</h2>
+            <p class="section-subtitle">A continental country of immense diversity, from colonial towns to wild
+                rainforests.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Christ the Redeemer -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/christ.jpg" alt="Christ the Redeemer" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Christ the Redeemer</h3>
+                        <p>Rio de Janeiro. The iconic Art Deco statue atop Mount Corcovado, offering panoramic views of
+                            the Marvelous City.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Iguazu Falls -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/iguazu.jpg" alt="Iguazu Falls" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Iguazu Falls</h3>
+                        <p>One of the New Seven Wonders of Nature. A massive system of 275 waterfalls straddling the
+                            border with Argentina.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Amazon Rainforest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/amazon.jpg" alt="Amazon Rainforest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amazon Rainforest</h3>
+                        <p>The "Lungs of the Earth." Explore the river from Manaus, stay in a jungle lodge, and spot
+                            pink dolphins.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Sugarloaf Mountain -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/sugarloaf.jpg" alt="Sugarloaf Mountain" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sugarloaf Mountain</h3>
+                        <p>Take the cable car up this granite peak at the mouth of Guanabara Bay for the best sunset in
+                            Rio.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Copacabana & Ipanema -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/copacabana.jpg" alt="Copacabana Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Copacabana & Ipanema</h3>
+                        <p>The world's most famous city beaches. Play volleyball, drink coconut water, and watch the
+                            world go by.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Salvador (Pelourinho) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/salvador.jpg" alt="Salvador" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Salvador</h3>
+                        <p>The Afro-Brazilian capital. The historic Pelourinho district is filled with colorful colonial
+                            houses and drumming.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pantanal -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/pantanal.jpg" alt="Pantanal" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pantanal</h3>
+                        <p>The world's largest tropical wetland. The best place in the Americas to spot wildlife like
+                            jaguars, caimans, and macaws.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Lençóis Maranhenses -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/lencois.jpg" alt="Lençóis Maranhenses" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lençóis Maranhenses</h3>
+                        <p>A surreal landscape of vast white sand dunes filled with crystal-clear rainwater lagoons.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Fernando de Noronha -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/noronha.jpg" alt="Fernando de Noronha" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Fernando de Noronha</h3>
+                        <p>An exclusive volcanic archipelago. Known for its undeveloped beaches and incredible scuba
+                            diving.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Brasilia -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Brazil/brasilia.jpg" alt="Brasilia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Brasilia</h3>
+                        <p>The futuristic capital designed by Oscar Niemeyer. A UNESCO site famous for its modernist
+                            architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">The Rhythm of Brazil</h2>
+                <p class="section-subtitle">Life is lived outside, with music, dance, and passion.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Carnival -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Brazil/carnival.jpg');">
+                        <div class="culture-icon">&#127881;</div>
+                        <div class="culture-text">
+                            <h4>Carnival</h4>
+                            <p>The greatest show on Earth. A week of samba parades, street parties (blocos), and
+                                costumes.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Samba & Bossa Nova -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Brazil/samba.jpg');">
+                        <div class="culture-icon">&#127926;</div>
+                        <div class="culture-text">
+                            <h4>Samba & Bossa Nova</h4>
+                            <p>Music is the soul of Brazil. From the energetic drums of Samba to the smooth jazz of
+                                Bossa Nova ("Girl from Ipanema").</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Football -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Brazil/football.jpg');">
+                        <div class="culture-icon">&#9917;</div>
+                        <div class="culture-text">
+                            <h4>Futebol</h4>
+                            <p>Not just a sport, but a religion. Brazil is home to Pelé and the most successful national
+                                team in history.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Capoeira -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Brazil/capoeira.jpg');">
+                        <div class="culture-icon">&#129346;</div> <!-- Martial Arts Uniform -->
+                        <div class="culture-text">
+                            <h4>Capoeira</h4>
+                            <p>A unique Afro-Brazilian martial art that combines dance, acrobatics, and music.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Churrasco -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Brazil/churrasco.jpg');">
+                        <div class="culture-icon">&#129385;</div> <!-- Meat -->
+                        <div class="culture-text">
+                            <h4>Churrasco</h4>
+                            <p>Brazilian BBQ. Juicy cuts of meat (picanha) skewered and grilled over charcoal, often
+                                served "Rodizio" style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Portuguese)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Portuguese Phrasebook</h2>
+                <p class="section-subtitle">Brazilian Portuguese is melodic and warm. "Tudo bem" is the universal
+                    greeting.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Portuguese</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Olá / Oi</td>
+                                <td>Oh-la / Oy</td>
+                                <td>Hello / Hi</td>
+                                <td><button class="audio-btn" data-phrase="Olá Oi" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tudo bem?</td>
+                                <td>Too-doo bayn</td>
+                                <td>How are you? / All good?</td>
+                                <td><button class="audio-btn" data-phrase="Tudo bem" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Obrigado/a</td>
+                                <td>Oh-bree-gah-doo/dah</td>
+                                <td>Thank you (Male/Female)</td>
+                                <td><button class="audio-btn" data-phrase="Obrigado" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fa-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sim / Não</td>
+                                <td>Seem / Now</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Sim Não" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Legal</td>
+                                <td>Le-gow</td>
+                                <td>Cool / Nice</td>
+                                <td><button class="audio-btn" data-phrase="Legal" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quanto custa?</td>
+                                <td>Kwan-too koos-ta</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Quanto custa"
+                                        data-lang="pt-BR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Um chopp, por favor</td>
+                                <td>Oom shop, por fa-vor</td>
+                                <td>A draft beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Um chopp por favor"
+                                        data-lang="pt-BR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Saudades</td>
+                                <td>Sow-da-jes</td>
+                                <td>Longing / Miss you (Unique word)</td>
+                                <td><button class="audio-btn" data-phrase="Saudades" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tchau</td>
+                                <td>Ch-ow</td>
+                                <td>Bye</td>
+                                <td><button class="audio-btn" data-phrase="Tchau" data-lang="pt-BR">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Brazil on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Brazil</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Mexico</title>
+
+    <meta name="description"
+        content="Viva Mexico! From ancient Mayan ruins and colonial cities to white sand beaches and a culinary heritage that conquered the world.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR MEXICO -->
+    <style>
+        :root {
+            /* Mexico Green */
+            --theme-primary: #006847;
+            /* Mexico Red */
+            --theme-secondary: #CE1126;
+            /* Off White */
+            --theme-bg-light: #fffdf9;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #006847;
+            /* Green blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Green button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #004d33 !important;
+        }
+
+        /* Gradient for Title: Green to Red */
+        .country-title {
+            background: linear-gradient(135deg, #006847 0%, #CE1126 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Mexico/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Mexico</h1>
+            <p class="country-slogan">"Viva México!"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Mexican Peso (MXN)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127790;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Tacos & Ruins</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Varies</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Aztecs, Mayans, and Beaches</h2>
+            <p class="section-subtitle">A diverse land where history meets paradise.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Chichen Itza -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/chichenitza.jpg" alt="El Castillo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chichen Itza</h3>
+                        <p>One of the New Seven Wonders of the World. A massive Mayan city featuring the iconic El
+                            Castillo pyramid (Temple of Kukulcan).</p>
+                    </div>
+                </div>
+
+                <!-- 2. Mexico City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/mexicocity.jpg" alt="Zocalo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mexico City (CDMX)</h3>
+                        <p>The cultural heart. Built on an ancient lake, it offers world-class museums, the Zócalo, and
+                            endless culinary adventures.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Cancun & Tulum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/tulum.jpg" alt="Tulum Ruins" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Riviera Maya</h3>
+                        <p>Cancun, Playa del Carmen, and Tulum. Famous for turquoise Caribbean waters, cenotes
+                            (underground swimming holes), and beachfront ruins.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Teotihuacan -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/teotihuacan.jpg" alt="Pyramid of the Sun" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Teotihuacan</h3>
+                        <p>City of the Gods. Climb the massive Pyramids of the Sun and Moon in this ancient holy city
+                            near Mexico City.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Oaxaca -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/oaxaca.jpg" alt="Oaxaca Streets" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Oaxaca</h3>
+                        <p>The culinary capital. Known for its 7 Moles, mezcal, colorful colonial architecture, and
+                            indigenous festivals like Guelaguetza.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Copper Canyon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/coppercanyon.jpg" alt="El Chepe Train" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Copper Canyon</h3>
+                        <p>Barranca del Cobre. A series of massive canyons in the Sierra Madre, deeper than the Grand
+                            Canyon. Ride the famous "El Chepe" train.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Cabo San Lucas -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/cabo.jpg" alt="The Arch" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cabo San Lucas</h3>
+                        <p>Where the desert meets the sea. Famous for "El Arco" (The Arch), luxury resorts, deep-sea
+                            fishing, and nightlife.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Guanajuato -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/guanajuato.jpg" alt="Colorful Houses" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Guanajuato</h3>
+                        <p>A colorful UNESCO World Heritage city built into a ravine. Famous for its underground
+                            tunnels, mummies, and arts festival.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Puerto Vallarta -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Mexico/puertovallarta.jpg" alt="Banderas Bay" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Puerto Vallarta</h3>
+                        <p>A resort town on the Pacific coast known for its beaches, water sports, and nightlife scene
+                            on the Malecon boardwalk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Mexican Soul</h2>
+                <p class="section-subtitle">A fusion of Indigenous and Spanish roots.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Day of the Dead -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Mexico/dia.jpg');">
+                        <div class="culture-icon">&#128128;</div> <!-- Skull -->
+                        <div class="culture-text">
+                            <h4>Día de los Muertos</h4>
+                            <p>Day of the Dead (Nov 1-2). A colorful celebration honoring deceased loved ones with
+                                altars (ofrendas), marigolds, and sugar skulls.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Gastronomy -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Mexico/tacos.jpg');">
+                        <div class="culture-icon">&#127790;</div> <!-- Taco -->
+                        <div class="culture-text">
+                            <h4>UNESCO Cuisine</h4>
+                            <p>Mexican food is UNESCO-protected heritage. Go beyond tacos to taste Mole, Pozole,
+                                Tamales, and Chiles en Nogada.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mariachi -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Mexico/mariachi.jpg');">
+                        <div class="culture-icon">&#127928;</div> <!-- Guitar -->
+                        <div class="culture-text">
+                            <h4>Mariachi Music</h4>
+                            <p>The sound of Mexico. Bands with violins, trumpets, and guitars dressed in charro suits,
+                                singing songs of love and country.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Lucha Libre -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Mexico/lucha.jpg');">
+                        <div class="culture-icon">&#129340;</div> <!-- Wrestling -->
+                        <div class="culture-text">
+                            <h4>Lucha Libre</h4>
+                            <p>Free Wrestling. High-flying maneuvers and colorful masks. It's a pop-culture phenomenon
+                                and a battle between Good (Técnicos) and Evil (Rudos).</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Artisania -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Mexico/art.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Paint -->
+                        <div class="culture-text">
+                            <h4>Alebrijes & Art</h4>
+                            <p>From the surrealist art of Frida Kahlo to the brightly colored folk art sculptures called
+                                Alebrijes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Mexican Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Mexican Slang</h2>
+                <p class="section-subtitle">Mexican Spanish is full of unique colorful slang ("modismos").</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Spanish (MX)</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>¡Hola!</td>
+                                <td>Oh-la</td>
+                                <td>Hello!</td>
+                                <td><button class="audio-btn" data-phrase="Hola" data-lang="es-MX">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Qué onda?</td>
+                                <td>Keh on-da</td>
+                                <td>What's up? (Slang)</td>
+                                <td><button class="audio-btn" data-phrase="Que onda" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¡Chido! / ¡Padre!</td>
+                                <td>Chee-doh / Pa-dreh</td>
+                                <td>Cool! / Awesome!</td>
+                                <td><button class="audio-btn" data-phrase="Que chido" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Gra-syas</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fa-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>¿Mande?</td>
+                                <td>Man-deh</td>
+                                <td>What? / Pardon? (Polite)</td>
+                                <td><button class="audio-btn" data-phrase="Mande" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ahorita</td>
+                                <td>A-or-ee-ta</td>
+                                <td>Right now (or in 5 hours)</td>
+                                <td><button class="audio-btn" data-phrase="Ahorita" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>La cuenta, por favor</td>
+                                <td>La kwen-ta por fa-vor</td>
+                                <td>The check, please</td>
+                                <td><button class="audio-btn" data-phrase="La cuenta por favor"
+                                        data-lang="es-MX">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Dónde está el baño?</td>
+                                <td>Don-deh es-ta el ban-yo</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Donde esta el bano"
+                                        data-lang="es-MX">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¡Salud!</td>
+                                <td>Sa-lood</td>
+                                <td>Cheers! / Bless you</td>
+                                <td><button class="audio-btn" data-phrase="Salud" data-lang="es-MX">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Mexico on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Mexico</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

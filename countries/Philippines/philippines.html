@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore the Philippines</title>
+
+    <meta name="description"
+        content="It's More Fun in the Philippines. Discover Palawan's lagoons, Boracay's white sands, the Chocolate Hills, and the historic streets of Vigan.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR PHILIPPINES -->
+    <style>
+        :root {
+            /* Philippines Royal Blue (Peace/Justice) */
+            --theme-primary: #0038A8;
+            /* Philippines Sun Yellow (Freedom/Vibrancy) */
+            --theme-secondary: #FCD116;
+            --theme-bg-light: #fefefc;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #FCD116;
+            /* Yellow blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Yellow button, Blue text to match flag contrast */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #0038A8 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e5be00 !important;
+        }
+
+        /* Gradient for Title: Blue to Red (Flag colors) */
+        .country-title {
+            background: linear-gradient(135deg, #0038A8 0%, #CE1126 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Philippines/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Philippines</h1>
+            <p class="country-slogan">"It's More Fun in the Philippines"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8369;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Philippine Peso (PHP)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Filipino (Tagalog) & English</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127796;</div>
+                <div class="stat-label">Islands</div>
+                <div class="stat-value">7,641 Islands</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (Many Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in the Philippines</h2>
+            <p class="section-subtitle">A tropical paradise with some of the world's best beaches, diving spots, and
+                natural wonders.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Palawan (El Nido / Coron) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/palawan.jpg" alt="Palawan" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Palawan</h3>
+                        <p>Consistently voted the "Best Island in the World." Crystal clear lagoons, limestone cliffs,
+                            and hidden beaches in El Nido and Coron.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Boracay -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/boracay.jpg" alt="Boracay" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Boracay</h3>
+                        <p>Famous for its powdery White Beach, vibrant nightlife, and stunning sunsets. A reinvigorated
+                            island paradise.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Chocolate Hills (Bohol) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/bohol.jpg" alt="Chocolate Hills" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chocolate Hills</h3>
+                        <p>Over 1,200 symmetrical hills in Bohol that turn brown in the dry season. Also home to the
+                            tiny Tarsier primate.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Banaue Rice Terraces -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/banaue.jpg" alt="Banaue Rice Terraces"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Banaue Rice Terraces</h3>
+                        <p>The "Eighth Wonder of the World." 2,000-year-old terraces carved into the mountains of Ifugao
+                            by ancestors.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Cebu (Kawasan Falls) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/cebu.jpg" alt="Cebu" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cebu</h3>
+                        <p>The "Queen City of the South." Swim with whale sharks in Oslob, canyoneer in Kawasan Falls,
+                            and taste the best Lechon.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Siargao -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/siargao.jpg" alt="Siargao" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Siargao</h3>
+                        <p>The Surfing Capital. Known for the legendary Cloud 9 break, coconut tree-lined roads, and a
+                            laid-back island vibe.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Intramuros (Manila) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/intramuros.jpg" alt="Intramuros" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Intramuros</h3>
+                        <p>The historic Walled City within Manila. Spanish colonial architecture, Fort Santiago, and
+                            horse-drawn carriages (Kalesa).</p>
+                    </div>
+                </div>
+
+                <!-- 8. Mayon Volcano -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/mayon.jpg" alt="Mayon Volcano" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mayon Volcano</h3>
+                        <p>Renowned for its "Perfect Cone" shape. An active volcano in Albay serving as a breathtaking
+                            backdrop.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Vigan -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Philippines/vigan.jpg" alt="Vigan" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Vigan</h3>
+                        <p>A UNESCO Heritage city. One of the few surviving Hispanic towns in Asia, famous for its
+                            preserved Calle Crisologo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Filipino Spirit</h2>
+                <p class="section-subtitle">"Bayanihan" — The spirit of communal unity, work, and cooperation.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Jeepney -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Philippines/jeepney.jpg');">
+                        <div class="culture-icon">&#128652;</div>
+                        <div class="culture-text">
+                            <h4>Jeepneys</h4>
+                            <p>The "King of the Road." Colorful, kitschy, and crowded public transport originally made
+                                from US military jeeps.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Festivals (Sinulog) -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Philippines/festival.jpg');">
+                        <div class="culture-icon">&#127881;</div>
+                        <div class="culture-text">
+                            <h4>Fiestas</h4>
+                            <p>Every town has a fiesta. Sinulog (Cebu) and Ati-Atihan are massive street parties
+                                celebrating the Santo Niño.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Food (Adobo & Lechon) -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Philippines/food.jpg');">
+                        <div class="culture-icon">&#127831;</div>
+                        <div class="culture-text">
+                            <h4>Adobo & Lechon</h4>
+                            <p>Adobo (marinated stew) is the unofficial national dish. Lechon (roasted pig) is the star
+                                of every celebration.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Halo-Halo -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Philippines/halohalo.jpg');">
+                        <div class="culture-icon">&#127847;</div>
+                        <div class="culture-text">
+                            <h4>Halo-Halo</h4>
+                            <p>"Mix-Mix." The ultimate shaved ice dessert with beans, fruits, jellies, flan, and ube
+                                (purple yam) ice cream.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Hospitality -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Philippines/hospitality.jpg');">
+                        <div class="culture-icon">&#129309;</div>
+                        <div class="culture-text">
+                            <h4>Hospitality</h4>
+                            <p>Filipinos are known as the warmest people in Asia. You will always be greeted with a
+                                smile and offer of food.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Filipino/Tagalog)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Filipino Phrasebook</h2>
+                <p class="section-subtitle">English is official and spoken everywhere, but Tagalog connects you to the
+                    heart.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Filipino</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mabuhay!</td>
+                                <td>Ma-boo-high</td>
+                                <td>Welcome / Long Live</td>
+                                <td><button class="audio-btn" data-phrase="Mabuhay" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Salamat</td>
+                                <td>Sa-la-mat</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Salamat" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kumusta ka?</td>
+                                <td>Koo-moos-tah kah</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Kumusta ka"
+                                        data-lang="fil-PH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Maganda</td>
+                                <td>Ma-gan-dah</td>
+                                <td>Beautiful</td>
+                                <td><button class="audio-btn" data-phrase="Maganda" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Oo / Hindi</td>
+                                <td>Oh-oh / Hin-dee</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Oo Hindi" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paalam</td>
+                                <td>Pa-a-lam</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Paalam" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Magkano?</td>
+                                <td>Mag-ka-no</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Magkano" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mahal</td>
+                                <td>Ma-hal</td>
+                                <td>Expensive / Love</td>
+                                <td><button class="audio-btn" data-phrase="Mahal" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Masarap!</td>
+                                <td>Ma-sa-rap</td>
+                                <td>Delicious!</td>
+                                <td><button class="audio-btn" data-phrase="Masarap" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Para!</td>
+                                <td>Pa-rah</td>
+                                <td>Stop (used in Jeepneys/Taxis)</td>
+                                <td><button class="audio-btn" data-phrase="Para" data-lang="fil-PH">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Philippines on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

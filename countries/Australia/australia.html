@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Australia</title>
+
+    <meta name="description"
+        content="Discover the Land Down Under. From the vibrant Great Barrier Reef to the red sands of Uluru and the iconic Sydney Opera House.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR AUSTRALIA -->
+    <style>
+        :root {
+            /* Australian Green */
+            --theme-primary: #00843D;
+            /* Australian Gold */
+            --theme-secondary: #FFCD00;
+            --theme-bg-light: #fffdf5;
+            --theme-text-dark: #222222;
+        }
+
+        .culture-section::before {
+            background: #FFCD00;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Gold button, Green text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #00843D !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e5b800 !important;
+        }
+
+        /* Gradient for Title: Green to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #00843D 0%, #FFCD00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Australia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Australia</h1>
+            <p class="country-slogan">"The Land Down Under"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Australian Dollar (AUD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English (Aussie)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127796;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">Megadiverse</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">ETA / eVisitor</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Australia</h2>
+            <p class="section-subtitle">A continent of extremes, from endless red deserts to tropical rainforests.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Sydney Opera House -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/sydney.jpg" alt="Sydney Opera House" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sydney Opera House</h3>
+                        <p>An architectural masterpiece on Sydney Harbour. snap a photo from the Royal Botanic Garden or
+                            climb the Harbour Bridge nearby.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Great Barrier Reef -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/reef.jpg" alt="Great Barrier Reef" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Great Barrier Reef</h3>
+                        <p>The world's largest coral reef system. A diver's paradise teeming with colorful fish,
+                            turtles, and coral gardens.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Uluru -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/uluru.jpg" alt="Uluru" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Uluru</h3>
+                        <p>The spiritual heart of Australia. This massive sandstone monolith glows red at sunrise and is
+                            sacred to the Anangu people.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Great Ocean Road -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/ocean-road.jpg" alt="Great Ocean Road" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Great Ocean Road</h3>
+                        <p>One of the world's most scenic coastal drives. See the Twelve Apostles limestone stacks
+                            rising from the Southern Ocean.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Bondi Beach -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/bondi.jpg" alt="Bondi Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bondi Beach</h3>
+                        <p>Australia's most famous stretch of sand. Watch the surfers, swim in the Icebergs pool, or
+                            walk the coastal track to Coogee.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Daintree Rainforest -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/daintree.jpg" alt="Daintree Rainforest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Daintree Rainforest</h3>
+                        <p>The oldest surviving tropical rainforest in the world. Where the green jungle meets the blue
+                            reef in Tropical North Queensland.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Kakadu National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/kakadu.jpg" alt="Kakadu National Park" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kakadu National Park</h3>
+                        <p>A massive biodiverse nature reserve with wetlands, crocodiles, and ancient Aboriginal rock
+                            art galleries.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Whitsunday Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/whitsundays.jpg" alt="Whitsunday Islands"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Whitsunday Islands</h3>
+                        <p>74 island wonders. Home to Whitehaven Beach, known for its unbelievably pure, swirling silica
+                            sand.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Melbourne Laneways -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/melbourne.jpg" alt="Melbourne" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Melbourne</h3>
+                        <p>The cultural capital. Famous for its hidden laneways filled with street art, coffee shops,
+                            and world-class restaurants.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Tasmania (Cradle Mountain) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Australia/tasmania.jpg" alt="Tasmania" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tasmania</h3>
+                        <p>An island of pristine wilderness. Hike around Dove Lake at Cradle Mountain and spot the
+                            Tasmanian Devil.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Aussie Way of Life</h2>
+                <p class="section-subtitle">Laid-back, outdoor-loving, and deeply connected to ancient history.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Indigenous Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Australia/indigenous.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Art -->
+                        <div class="culture-text">
+                            <h4>Aboriginal Heritage</h4>
+                            <p>The world's oldest continuous living culture. Explore "Dreamtime" stories, rock art, and
+                                traditional connection to Country.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Surf Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Australia/surf.jpg');">
+                        <div class="culture-icon">&#127940;</div>
+                        <div class="culture-text">
+                            <h4>Surf & Beach</h4>
+                            <p>With 50,000km of coastline, the beach is the backyard. Surfing isn't just a sport; it's a
+                                lifestyle.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. BBQ -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Australia/bbq.jpg');">
+                        <div class="culture-icon">&#129382;</div> <!-- Sausage -->
+                        <div class="culture-text">
+                            <h4>The Barbie</h4>
+                            <p>A social institution. Whether it's sausages ("snags") or prawns, everything tastes better
+                                cooked outdoors with friends.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Coffee -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Australia/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div>
+                        <div class="culture-text">
+                            <h4>Coffee Culture</h4>
+                            <p>Australians are coffee snobs. The "Flat White" was perfected here, and finding bad coffee
+                                is harder than finding good coffee.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Wildlife -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Australia/wildlife.jpg');">
+                        <div class="culture-icon">&#129432;</div> <!-- Kangaroo -->
+                        <div class="culture-text">
+                            <h4>Unique Wildlife</h4>
+                            <p>Land of the marsupials. Kangaroos hopping on golf courses, koalas sleeping in gum trees,
+                                and wombats waddling by.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Slang)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Aussie Slang Guide</h2>
+                <p class="section-subtitle">English is spoken, but "Strine" (Australian English) can be a whole new
+                    language.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Slang</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>G'day</td>
+                                <td>G-day</td>
+                                <td>Hello / Good day</td>
+                                <td><button class="audio-btn" data-phrase="G'day" data-lang="en-AU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>No worries</td>
+                                <td>No wuh-rees</td>
+                                <td>You're welcome / It's okay</td>
+                                <td><button class="audio-btn" data-phrase="No worries"
+                                        data-lang="en-AU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mate</td>
+                                <td>May-t</td>
+                                <td>Friend (used frequently)</td>
+                                <td><button class="audio-btn" data-phrase="Mate" data-lang="en-AU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>How ya going?</td>
+                                <td>How ya go-in</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="How ya going"
+                                        data-lang="en-AU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Fair dinkum</td>
+                                <td>Fare dink-um</td>
+                                <td>True / Genuine</td>
+                                <td><button class="audio-btn" data-phrase="Fair dinkum"
+                                        data-lang="en-AU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Barbie</td>
+                                <td>Bar-bee</td>
+                                <td>Barbecue (BBQ)</td>
+                                <td><button class="audio-btn" data-phrase="Barbie" data-lang="en-AU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Arvo</td>
+                                <td>Ar-voh</td>
+                                <td>Afternoon</td>
+                                <td><button class="audio-btn" data-phrase="Arvo" data-lang="en-AU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Brekkie</td>
+                                <td>Brek-key</td>
+                                <td>Breakfast</td>
+                                <td><button class="audio-btn" data-phrase="Brekkie" data-lang="en-AU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Thongs</td>
+                                <td>Thongs</td>
+                                <td>Flip-flops (Footwear)</td>
+                                <td><button class="audio-btn" data-phrase="Thongs" data-lang="en-AU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stoked</td>
+                                <td>Stow-kt</td>
+                                <td>Very happy / Excited</td>
+                                <td><button class="audio-btn" data-phrase="Stoked" data-lang="en-AU">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Australia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Australia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

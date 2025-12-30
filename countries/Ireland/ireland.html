@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Ireland</title>
+
+    <meta name="description"
+        content="Welcome to the Emerald Isle. Discover ancient castles, rugged coastlines, lively pubs, and the warmest welcome in the world.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR IRELAND -->
+    <style>
+        :root {
+            /* Emerald Green */
+            --theme-primary: #009A49;
+            /* Celtic Orange */
+            --theme-secondary: #FF7900;
+            --theme-bg-light: #f4fdf4;
+            --theme-text-dark: #1a2e1a;
+        }
+
+        .culture-section::before {
+            background: #009A49;
+            /* Green blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Orange button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #cc6100 !important;
+        }
+
+        /* Gradient for Title: Green to Orange */
+        .country-title {
+            background: linear-gradient(135deg, #009A49 0%, #ffffff 50%, #FF7900 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            /* Shadow needed for white middle part visibility */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Ireland/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Ireland</h1>
+            <p class="country-slogan">"Céad Míle Fáilte" (A Hundred Thousand Welcomes)</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English & Irish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127808;</div>
+                <div class="stat-label">Nickname</div>
+                <div class="stat-value">The Emerald Isle</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">E.U. / Common Travel Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Ireland</h2>
+            <p class="section-subtitle">A land of myth and legend, where every ruin tells a story.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Cliffs of Moher -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/moher.jpg" alt="Cliffs of Moher" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cliffs of Moher</h3>
+                        <p>Ireland's most famous natural wonder. These dramatic cliffs rise 214 meters out of the
+                            Atlantic Ocean.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Dublin (Trinity College) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/dublin.jpg" alt="Dublin" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dublin</h3>
+                        <p>The lively literary capital. Visit the Book of Kells at Trinity College, the Guinness
+                            Storehouse, and Temple Bar.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Ring of Kerry -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/kerry.jpg" alt="Ring of Kerry" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ring of Kerry</h3>
+                        <p>A stunning scenic drive around the Iveragh Peninsula. Expect lush green hills, rugged
+                            coastlines, and quaint villages.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Blarney Castle -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/blarney.jpg" alt="Blarney Castle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Blarney Castle</h3>
+                        <p>Home of the legendary Blarney Stone. Kiss it (upside down!) to gain the "Gift of the Gab"
+                            (eloquence).</p>
+                    </div>
+                </div>
+
+                <!-- 5. Giant's Causeway -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/causeway.jpg" alt="Giant's Causeway" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Giant's Causeway</h3>
+                        <p>On the north coast. 40,000 interlocking basalt columns formed by an ancient volcanic eruption
+                            (or a giant!).</p>
+                    </div>
+                </div>
+
+                <!-- 6. Galway -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/galway.jpg" alt="Galway" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Galway</h3>
+                        <p>The bohemian heart of the west. Known for its street performers (buskers), festivals, and
+                            easy access to Connemara.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Rock of Cashel -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/cashel.jpg" alt="Rock of Cashel" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rock of Cashel</h3>
+                        <p>A spectacular group of medieval buildings set on an outcrop of limestone in the Golden Vale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. Killarney National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/killarney.jpg" alt="Killarney National Park"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Killarney National Park</h3>
+                        <p>Explore the lakes of Killarney, Ross Castle, and Muckross House. Take a traditional "jaunting
+                            car" ride.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Dingle Peninsula -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/dingle.jpg" alt="Dingle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dingle Peninsula</h3>
+                        <p>Wild Atlantic Way beauty. Drive the Slea Head loop for ancient beehive huts and dramatic
+                            ocean views.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Newgrange -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Ireland/newgrange.jpg" alt="Newgrange" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Newgrange</h3>
+                        <p>A Stone Age monument older than Stonehenge and the Pyramids. Famous for its alignment with
+                            the Winter Solstice sun.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Irish Culture</h2>
+                <p class="section-subtitle">Famous for music, storytelling, and having a good time ("The Craic").</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Pub Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Ireland/pub.jpg');">
+                        <div class="culture-icon">&#127867;</div>
+                        <div class="culture-text">
+                            <h4>The Irish Pub</h4>
+                            <p>The community living room. A place for conversation, a pint of "The Black Stuff"
+                                (Guinness), and warmth.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Trad Music -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Ireland/music.jpg');">
+                        <div class="culture-icon">&#127931;</div> <!-- Violin/Fiddle -->
+                        <div class="culture-text">
+                            <h4>Trad Music</h4>
+                            <p>Traditional sessions featuring fiddles, tin whistles, and bodhráns. Spontaneous and full
+                                of energy.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Literature -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Ireland/literature.jpg');">
+                        <div class="culture-icon">&#128366;</div> <!-- Quill/Pen -->
+                        <div class="culture-text">
+                            <h4>Land of Saints & Scholars</h4>
+                            <p>Ireland has produced four Nobel Prize winners for Literature: Yeats, Shaw, Beckett, and
+                                Heaney. Plus Joyce and Wilde.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Gaelic Games -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Ireland/gaa.jpg');">
+                        <div class="culture-icon">&#127953;</div> <!-- Field/Stadium -->
+                        <div class="culture-text">
+                            <h4>GAA (Hurling & Football)</h4>
+                            <p>Ancient amateur sports played with fierce passion. Hurling is the fastest field sport in
+                                the world.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. St. Patrick -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Ireland/shamrock.jpg');">
+                        <div class="culture-icon">&#9752;</div> <!-- Shamrock -->
+                        <div class="culture-text">
+                            <h4>St. Patrick & The Shamrock</h4>
+                            <p>The patron saint who brought Christianity (and banished snakes?). The shamrock symbolizes
+                                the Holy Trinity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Irish / Gaeilge)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Irish Phrases (Gaeilge)</h2>
+                <p class="section-subtitle">English is spoken everywhere, but using a "Cúpla Focal" (few words) is
+                    loved.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Irish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dia dhuit</td>
+                                <td>Dee-a gwit</td>
+                                <td>Hello (God be with you)</td>
+                                <td><button class="audio-btn" data-phrase="Dia dhuit" data-lang="ga-IE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Go raibh maith agat</td>
+                                <td>Gu rev mah a-gut</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Go raibh maith agat"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sláinte</td>
+                                <td>Slawn-cha</td>
+                                <td>Cheers / Health</td>
+                                <td><button class="audio-btn" data-phrase="Sláinte" data-lang="ga-IE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Céad Míle Fáilte</td>
+                                <td>Kay-od mee-la fawl-cha</td>
+                                <td>A hundred thousand welcomes</td>
+                                <td><button class="audio-btn" data-phrase="Céad Míle Fáilte"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Conas atá tú?</td>
+                                <td>Kun-us a-taw too</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Conas atá tú"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Le do thoil</td>
+                                <td>Le duh hull</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Le do thoil"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Pionta Guinness, le do thoil</td>
+                                <td>Pyun-ta Guinness le duh hull</td>
+                                <td>A pint of Guinness, please</td>
+                                <td><button class="audio-btn" data-phrase="Pionta Guinness le do thoil"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tá sé go hálainn</td>
+                                <td>Taw shay gu haw-lin</td>
+                                <td>It is beautiful</td>
+                                <td><button class="audio-btn" data-phrase="Tá sé go hálainn"
+                                        data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Craic</td>
+                                <td>Crack</td>
+                                <td>Fun / Gossip / Entertainment</td>
+                                <td><button class="audio-btn" data-phrase="Craic" data-lang="ga-IE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Slán</td>
+                                <td>Slawn</td>
+                                <td>Goodbye / Safe</td>
+                                <td><button class="audio-btn" data-phrase="Slán" data-lang="ga-IE">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Ireland on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Ireland</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

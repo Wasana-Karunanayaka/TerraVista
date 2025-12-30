@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Kenya</title>
+
+    <meta name="description"
+        content="The magic of Africa. Experience the Great Migration, pristine savannas, white sand beaches, and vibrant tribal culture.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR KENYA -->
+    <style>
+        :root {
+            /* Kenya Red */
+            --theme-primary: #BE0000;
+            /* Kenya Green */
+            --theme-secondary: #006600;
+            /* Black */
+            --theme-text-dark: #000000;
+            --theme-bg-light: #fefcfb;
+        }
+
+        .culture-section::before {
+            background: #BE0000;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #8e0000 !important;
+        }
+
+        /* Gradient for Title: Black to Red to Green */
+        .country-title {
+            background: linear-gradient(135deg, #000000 0%, #BE0000 50%, #006600 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Kenya/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Kenya</h1>
+            <p class="country-slogan">"Magical Kenya"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#75;&#115;&#104;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Kenyan Shilling (KES)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Swahili & English</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#129409;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Safaris & Wildlife</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">eTA Required</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">The Wild Heart of Africa</h2>
+            <p class="section-subtitle">Home of the Safari and the cradle of mankind.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Masai Mara -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/masaimara.jpg" alt="Great Migration" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Masai Mara</h3>
+                        <p>The greatest wildlife show on earth. Witness the annual Great Migration of wildebeest and
+                            zebra, and see the Big Five.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Amboseli -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/amboseli.jpg" alt="Elephants Kilimanjaro" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amboseli National Park</h3>
+                        <p>Famous for huge herds of free-ranging elephants and the best views of Mt. Kilimanjaro (across
+                            the border in Tanzania).</p>
+                    </div>
+                </div>
+
+                <!-- 3. Nairobi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/nairobi.jpg" alt="Nairobi Giraffe Manor" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nairobi</h3>
+                        <p>The Safari Capital. Visit the David Sheldrick Elephant Orphanage, the Giraffe Centre, and the
+                            Nairobi National Park (city safari).</p>
+                    </div>
+                </div>
+
+                <!-- 4. Diani Beach -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/diani.jpg" alt="Diani Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Diani Beach</h3>
+                        <p>Relaxation. Voted Africa's leading beach destination. White sands, turquoise waters, and
+                            coral reefs south of Mombasa.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Mount Kenya -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/mountkenya.jpg" alt="Mount Kenya" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Kenya</h3>
+                        <p>The second highest peak in Africa. A UNESCO site offering challenging trekking through
+                            diverse vegetation zones.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Lake Nakuru -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/lake.jpg" alt="Flamingos" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lake Nakuru</h3>
+                        <p>The Pink Lake. Famous for the thousands of flamingos that line its shores and its rhino
+                            sanctuary.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Lamu Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/lamu.jpg" alt="Lamu Old Town" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lamu Island</h3>
+                        <p>Swahili Culture. Kenya's oldest living town. No cars, only donkeys. A peaceful blend of
+                            Arabic, Indian, and African influences.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Tsavo National Parks -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/tsavo.jpg" alt="Tsavo Red Lions" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tsavo East & West</h3>
+                        <p>The Theater of the Wild. Massive parks known for red elephants, man-eating lion history, and
+                            the Mzima Springs.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Hell's Gate -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Kenya/hellsgate.jpg" alt="Hells Gate" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hell's Gate</h3>
+                        <p>Adventure. One of the few parks where you can cycle or walk among wildlife. The scenery
+                            inspired "The Lion King."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Kenyan Pride</h2>
+                <p class="section-subtitle">A land of 42 tribes and "Harambee".</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Maasai Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Kenya/maasai.jpg');">
+                        <div class="culture-icon">&#128737;</div> <!-- Shield -->
+                        <div class="culture-text">
+                            <h4>Maasai Warriors</h4>
+                            <p>Known for their red shukas (robes), beadwork, and jumping dance (Adumu). They have
+                                maintained traditions in the face of modernity.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Big Five -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Kenya/lion.jpg');">
+                        <div class="culture-icon">&#129409;</div> <!-- Lion -->
+                        <div class="culture-text">
+                            <h4>The Big Five</h4>
+                            <p>Lion, Leopard, Rhino, Elephant, Buffalo. Safaris are not just tourism; conservation is a
+                                central national pillar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Marathon Running -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Kenya/run.jpg');">
+                        <div class="culture-icon">&#127939;</div> <!-- Runner -->
+                        <div class="culture-text">
+                            <h4>Long Distance Running</h4>
+                            <p>The Kalenjin tribe produces the world's best marathon runners. Running is a path to glory
+                                and national pride.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Matatu Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Kenya/bus.jpg');">
+                        <div class="culture-icon">&#128652;</div> <!-- Bus -->
+                        <div class="culture-text">
+                            <h4>Matatus</h4>
+                            <p>Privately owned minibuses. They are flamboyant, covered in graffiti art, play loud music,
+                                and are the pulse of Nairobi streets.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Harambee -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Kenya/hands.jpg');">
+                        <div class="culture-icon">&#129309;</div> <!-- Handshake -->
+                        <div class="culture-text">
+                            <h4>Harambee</h4>
+                            <p>"All pull together." The official national motto. It signifies community self-help events
+                                to build schools or help neighbors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Swahili)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Swahili Basics</h2>
+                <p class="section-subtitle">Swahili (Kiswahili) is the lingua franca of East Africa. "Hakuna Matata" is
+                    real!</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Swahili</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jambo</td>
+                                <td>Jam-bo</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Jambo" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Habari?</td>
+                                <td>Ha-ba-ree</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Habari" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mzuri</td>
+                                <td>M-zoo-ree</td>
+                                <td>Good / Fine</td>
+                                <td><button class="audio-btn" data-phrase="Mzuri" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asante sana</td>
+                                <td>A-san-te sa-na</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Asante sana"
+                                        data-lang="sw-KE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Karibu</td>
+                                <td>Ka-ree-boo</td>
+                                <td>Welcome</td>
+                                <td><button class="audio-btn" data-phrase="Karibu" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hakuna Matata</td>
+                                <td>Ha-koo-na Ma-ta-ta</td>
+                                <td>No worries</td>
+                                <td><button class="audio-btn" data-phrase="Hakuna Matata"
+                                        data-lang="sw-KE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Rafiki</td>
+                                <td>Ra-fee-kee</td>
+                                <td>Friend</td>
+                                <td><button class="audio-btn" data-phrase="Rafiki" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pole pole</td>
+                                <td>Po-le po-le</td>
+                                <td>Slowly (Relax)</td>
+                                <td><button class="audio-btn" data-phrase="Pole pole" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Simba</td>
+                                <td>Sim-bah</td>
+                                <td>Lion</td>
+                                <td><button class="audio-btn" data-phrase="Simba" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kwaheri</td>
+                                <td>Kwa-heh-ree</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Kwaheri" data-lang="sw-KE">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Kenya on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Kenya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

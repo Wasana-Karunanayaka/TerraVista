@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Sweden</title>
+
+    <meta name="description"
+        content="Welcome to Sweden. Experience the cool of Stockholm, the magic of the Northern Lights in Kiruna, and the cozy tradition of Fika.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SWEDEN -->
+    <style>
+        :root {
+            /* Swedish Blue */
+            --theme-primary: #006AA7;
+            /* Swedish Yellow */
+            --theme-secondary: #FECC00;
+            --theme-bg-light: #f6fbfc;
+            --theme-text-dark: #242424;
+        }
+
+        .culture-section::before {
+            background: #FECC00;
+            /* Yellow blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Yellow button, Blue text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #006AA7 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e5b800 !important;
+        }
+
+        /* Gradient for Title: Blue to Yellow */
+        .country-title {
+            background: linear-gradient(135deg, #006AA7 0%, #FECC00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Sweden/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Sweden</h1>
+            <p class="country-slogan">"Lagom is Best"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#107;&#114;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Swedish Krona (SEK)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Swedish (Svenska)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127794;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">63% Forest Cover</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Sweden</h2>
+            <p class="section-subtitle">From the archipelago of the capital to the frozen tundra of the Arctic Circle.
+            </p>
+
+            <div class="masonry-grid">
+                <!-- 1. Stockholm -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/stockholm.jpg" alt="Stockholm" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Stockholm</h3>
+                        <p>The capital built on 14 islands. Wander the cobbled streets of Gamla Stan and see the
+                            recovered warship at the Vasa Museum.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Gothenburg (Göteborg) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/gothenburg.jpg" alt="Gothenburg" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Gothenburg</h3>
+                        <p>The friendly west coast city. Home to Liseberg amusement park, canals, and the gateway to a
+                            stunning archipelago.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Kiruna (Icehotel) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/kiruna.jpg" alt="Kiruna" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kiruna & The Icehotel</h3>
+                        <p>In Swedish Lapland. Sleep in a room made of ice, go dog sledding, and hunt for the Northern
+                            Lights.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Visby (Gotland) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/visby.jpg" alt="Visby" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Visby, Gotland</h3>
+                        <p>A UNESCO medieval walled town on the island of Gotland. Known for its roses, ruins, and
+                            summer parties.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Abisko National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/abisko.jpg" alt="Abisko" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Abisko National Park</h3>
+                        <p>Considered one of the best places on Earth to see the Aurora Borealis due to its "Blue Hole"
+                            clear skies.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Malmö -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/malmo.jpg" alt="Malmö" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Malmö</h3>
+                        <p>A modern, multicultural city connected to Denmark by the Öresund Bridge. See the twisted
+                            Turning Torso skyscraper.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Uppsala -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/uppsala.jpg" alt="Uppsala" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Uppsala</h3>
+                        <p>A historic university city. View the largest cathedral in Scandinavia and the burial mounds
+                            of Viking kings.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Drottningholm Palace -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/drottningholm.jpg" alt="Drottningholm Palace"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Drottningholm Palace</h3>
+                        <p>The private residence of the Swedish royal family. A UNESCO site with magnificent gardens and
+                            a theater.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Åre -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Sweden/are.jpg" alt="Åre" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Åre</h3>
+                        <p>Scandinavia's top ski resort. Offers world-class slopes in winter and downhill mountain
+                            biking in summer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Swedish Lifestyle</h2>
+                <p class="section-subtitle">Balanced, nature-loving, and fueled by strong coffee.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Fika -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Sweden/fika.jpg');">
+                        <div class="culture-icon">&#9749;</div>
+                        <div class="culture-text">
+                            <h4>Fika</h4>
+                            <p>An institution, not just a coffee break. It means sitting down with coffee and a cinnamon
+                                bun (Kanelbulle) to socialize.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Midsummer -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Sweden/midsummer.jpg');">
+                        <div class="culture-icon">&#127800;</div>
+                        <div class="culture-text">
+                            <h4>Midsommar</h4>
+                            <p>The most important holiday. Swedes wear flower crowns, dance around the maypole like
+                                frogs, and eat herring.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Lagom -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Sweden/lagom.jpg');">
+                        <div class="culture-icon">&#9878;</div> <!-- Balance scale -->
+                        <div class="culture-text">
+                            <h4>Lagom</h4>
+                            <p>The Swedish philosophy of life: "Not too little, not too much. Just right." Moderation
+                                and balance in all things.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Allemansrätten -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Sweden/nature.jpg');">
+                        <div class="culture-icon">&#127957;</div> <!-- Camping -->
+                        <div class="culture-text">
+                            <h4>Allemansrätten</h4>
+                            <p>"The Right of Public Access." You are free to roam, camp, and pick berries anywhere in
+                                nature, even on private land.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Smörgåsbord -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Sweden/food.jpg');">
+                        <div class="culture-icon">&#129382;</div> <!-- Meatball -->
+                        <div class="culture-text">
+                            <h4>Smörgåsbord</h4>
+                            <p>A festive buffet style meal. Staples include pickled herring, gravlax (cured salmon), and
+                                of course, meatballs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Swedish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Swedish Phrasebook</h2>
+                <p class="section-subtitle">Swedes speak impeccable English, but they love it when you try.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Swedish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hej</td>
+                                <td>Hey</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hej" data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tack</td>
+                                <td>Tack</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Tack" data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ursäkta</td>
+                                <td>Ir-shek-ta</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Ursäkta" data-lang="sv-SE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hur mår du?</td>
+                                <td>Hoor mor doo</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Hur mår du"
+                                        data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ja / Nej</td>
+                                <td>Yah / Nay</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ja Nej" data-lang="sv-SE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vad kostar det?</td>
+                                <td>Vad cos-tar deh</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Vad kostar det"
+                                        data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>En öl, tack</td>
+                                <td>En erl, tack</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="En öl tack"
+                                        data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Skål!</td>
+                                <td>Skohl</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Skål" data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Var är toaletten?</td>
+                                <td>Var air twa-let-en</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Var är toaletten"
+                                        data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Talar du engelska?</td>
+                                <td>Tah-lar doo eng-el-ska</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Talar du engelska"
+                                        data-lang="sv-SE">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Sweden on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Sweden</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

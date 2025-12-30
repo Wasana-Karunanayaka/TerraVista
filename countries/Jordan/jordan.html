@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Jordan</title>
+
+    <meta name="description"
+        content="Discover the Rose City of Petra, float in the Dead Sea, camp under the stars in Wadi Rum, and experience legendary Bedouin hospitality.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR JORDAN -->
+    <style>
+        :root {
+            /* Petra Rose (Red Sandstone) */
+            --theme-primary: #C75B48;
+            /* Olive/Flag Green */
+            --theme-secondary: #007A33;
+            --theme-bg-light: #fbf7f4;
+            --theme-text-dark: #2c1a16;
+        }
+
+        .culture-section::before {
+            background: #C75B48;
+            /* Rose blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Green button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #005925 !important;
+        }
+
+        /* Gradient for Title: Rose to Green */
+        .country-title {
+            background: linear-gradient(135deg, #C75B48 0%, #007A33 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Jordan/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Jordan</h1>
+            <p class="country-slogan">"The Kingdom of Time"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#74;&#79;&#68;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Jordanian Dinar (JOD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Arabic</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127964;</div>
+                <div class="stat-label">Wonder</div>
+                <div class="stat-value">Petra (New 7 Wonders)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Jordan Pass Recommended</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Jordan</h2>
+            <p class="section-subtitle">An open-air museum of history, from Roman cities to Martian landscapes.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Petra -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/petra.jpg" alt="Petra Treasury" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Petra</h3>
+                        <p>The "Rose City." Walk through the Siq to reveal Al-Khazneh (The Treasury). A Nabataean
+                            masterpiece carved into rock.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Wadi Rum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/wadirum.jpg" alt="Wadi Rum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wadi Rum</h3>
+                        <p>The Valley of the Moon. A mars-like desert protected as a UNESCO site. take a jeep tour or
+                            camp with Bedouins.</p>
+                    </div>
+                </div>
+
+                <!-- 3. The Dead Sea -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/deadsea.jpg" alt="Dead Sea" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Dead Sea</h3>
+                        <p>The lowest point on Earth. The water is so salty you can't sink. Apply the mineral-rich mud
+                            for a natural spa treatment.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Jerash -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/jerash.jpg" alt="Jerash" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jerash</h3>
+                        <p>One of the best-preserved Roman cities in the world. Walk the Colonnaded Street and see
+                            Hadrian's Arch.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Amman Citadel -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/amman.jpg" alt="Amman Citadel" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Amman Citadel</h3>
+                        <p>Jabal al-Qal'a. Ancient ruins sitting on the highest hill in Amman, offering panoramic views
+                            of the capital's seven hills.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Aqaba -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/aqaba.jpg" alt="Aqaba" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Aqaba / Red Sea</h3>
+                        <p>Jordan's only coastal city. Famous for its warm weather, vibrant coral reefs, and world-class
+                            scuba diving.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Mount Nebo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/nebo.jpg" alt="Mount Nebo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Nebo</h3>
+                        <p>The site where Moses is said to have viewed the Promised Land. Offers stunning views of the
+                            Holy Land on clear days.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Madaba -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/madaba.jpg" alt="Madaba" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Madaba</h3>
+                        <p>"The City of Mosaics." Famous for the 6th-century mosaic map of Jerusalem and the Holy Land
+                            in St. George’s Church.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Dana Biosphere Reserve -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/dana.jpg" alt="Dana Reserve" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dana Biosphere Reserve</h3>
+                        <p>Jordan's largest nature reserve. A hiker's paradise with diverse geology, from sandstone
+                            cliffs to wadis.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Wadi Mujib -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Jordan/mujib.jpg" alt="Wadi Mujib" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Wadi Mujib</h3>
+                        <p>The "Grand Canyon of Jordan." An adventure hub for canyoning, hiking through water, and
+                            dramatic rock formations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Jordanian Heritage</h2>
+                <p class="section-subtitle">A land where guests are treated like kings.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Bedouin Hospitality -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Jordan/bedouin.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee/Tea -->
+                        <div class="culture-text">
+                            <h4>Bedouin Hospitality</h4>
+                            <p>"Ahlan Wa Sahlan." Offering sweet tea or cardamom coffee to strangers is a sacred duty of
+                                honor.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Mansaf -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Jordan/mansaf.jpg');">
+                        <div class="culture-icon">&#127835;</div> <!-- Rice/Meat -->
+                        <div class="culture-text">
+                            <h4>Mansaf</h4>
+                            <p>The national dish. Lamb cooked in fermented dried yogurt (Jameed) served on rice.
+                                Traditionally eaten with the right hand.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mosaics -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Jordan/mosaic.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Art -->
+                        <div class="culture-text">
+                            <h4>Mosaic Art</h4>
+                            <p>Continuing a Byzantine tradition, intricate stone mosaics are still crafted by hand in
+                                Madaba and beyond.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Dead Sea Mud -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Jordan/mud.jpg');">
+                        <div class="culture-icon">&#128671;</div> <!-- Bath -->
+                        <div class="culture-text">
+                            <h4>Wellness Traditions</h4>
+                            <p>Since the days of Cleopatra, the mineral-rich black mud of the Dead Sea has been used for
+                                healing and beauty.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Petra by Night -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Jordan/lantern.jpg');">
+                        <div class="culture-icon">&#127878;</div> <!-- Lantern -->
+                        <div class="culture-text">
+                            <h4>Petra by Night</h4>
+                            <p>A magical experience. Walking the Siq to the Treasury illuminated only by 1,500 candles
+                                and Bedouin music.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Arabic)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Useful Arabic Phrases</h2>
+                <p class="section-subtitle">Jordanians are incredibly friendly. A "Salam" goes a long way.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Arabic</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marhaba</td>
+                                <td>Mar-ha-ba</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Marhaba" data-lang="ar-JO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ahlan Wa Sahlan</td>
+                                <td>Ah-lan wa sah-lan</td>
+                                <td>Welcome</td>
+                                <td><button class="audio-btn" data-phrase="Ahlan Wa Sahlan"
+                                        data-lang="ar-JO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Shukran</td>
+                                <td>Shook-ran</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Shukran" data-lang="ar-JO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Afwan</td>
+                                <td>Af-wan</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Afwan" data-lang="ar-JO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Keef Halak? (M) / Halik? (F)</td>
+                                <td>Keef ha-lak</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Keef Halak"
+                                        data-lang="ar-JO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Inshallah</td>
+                                <td>In-shal-la</td>
+                                <td>God willing / Hopefully</td>
+                                <td><button class="audio-btn" data-phrase="Inshallah" data-lang="ar-JO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Min fadlak</td>
+                                <td>Min fad-lak</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Min fadlak"
+                                        data-lang="ar-JO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Wayn...?</td>
+                                <td>Wane</td>
+                                <td>Where is...?</td>
+                                <td><button class="audio-btn" data-phrase="Wayn" data-lang="ar-JO">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tayyeb</td>
+                                <td>Ta-yeb</td>
+                                <td>Okay / Good</td>
+                                <td><button class="audio-btn" data-phrase="Tayyeb" data-lang="ar-JO">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ma'a salama</td>
+                                <td>Ma sa-la-ma</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Ma'a salama"
+                                        data-lang="ar-JO">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Jordan on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Jordan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

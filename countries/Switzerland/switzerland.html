@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Switzerland</title>
+
+    <meta name="description"
+        content="The Roof of Europe. Breathtaking Alpine peaks, pristine lakes, precision engineering, and the world's best chocolate.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR SWITZERLAND -->
+    <style>
+        :root {
+            /* Swiss Red */
+            --theme-primary: #D52B1E;
+            /* Silver / White */
+            --theme-secondary: #AAAAAA;
+            --theme-bg-light: #fcfcfc;
+            --theme-text-dark: #1f1f1f;
+        }
+
+        .culture-section::before {
+            background: #D52B1E;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #b22218 !important;
+        }
+
+        /* Gradient for Title: Red to Silver */
+        .country-title {
+            background: linear-gradient(135deg, #D52B1E 0%, #AAAAAA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Switzerland/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Switzerland</h1>
+            <p class="country-slogan">"Get Natural"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#67;&#72;&#70;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Swiss Franc (CHF)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Languages</div>
+                <div class="stat-value">DE, FR, IT, RM</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127956;</div>
+                <div class="stat-label">Symbol</div>
+                <div class="stat-value">The Matterhorn</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Switzerland</h2>
+            <p class="section-subtitle">A playground of mountains, lakes, and charming medieval towns.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. The Matterhorn -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/matterhorn.jpg" alt="Matterhorn" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Matterhorn</h3>
+                        <p>Zermatt. The world's most photographed mountain. A jagged pyramid soaring 4,478 meters into
+                            the sky.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Jungfraujoch -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/jungfrau.jpg" alt="Jungfraujoch" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jungfraujoch</h3>
+                        <p>Top of Europe. The highest railway station in Europe, offering breathtaking views of the
+                            Aletsch Glacier.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Lake Geneva -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/geneva.jpg" alt="Lake Geneva" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lake Geneva</h3>
+                        <p>Europe's largest Alpine lake. Home to the Jet d'Eau, the vineyards of Lavaux, and the jazz
+                            city of Montreux.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Lucerne -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/lucerne.jpg" alt="Lucerne" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lucerne</h3>
+                        <p>A picture-perfect city. Famous for the covered Kapellbrücke (Chapel Bridge), the Lion
+                            Monument, and Lake Lucerne.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Interlaken -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/interlaken.jpg" alt="Interlaken" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Interlaken</h3>
+                        <p>"Between Lakes." The adventure capital of Switzerland. Skydiving, canyoning, and the gateway
+                            to the Bernese Oberland.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Château de Chillon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/chillon.jpg" alt="Chateau de Chillon" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Château de Chillon</h3>
+                        <p>Montreux. An island castle on Lake Geneva made famous by Lord Byron. The most visited
+                            historic building in the country.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Rhine Falls -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/rhine.jpg" alt="Rhine Falls" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rhine Falls</h3>
+                        <p>Europe's most powerful waterfall. Feel the roar of the water from a boat ride near
+                            Schaffhausen.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Bern -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/bern.jpg" alt="Bern" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bern</h3>
+                        <p>The capital. Its medieval Old Town is a UNESCO World Heritage site, featuring 6km of arcades
+                            and the Zytglogge clock tower.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Zurich -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/zurich.jpg" alt="Zurich" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zurich</h3>
+                        <p>A global banking hub with a creative heart. Enjoy the trendy Zurich West, the beautiful
+                            lakefront, and high-end shopping.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Grindelwald -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Switzerland/grindelwald.jpg" alt="Grindelwald" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Grindelwald</h3>
+                        <p>A village at the base of the Eiger North Face. Stunning scenery in both winter (skiing) and
+                            summer (hiking).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Swiss Excellence</h2>
+                <p class="section-subtitle">Precision, privacy, punctuality, and pure quality.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Watches -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Switzerland/watch.jpg');">
+                        <div class="culture-icon">&#8986;</div> <!-- Watch -->
+                        <div class="culture-text">
+                            <h4>Watchmaking</h4>
+                            <p>Swiss Made. A symbol of quality and precision. From Swatch to Rolex, horology is in the
+                                national DNA.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Chocolate -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Switzerland/chocolate.jpg');">
+                        <div class="culture-icon">&#127851;</div> <!-- Chocolate -->
+                        <div class="culture-text">
+                            <h4>Swiss Chocolate</h4>
+                            <p>The inventors of milk chocolate (Daniel Peter). Lindt, Toblerone, and countless artisanal
+                                chocolatiers.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Fondue -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Switzerland/fondue.jpg');">
+                        <div class="culture-icon">&#129472;</div> <!-- Cheese -->
+                        <div class="culture-text">
+                            <h4>Cheese Fondue</h4>
+                            <p>Melted Gruyère and Emmental with white wine and garlic. Dipping bread is a communal
+                                winter tradition.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Punctuality -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Switzerland/train.jpg');">
+                        <div class="culture-icon">&#128646;</div> <!-- Train -->
+                        <div class="culture-text">
+                            <h4>Punctuality</h4>
+                            <p>If the train is one minute late, people check their watches. The transport system is
+                                famously efficient.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Yodeling & Alphorns -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Switzerland/alphorn.jpg');">
+                        <div class="culture-icon">&#127926;</div> <!-- Music note -->
+                        <div class="culture-text">
+                            <h4>Alpine Tradition</h4>
+                            <p>The sounds of the mountains. Yodeling was once a way to communicate across valleys;
+                                Alphorns are massive wooden wonders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Swiss German / French)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Swiss Phrasebook</h2>
+                <p class="section-subtitle">Switzerland has 4 official languages. Here's a mix of Swiss German (Grüezi)
+                    and French.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Phrase</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grüezi (Swiss German)</td>
+                                <td>Grew-tsee</td>
+                                <td>Hello (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Grüezi" data-lang="de-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Merci vilmal</td>
+                                <td>Mer-see veel-mal</td>
+                                <td>Thanks a lot</td>
+                                <td><button class="audio-btn" data-phrase="Merci vilmal"
+                                        data-lang="de-CH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Bonjour (French)</td>
+                                <td>Bon-zhoor</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Bonjour" data-lang="fr-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>En guete</td>
+                                <td>En goo-te</td>
+                                <td>Enjoy your meal</td>
+                                <td><button class="audio-btn" data-phrase="En guete" data-lang="de-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prost! / Santé!</td>
+                                <td>Prost / Son-tay</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Prost" data-lang="de-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wo isch...?</td>
+                                <td>Vo ish</td>
+                                <td>Where is...?</td>
+                                <td><button class="audio-btn" data-phrase="Wo isch" data-lang="de-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Uf Wiederluege</td>
+                                <td>Oof vee-der-loo-ge</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Uf Wiederluege"
+                                        data-lang="de-CH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Excusez-moi</td>
+                                <td>Ex-koo-zay mwa</td>
+                                <td>Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Excusez-moi"
+                                        data-lang="fr-CH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Chuchichäschtli</td>
+                                <td>Khoo-khee-khesh-lee</td>
+                                <td>Kitchen Cupboard (The test if you can speak Swiss German!)</td>
+                                <td><button class="audio-btn" data-phrase="Chuchichäschtli"
+                                        data-lang="de-CH">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ja / Nein / Oui / Non</td>
+                                <td>Ya / Nine / Wee / Noh</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ja Nein" data-lang="de-CH">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Switzerland on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Switzerland</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!--
+ * TerraVista - Contact Page
+ *
+ * File:        contact.html
+ * Author:      Wasana Karunanayaka
+ * Description: This file contains the contact page for the TerraVista website. 
+ *              It includes an interactive contact form with client-side validation,
+ *              key contact information, an on-demand loading map, a FAQ section, 
+ *              and a modal for the privacy policy.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TerraVista</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Get in touch with the TerraVista team. Send us your questions, feedback, or travel inquiries.">
+    <meta name="keywords" content="contact, terravista, travel help, feedback, inquiry">
+    <meta name="author" content="Wasana Karunanayaka">
+
+    <!-- External Assets -->
+    <link rel="stylesheet" href="stylesMain.css">
+    <link rel="icon" type="image/x-icon" href="resourcesMain/favicon.ico">
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+       1. MAIN NAVIGATION BAR
+       This is the primary navigation component, consistent across all main pages.
+       ========================================================================== -->
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content Wrapper for the Page -->
+    <main id="main-content">
+
+        <!-- ==========================================================================
+           2. HERO SECTION
+           The introductory banner for the contact page.
+           ========================================================================== -->
+        <section class="hero about-hero">
+            <img src="resourcesMain/contact-hero-bg.jpg" alt="A desk with a laptop, passport, and a map"
+                class="hero-background-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">Get in Touch</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Have questions? We'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. CONTACT FORM & INFO SECTION
+           Contains the user message form and key contact details.
+           ========================================================================== -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-content">
+
+                    <!-- Form Container -->
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <h2 style="text-align: left; margin-bottom: 2rem;">Send Us a Message</h2>
+
+                            <!-- Name Input -->
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="e.g., John Doe"
+                                    required>
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="e.g., john.doe@example.com" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <!-- Message Textarea -->
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea"
+                                    placeholder="Tell us about your inquiry..." rows="5" required></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <!-- Privacy Policy Agreement -->
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+                                    <span class="checkbox-custom"></span>I agree to the <a href="#"
+                                        class="privacy-link">Privacy Policy</a> *
+                                </label>
+                                <span class="error-message" id="privacy-error"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information Card -->
+                    <div class="contact-info-container">
+                        <div class="contact-info-card">
+                            <h3>Contact Information</h3>
+                            <div class="info-item">
+                                <div class="info-icon"><img src="resourcesMain/email-icon.png" alt="Email Icon"
+                                        width="24" height="24"></div>
+                                <div><strong>Email</strong>
+                                    <p>contact@terravista.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><img src="resourcesMain/address-icon.png" alt="Address Icon"
+                                        width="24" height="24"></div>
+                                <div><strong>Address</strong>
+                                    <p>University of Peradeniya<br>Peradeniya, Sri Lanka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           4. GOOGLE MAPS SECTION
+           Embeds an interactive map showing the project's origin location.
+           ========================================================================== -->
+        <section class="map-section" style="background: var(--white);">
+            <div class="container">
+                <h2 class="section-title">Find Us On The Map</h2>
+
+                <!-- This is the new interactive placeholder for the map -->
+                <div class="map-container" id="contact-map-placeholder">
+                    <img src="resourcesMain/map-preview.jpg"
+                        alt="A map showing the location of the University of Peradeniya"
+                        style="width:100%; height:100%; object-fit: cover;">
+                    <div id="loadMapBtn" class="map-load-button">
+                        Click to Load Interactive Map
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. FAQ SECTION
+           An accordion-style list of frequently asked questions.
+           ========================================================================== -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is TerraVista?</span>
+                            <span class="faq-toggle"><img src="resourcesMain/plus-icon.png" alt="Toggle FAQ" width="18"
+                                    height="18"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>TerraVista is a travel platform providing detailed insights into global destinations. Our
+                                name combines 'Terra' (Latin for Earth) and 'Vista' (a view or sight), reflecting our
+                                mission to offer a beautiful view of the world to every explorer.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How many countries are featured?</span>
+                            <span class="faq-toggle"><img src="resourcesMain/plus-icon.png" alt="Toggle FAQ" width="18"
+                                    height="18"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently, our platform provides in-depth guides for 10 popular travel destinations, with
+                                more being added in the future.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is TerraVista free to use?</span>
+                            <span class="faq-toggle"><img src="resourcesMain/plus-icon.png" alt="Toggle FAQ" width="18"
+                                    height="18"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, all destination guides, interactive features, and travel resources on TerraVista are
+                                completely free for all users.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I contribute to the platform?</span>
+                            <span class="faq-toggle"><img src="resourcesMain/plus-icon.png" alt="Toggle FAQ" width="18"
+                                    height="18"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We love hearing from our community! If you have suggestions, feedback, or travel stories,
+                                please use our contact form to get in touch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       6. FOOTER
+       The site-wide footer component.
+       ========================================================================== -->
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ==========================================================================
+       7. PRIVACY POLICY MODAL
+       A pop-up window for the privacy policy, triggered from the contact form.
+       ========================================================================== -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-button">×</span>
+            <h2>Privacy Policy</h2>
+            <p>This privacy policy outlines how TerraVista handles your information when you use our contact form.</p>
+
+            <h3>Information We Collect</h3>
+            <p>When you use our contact form, we collect the following information:</p>
+            <ul>
+                <li><strong>Full Name:</strong> To address you personally in our response.</li>
+                <li><strong>Email Address:</strong> To reply to your inquiry.</li>
+                <li><strong>Message:</strong> The content of your question or feedback.</li>
+            </ul>
+
+            <h3>How We Use Your Information</h3>
+            <p>Your information is used solely for the purpose of responding to your message. We are a student project
+                and do not store your data for marketing purposes, sell it to third parties, or use it for any other
+                reason.</p>
+
+            <h3>Data Security</h3>
+            <p>As this is a demonstration website, please do not send any sensitive personal information through the
+                contact form. All submissions are for project evaluation purposes only.</p>
+
+            <h3>Your Consent</h3>
+            <p>By using our contact form and checking the "I agree" box, you consent to this privacy policy.</p>
+        </div>
+    </div>
+
+    <!-- Shared Components Script (Header/Footer) -->
+    <script src="../components.js"></script>
+    <script>
+        // Initialize shared components with root path (empty for root-level files)
+        loadComponents('../');
+    </script>
+
+    <!-- Main JavaScript File for Page-Specific Logic (Form, FAQ) -->
+    <script src="scriptMain.js"></script>
+
+</body>
+
+</html>

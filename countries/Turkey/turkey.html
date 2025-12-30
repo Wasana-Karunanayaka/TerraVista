@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Turkey</title>
+
+    <meta name="description"
+        content="Where East meets West. Explore the mosques of Istanbul, the fairy chimneys of Cappadocia, and the white terraces of Pamukkale.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR TURKEY -->
+    <style>
+        :root {
+            /* Turkey Red */
+            --theme-primary: #E30A17;
+            /* Turquoise (The color named after the country!) */
+            --theme-secondary: #30D5C8;
+            --theme-bg-light: #fdfcfc;
+            --theme-text-dark: #2d2d2d;
+        }
+
+        .culture-section::before {
+            background: #30D5C8;
+            /* Turquoise blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #b0000a !important;
+        }
+
+        /* Gradient for Title: Red to Turquoise */
+        .country-title {
+            background: linear-gradient(135deg, #E30A17 0%, #30D5C8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Turkey/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Türkiye</h1>
+            <p class="country-slogan">"The Cradle of Civilizations"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8378;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Turkish Lira (TRY)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Turkish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127963;</div>
+                <div class="stat-label">History</div>
+                <div class="stat-value">18 UNESCO Sites</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">E-Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Türkiye</h2>
+            <p class="section-subtitle">A tapestry of cultures stretching from Europe to Asia, filled with ancient
+                wonder.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Istanbul (Hagia Sophia) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/istanbul.jpg" alt="Istanbul" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Istanbul</h3>
+                        <p>The only city on two continents. Visit the Hagia Sophia, the Blue Mosque, Topkapi Palace, and
+                            the Grand Bazaar.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Cappadocia -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/cappadocia.jpg" alt="Cappadocia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Cappadocia</h3>
+                        <p>A fairytale landscape of "fairy chimneys." Famous for hot air balloon rides at sunrise and
+                            underground cities.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Ephesus -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/ephesus.jpg" alt="Ephesus" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ephesus</h3>
+                        <p>One of the best-preserved Roman cities in the Mediterranean. Walk the Library of Celsus and
+                            the Great Theatre.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Pamukkale -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/pamukkale.jpg" alt="Pamukkale" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pamukkale</h3>
+                        <p>"Cotton Castle." Surreal white travertine terraces filled with thermal blue waters, located
+                            next to ancient Hierapolis.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Antalya (Turquoise Coast) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/antalya.jpg" alt="Antalya" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Antalya</h3>
+                        <p>The pearl of the Turkish Riviera. Stunning beaches, the historic Kaleiçi district, and the
+                            Düden Waterfalls.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Mount Nemrut -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/nemrut.jpg" alt="Mount Nemrut" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Nemrut</h3>
+                        <p>A mysterious mountain peak adorned with massive stone heads of ancient gods. Spectacular at
+                            sunset.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Bodrum -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/bodrum.jpg" alt="Bodrum" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bodrum</h3>
+                        <p>A chic coastal town featuring the Castle of St. Peter and the site of the Mausoleum at
+                            Halicarnassus (Ancient Wonder).</p>
+                    </div>
+                </div>
+
+                <!-- 8. Sumela Monastery -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/sumela.jpg" alt="Sumela Monastery" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sumela Monastery</h3>
+                        <p>A Greek Orthodox monastery clinging to a sheer cliff face in the lush Pontic Mountains near
+                            Trabzon.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Troy (Truva) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Turkey/troy.jpg" alt="Troy" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Troy</h3>
+                        <p>The legendary city of Homer's Iliad. See the replica wooden horse and the layers of 4,000
+                            years of history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Anatolian Heritage</h2>
+                <p class="section-subtitle">Hospitality is the cornerstone of Turkish way of life.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Tea (Çay) -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Turkey/tea.jpg');">
+                        <div class="culture-icon">&#129486;</div> <!-- Cup (closest) -->
+                        <div class="culture-text">
+                            <h4>Çay (Tea)</h4>
+                            <p>Served in tulip-shaped glasses. It is offered everywhere as a sign of friendship and
+                                hospitality.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Hamam -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Turkey/hamam.jpg');">
+                        <div class="culture-icon">&#128704;</div>
+                        <div class="culture-text">
+                            <h4>Turkish Hamam</h4>
+                            <p>The traditional bathhouse experience. A cleansing ritual involving steam, scrubbing
+                                (kese), and foam massage.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Carpets -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Turkey/carpet.jpg');">
+                        <div class="culture-icon">&#129526;</div>
+                        <!-- Rug/Mat via safety vest icon? Using generic art icon -->
+                        <div class="culture-text">
+                            <h4>Kilims & Carpets</h4>
+                            <p>World-famous for their double-knot technique and intricate patterns telling stories of
+                                their weavers.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Whirling Dervishes -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Turkey/dervish.jpg');">
+                        <div class="culture-icon">&#128131;</div>
+                        <div class="culture-text">
+                            <h4>Whirling Dervishes</h4>
+                            <p>A mesmerizing Sufi ceremony (Sema) representing the soul's mystical journey to spiritual
+                                perfection.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Nazar (Evil Eye) -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Turkey/nazar.jpg');">
+                        <div class="culture-icon">&#129487;</div> <!-- Eye -->
+                        <div class="culture-text">
+                            <h4>Nazar Boncuğu</h4>
+                            <p>The blue "Evil Eye" bead. Used to ward off bad luck and jealousy, found in every home and
+                                vehicle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Turkish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Turkish Phrasebook</h2>
+                <p class="section-subtitle">Turkish is an agglutinative language. Words can get very long!</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Turkish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Merhaba</td>
+                                <td>Mer-ha-ba</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Merhaba" data-lang="tr-TR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Teşekkürler</td>
+                                <td>Te-shek-kur-ler</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Teşekkürler"
+                                        data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Nasılsınız?</td>
+                                <td>Na-sil-sin-iz</td>
+                                <td>How are you? (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Nasılsınız"
+                                        data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>İyi</td>
+                                <td>Ee-yee</td>
+                                <td>Good</td>
+                                <td><button class="audio-btn" data-phrase="İyi" data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Evet / Hayır</td>
+                                <td>E-vet / Ha-yir</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Evet Hayır"
+                                        data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lütfen</td>
+                                <td>Lut-fen</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Lütfen" data-lang="tr-TR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ne kadar?</td>
+                                <td>Ne ka-dar</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Ne kadar" data-lang="tr-TR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Afiyet olsun</td>
+                                <td>A-fi-yet ol-sun</td>
+                                <td>Bon appetit</td>
+                                <td><button class="audio-btn" data-phrase="Afiyet olsun"
+                                        data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hesap, lütfen</td>
+                                <td>He-sap lut-fen</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="Hesap lütfen"
+                                        data-lang="tr-TR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hoşça kal</td>
+                                <td>Hosh-cha kal</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Hoşça kal" data-lang="tr-TR">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Türkiye on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Türkiye</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

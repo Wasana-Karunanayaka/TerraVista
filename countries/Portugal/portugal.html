@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Portugal</title>
+
+    <meta name="description"
+        content="Europe's sunniest country. Discover the golden beaches of the Algarve, the history of Lisbon, and the lush vineyards of the Douro Valley.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR PORTUGAL -->
+    <style>
+        :root {
+            /* Portugal Green (Flag) */
+            --theme-primary: #006600;
+            /* Portugal Red (Flag) */
+            --theme-secondary: #FF0000;
+            --theme-bg-light: #f4fdf4;
+            --theme-text-dark: #1a2e1a;
+        }
+
+        .culture-section::before {
+            background: #006600;
+            /* Green blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #cc0000 !important;
+        }
+
+        /* Gradient for Title: Green to Red */
+        .country-title {
+            background: linear-gradient(135deg, #006600 0%, #FF0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Portugal/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Portugal</h1>
+            <p class="country-slogan">"Europe's West Coast"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Portuguese</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127774;</div>
+                <div class="stat-label">Sunniest</div>
+                <div class="stat-value">300+ Days of Sun</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Portugal</h2>
+            <p class="section-subtitle">From medieval castles and cobblestone villages to dramatic cliffs and golden
+                beaches.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Lisbon -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/lisbon.jpg" alt="Lisbon Tram" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lisbon</h3>
+                        <p>The City of Seven Hills. Famous for its yellow trams, pastel de nata, and the historic Alfama
+                            district.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Algarve -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/algarve.jpg" alt="Algarve Coast" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Algarve</h3>
+                        <p>Portugal's southern coast. Renowned for its breathtaking cliffs, sea caves like Benagil, and
+                            golden sandy beaches.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Sintra -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/sintra.jpg" alt="Sintra Pena Palace" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sintra</h3>
+                        <p>A fairytale town. Visit the colorful Pena Palace, the Moorish Castle, and the mystical Quinta
+                            da Regaleira.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Porto -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/porto.jpg" alt="Porto" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Porto</h3>
+                        <p>The home of Port wine. A stunning riverside city with medieval architecture and the iconic
+                            Dom Luís I Bridge.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Douro Valley -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/douro.jpg" alt="Douro Valley" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Douro Valley</h3>
+                        <p>The oldest demarcated wine region in the world. Terraced vineyards slope down to the winding
+                            river.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Madeira -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/madeira.jpg" alt="Madeira" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Madeira</h3>
+                        <p>"The Floating Garden." An Atlantic island famous for its rugged landscapes, Levada walks, and
+                            fortified wine.</p>
+                    </div>
+                </div>
+
+                <!-- 7. The Azores -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/azores.jpg" alt="Azores" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Azores</h3>
+                        <p>Europe's Hawaii. A volcanic archipelago known for whale watching, hot springs, and lush green
+                            calderas.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Évora -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/evora.jpg" alt="Obidos" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Évora</h3>
+                        <p>A museum-city. Encased in medieval walls, featuring a Roman Temple (Diana) and the spooky
+                            Chapel of Bones.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Óbidos -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/obidos.jpg" alt="Obidos" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Óbidos</h3>
+                        <p>A charming walled town gifted to Queens of Portugal. Known for its cobblestone streets and
+                            Ginjinha liqueur.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Coimbra -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Portugal/coimbra.jpg" alt="Coimbra" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Coimbra</h3>
+                        <p>The Oxford of Portugal. Home to one of the world's oldest universities and its spectacular
+                            Baroque library.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Portuguese Soul</h2>
+                <p class="section-subtitle">Melancholic music, vibrant tiles, and a love for the sea.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Fado -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Portugal/fado.jpg');">
+                        <div class="culture-icon">&#127928;</div> <!-- Guitar -->
+                        <div class="culture-text">
+                            <h4>Fado Music</h4>
+                            <p>The sound of "Saudade" (longing). Hauntingly beautiful songs accompanied by the
+                                Portuguese 12-string guitar.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Azulejos -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Portugal/tiles.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Art -->
+                        <div class="culture-text">
+                            <h4>Azulejos</h4>
+                            <p>Painted ceramic tiles. They cover churches, palaces, and train stations, telling stories
+                                in blue and white.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Pastel de Nata -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Portugal/nata.jpg');">
+                        <div class="culture-icon">&#129383;</div> <!-- Tart/Pie -->
+                        <div class="culture-text">
+                            <h4>Pastel de Nata</h4>
+                            <p>The iconic egg tart. Crispy puff pastry filled with creamy custard, dusted with cinnamon.
+                                Best eaten warm.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bacalhau -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Portugal/fish.jpg');">
+                        <div class="culture-icon">&#128031;</div> <!-- Fish -->
+                        <div class="culture-text">
+                            <h4>Bacalhau</h4>
+                            <p>Salted Cod. It is said there are 365 ways to cook it—one for every day of the year.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Café Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Portugal/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Café Culture</h4>
+                            <p>Life revolves around the "bica" (espresso). It's a daily ritual to stand at the counter
+                                for a quick coffee and chat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Portuguese)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Portuguese Phrasebook</h2>
+                <p class="section-subtitle">European Portuguese sounds quite different from Brazilian Portuguese.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Portuguese</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Olá</td>
+                                <td>Oh-lah</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Olá" data-lang="pt-PT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Obrigado (Masked) / Obrigada (Fem)</td>
+                                <td>Ob-ree-gah-doo / da</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Obrigado" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Poor fah-voor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bom dia</td>
+                                <td>Bom dee-ah</td>
+                                <td>Good morning</td>
+                                <td><button class="audio-btn" data-phrase="Bom dia" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Desculpe</td>
+                                <td>Des-kool-pah</td>
+                                <td>Sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Desculpe" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tudo bem?</td>
+                                <td>Too-doo beng</td>
+                                <td>How are you? / All good?</td>
+                                <td><button class="audio-btn" data-phrase="Tudo bem?" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quanto custa?</td>
+                                <td>Kwan-too koos-tah</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Quanto custa?"
+                                        data-lang="pt-PT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>A conta, por favor</td>
+                                <td>Ah kon-tah poor fah-voor</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="A conta por favor"
+                                        data-lang="pt-PT">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Adeus</td>
+                                <td>Ah-de-oosh</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Adeus" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Saúde!</td>
+                                <td>Sah-oo-dah</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Saúde" data-lang="pt-PT">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Portugal on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Portugal</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

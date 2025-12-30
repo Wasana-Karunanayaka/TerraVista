@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Hungary</title>
+
+    <meta name="description"
+        content="Dive into Hungary. Relax in thermal baths, explore the architecture of Budapest, taste spicy Goulash, and sip Tokaji wine.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR HUNGARY -->
+    <style>
+        :root {
+            /* Hungarian Red (Flag) */
+            --theme-primary: #CD2A3E;
+            /* Hungarian Green (Flag) */
+            --theme-secondary: #436F4D;
+            --theme-bg-light: #fefcfc;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #436F4D;
+            /* Green blob */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text: Green button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+        }
+
+        /* Gradient for Title: Red to Green */
+        .country-title {
+            background: linear-gradient(135deg, #CD2A3E 0%, #436F4D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Hungary/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Hungary</h1>
+            <p class="country-slogan">"Wellspring of Wonders"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#70;&#116;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Forint (HUF)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Hungarian (Magyar)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#9832;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Thermal Baths</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Hungary</h2>
+            <p class="section-subtitle">From the Pearl of the Danube to the Great Plain.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Budapest (Parliament) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/budapest.jpg" alt="Budapest Parliament" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Budapest</h3>
+                        <p>The stunning capital. See the Gothic Parliament, cross the Chain Bridge, and visit
+                            Fisherman's Bastion.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Thermal Baths (Széchenyi) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/baths.jpg" alt="Széchenyi Thermal Bath" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Thermal Baths</h3>
+                        <p>Relax in the medicinal waters of Széchenyi or Gellért. Budapest is the "City of Spas."</p>
+                    </div>
+                </div>
+
+                <!-- 3. Lake Balaton -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/balaton.jpg" alt="Lake Balaton" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lake Balaton</h3>
+                        <p>The "Hungarian Sea." A massive freshwater lake perfect for sailing, swimming, and wine
+                            tasting.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Eger -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/eger.jpg" alt="Eger" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Eger</h3>
+                        <p>Famous for its castle (heroic 1552 siege), baroque architecture, and "Bull's Blood" red wine.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Tokaj Wine Region -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/tokaj.jpg" alt="Tokaj" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tokaj</h3>
+                        <p>A UNESCO region producing the world's oldest botrytized wine, Tokaji Aszú (Wine of Kings).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. Szentendre -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/szentendre.jpg" alt="Szentendre" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Szentendre</h3>
+                        <p>An artists' village near Budapest with colorful houses, cobbled streets, and marzipan
+                            museums.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Hortobágy National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/hortobagy.jpg" alt="Hortobágy" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hortobágy (Puszta)</h3>
+                        <p>The Great Hungarian Plain. Home to the Csikós (horsemen), grey cattle, and the Nine-Arched
+                            Bridge.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Pécs -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Hungary/pecs.jpg" alt="Pécs" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Pécs</h3>
+                        <p>A multicultural city with Early Christian Mausoleums (UNESCO), mosques from the Ottoman era,
+                            and ceramics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Magyar Culture</h2>
+                <p class="section-subtitle">A unique language, spicy food, and a history of invention.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Paprika & Goulash -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Hungary/goulash.jpg');">
+                        <div class="culture-icon">&#127798;</div>
+                        <div class="culture-text">
+                            <h4>Paprika & Gulyás</h4>
+                            <p>Paprika is the national spice. Goulash is a rich soup (not stew) of meat and vegetables
+                                seasoned with it.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Ruin Bars -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Hungary/ruin-bar.jpg');">
+                        <div class="culture-icon">&#127867;</div>
+                        <div class="culture-text">
+                            <h4>Ruin Bars</h4>
+                            <p>Dilapidated buildings in Budapest's Jewish Quarter turned into eclectic, vibrant bars
+                                (e.g., Szimpla Kert).</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Inventions -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Hungary/rubik.jpg');">
+                        <div class="culture-icon">&#129513;</div> <!-- Puzzle piece/Cube -->
+                        <div class="culture-text">
+                            <h4>Inventions</h4>
+                            <p>Hungarians invented the Rubik's Cube, the ballpoint pen (Bíró), and Vitamin C discovery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Folk Art -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Hungary/folk-art.jpg');">
+                        <div class="culture-icon">&#129525;</div> <!-- Thread/Needle -->
+                        <div class="culture-text">
+                            <h4>Folk Art</h4>
+                            <p>Matyó embroidery (UNESCO) features brilliant floral motifs, especially roses, on
+                                traditional clothing.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Music -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Hungary/music.jpg');">
+                        <div class="culture-icon">&#127931;</div> <!-- Violin -->
+                        <div class="culture-text">
+                            <h4>Music (Liszt & Kodály)</h4>
+                            <p>From the Rhapsodies of Franz Liszt to authentic Roma folk music, melody is in the
+                                Hungarian soul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Hungarian)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Hungarian Phrasebook</h2>
+                <p class="section-subtitle">Magyar is a Uralic language, unrelated to most European languages. It's
+                    difficult but beautiful.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Hungarian</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Szia</td>
+                                <td>See-ya</td>
+                                <td>Hello / Goodbye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Szia" data-lang="hu-HU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Köszönöm</td>
+                                <td>Kuh-suh-nuhm</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Köszönöm" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jó napot</td>
+                                <td>Yoh nah-pot</td>
+                                <td>Good day (Formal Hello)</td>
+                                <td><button class="audio-btn" data-phrase="Jó napot" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Egészségedre</td>
+                                <td>Ah-gays-shay-ged-reh</td>
+                                <td>Cheers / Bless you</td>
+                                <td><button class="audio-btn" data-phrase="Egészségedre"
+                                        data-lang="hu-HU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Igen / Nem</td>
+                                <td>Ee-gen / Nem</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Igen Nem" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bocsánat</td>
+                                <td>Boh-chah-not</td>
+                                <td>Sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Bocsánat" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kérek...</td>
+                                <td>Kay-rek</td>
+                                <td>I would like... (Please)</td>
+                                <td><button class="audio-btn" data-phrase="Kérek" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mennyibe kerül?</td>
+                                <td>Meh-nyi-beh keh-rool</td>
+                                <td>How much does it cost?</td>
+                                <td><button class="audio-btn" data-phrase="Mennyibe kerül?"
+                                        data-lang="hu-HU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hol a mosdó?</td>
+                                <td>Hohl ah mosh-doh</td>
+                                <td>Where is the washroom?</td>
+                                <td><button class="audio-btn" data-phrase="Hol a mosdó?"
+                                        data-lang="hu-HU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Finom</td>
+                                <td>Fee-nom</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="Finom" data-lang="hu-HU">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Hungary on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Hungary</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

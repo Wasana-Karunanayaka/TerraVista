@@ -1,0 +1,197 @@
+<!--
+ * TerraVista - Home Page
+ *
+ * File:        index.html
+ * Author:      Wasana Karunanayaka
+ * Description: The landing page of TerraVista, featuring the hero section, featured countries, and core value propositions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Travel the Globe, One Vista at a Time</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore top travel destinations with TerraVista. Your ultimate guide to culture, attractions, and travel tips for countries around the world.">
+    <meta name="keywords" content="travel, exploration, culture, destinations, TerraVista">
+    <meta name="author" content="Wasana Karunanayaka">
+
+    <!-- External Assets -->
+    <link rel="icon" type="image/x-icon" href="resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="stylesMain.css">
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content Wrapper for the Page -->
+    <main>
+
+        <!-- ==========================================================================
+           2. HERO SECTION
+           The full-screen introductory banner for the home page.
+           ========================================================================== -->
+        <section class="hero" id="hero">
+            <img src="resourcesMain/home-hero-bg.jpg" alt="Beautiful mountain lake scenery" class="hero-background-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">TerraVista</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Travel the Globe, One Vista at a Time</p>
+                <a href="#countries" class="cta-button animate-fade-in-delay-2">
+                    Start Exploring
+                    <img src="resourcesMain/arrow-right.png" alt="Arrow Right" width="18" height="18">
+                </a>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. WHY CHOOSE US SECTION
+           Highlights the key features and value propositions of the website.
+           ========================================================================== -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose TerraVista?</h2>
+                <p class="section-subtitle">We provide a unique and enriching platform for cultural exploration.</p>
+
+                <div class="features-grid">
+                    <!-- Feature: Curated Content -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="resourcesMain/info-icon.png" alt="Info Icon" width="40" height="40">
+                        </div>
+                        <h3>Curated Content</h3>
+                        <p>Receive detailed and well-researched insights into each country's culture, history, and
+                            attractions.</p>
+                    </div>
+
+                    <!-- Feature: Interactive Experience -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="resourcesMain/cloud-icon.png" alt="Cloud Icon" width="40" height="40">
+                        </div>
+                        <h3>Interactive Experience</h3>
+                        <p>Engage with interactive maps, native audio phrasebooks, and deep cultural insights that make
+                            learning about the world fun.
+                        </p>
+                    </div>
+
+                    <!-- Feature: User-Friendly Design -->
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="resourcesMain/target-icon.png" alt="Target Icon" width="40" height="40">
+                        </div>
+                        <h3>User-Friendly</h3>
+                        <p>Enjoy a clean, modern, and fully responsive design that works beautifully on any device.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           4. FEATURED COUNTRIES SECTION
+           A gallery of clickable cards showcasing a selection of destinations.
+           ========================================================================== -->
+        <section class="countries-section" id="countries">
+            <div class="container">
+                <h2 class="section-title">Find Your Next Adventure</h2>
+                <p class="section-subtitle">From ancient wonders to modern marvels, here's a handpicked selection of
+                    destinations to spark your wanderlust.</p>
+
+                <div class="countries-grid">
+                    <!-- Japan Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/Japan/japan.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/japan-card.jpg" alt="Japan" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>Japan</h3>
+                                <p>Land of the Rising Sun</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- France Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/France/france.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/france-card.jpg" alt="France" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>France</h3>
+                                <p>City of Light and Love</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brazil Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/Brazil/brazil.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/brazil-card.jpg" alt="Brazil" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>Brazil</h3>
+                                <p>Vibrant Culture & Nature</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canada Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/Canada/canada.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/canada-card.jpg" alt="Canada" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>Canada</h3>
+                                <p>The Great White North</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Italy Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/Italy/italy.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/italy-card.jpg" alt="Italy" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>Italy</h3>
+                                <p>Art, History & Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Australia Card -->
+                    <div class="country-card" onclick="window.location.href='../countries/Australia/australia.html'">
+                        <div class="card-image">
+                            <img src="resourcesMain/australia-card.jpg" alt="Australia" loading="lazy">
+                            <div class="card-overlay">
+                                <h3>Australia</h3>
+                                <p>Land Down Under</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       5. FOOTER
+       The site-wide footer component.
+       ========================================================================== -->
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Main JavaScript File for Interactivity -->
+    <script src="scriptMain.js"></script>
+    <script src="../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../');
+        });
+    </script>
+
+</body>
+
+</html>

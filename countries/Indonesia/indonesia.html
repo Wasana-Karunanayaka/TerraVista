@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Indonesia</title>
+
+    <meta name="description"
+        content="Journey to Indonesia. Explore the temples of Borobudur, the beaches of Bali, the dragons of Komodo, and the wonders of Raja Ampat.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR INDONESIA -->
+    <style>
+        :root {
+            /* Indonesia Red (Merah Putih) */
+            --theme-primary: #CE1126;
+            /* Garuda Gold (Wealth & Culture) */
+            --theme-secondary: #F1C40F;
+            --theme-bg-light: #fffdf9;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #F1C40F;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Gold button, Dark text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #2c2c2c !important;
+            font-weight: 700;
+        }
+
+        /* Gradient for Title: Red to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #CE1126 0%, #d4ac0d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Indonesia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Indonesia</h1>
+            <p class="country-slogan">"Wonderful Indonesia"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#82;&#112;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Indonesian Rupiah (IDR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Bahasa Indonesia</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127796;</div>
+                <div class="stat-label">Islands</div>
+                <div class="stat-value">Over 17,000</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa on Arrival (VoA)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Indonesia</h2>
+            <p class="section-subtitle">From the Island of the Gods to the last dragons on Earth.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Bali -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/bali.jpg" alt="Bali" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bali</h3>
+                        <p>The "Island of Gods." Famous for its rice terraces in Ubud, surf in Uluwatu, and vibrant
+                            spiritual culture.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Borobudur Temple -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/borobudur.jpg" alt="Borobudur" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Borobudur</h3>
+                        <p>The world's largest Buddhist temple (Java). Sunrise here among the stupas and volcanoes is
+                            spiritual magic.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Komodo National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/komodo.jpg" alt="Komodo Island" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Komodo Island</h3>
+                        <p>The only place on Earth to see wild Komodo Dragons. Also offers world-class diving and pink
+                            beaches.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Raja Ampat -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/raja-ampat.jpg" alt="Raja Ampat" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Raja Ampat</h3>
+                        <p>The "Amazon of the Ocean." A diver's paradise with the highest marine biodiversity on the
+                            planet.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Mount Bromo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/bromo.jpg" alt="Mount Bromo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mount Bromo</h3>
+                        <p>An active volcano in East Java with a surreal, moon-like landscape. Hiking the crater rim is
+                            unforgettable.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Jakarta -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/jakarta.jpg" alt="Jakarta" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jakarta</h3>
+                        <p>The bustling mega-city capital. A melting pot of cultures, massive malls, historic Kota Tua,
+                            and street food.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Tana Toraja -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/toraja.jpg" alt="Tana Toraja" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tana Toraja</h3>
+                        <p>Highland region in Sulawesi known for its elaborate funeral rites, cave graves, and
+                            boat-shaped houses (Tongkonan).</p>
+                    </div>
+                </div>
+
+                <!-- 8. Gili Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/gili.jpg" alt="Gili Islands" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Gili Islands</h3>
+                        <p>Three tiny islands near Lombok with no cars (only bikes and carts), crystal clear water, and
+                            sea turtles.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Prambanan -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Indonesia/prambanan.jpg" alt="Prambanan" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Prambanan</h3>
+                        <p>A massive 9th-century Hindu temple compound near Yogyakarta, dedicated to Shiva, known for
+                            its tall spires.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Indonesian Culture</h2>
+                <p class="section-subtitle">"Bhinneka Tunggal Ika" — Unity in Diversity.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Batik -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Indonesia/batik.jpg');">
+                        <div class="culture-icon">&#128085;</div>
+                        <div class="culture-text">
+                            <h4>Batik</h4>
+                            <p>A UNESCO Intangible Heritage. The art of decorating cloth using wax and dye, each pattern
+                                having specific meaning.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Wayang Kulit -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Indonesia/wayang.jpg');">
+                        <div class="culture-icon">&#127917;</div>
+                        <div class="culture-text">
+                            <h4>Wayang Kulit</h4>
+                            <p>Traditional shadow puppetry retelling epic stories like the Ramayana and Mahabharata,
+                                accompanied by Gamelan.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Rendang -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Indonesia/rendang.jpg');">
+                        <div class="culture-icon">&#127835;</div>
+                        <div class="culture-text">
+                            <h4>Rendang</h4>
+                            <p>Chosen as the "World's Best Food" by CNN. A slow-cooked, dry curry beef dish from Padang
+                                rich in spices.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Gamelan -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Indonesia/gamelan.jpg');">
+                        <div class="culture-icon">&#129345;</div> <!-- Drum -->
+                        <div class="culture-text">
+                            <h4>Gamelan</h4>
+                            <p>The traditional ensemble music of Java and Bali, made up predominantly of percussive
+                                instruments.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Jamu -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Indonesia/jamu.jpg');">
+                        <div class="culture-icon">&#127861;</div> <!-- Herb drink -->
+                        <div class="culture-text">
+                            <h4>Jamu</h4>
+                            <p>Traditional herbal medicine made from roots, bark, flowers, seeds, leaves, and fruits
+                                (mostly Turmeric/Ginger).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Bahasa Indonesia)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Bahasa Indonesia Phrasebook</h2>
+                <p class="section-subtitle">Bahasa Indonesia is relatively easy to learn with no tones or complex
+                    tenses.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Bahasa Indonesia</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selamat Pagi</td>
+                                <td>Se-la-mat Pa-gee</td>
+                                <td>Good Morning</td>
+                                <td><button class="audio-btn" data-phrase="Selamat Pagi"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Terima Kasih</td>
+                                <td>Te-ree-ma Ka-see</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Terima Kasih"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sama-sama</td>
+                                <td>Sa-ma sa-ma</td>
+                                <td>You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Sama sama" data-lang="id-ID">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apa Kabar?</td>
+                                <td>A-pa Ka-bar</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Apa Kabar?"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ya / Tidak</td>
+                                <td>Ya / Tee-dak</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ya Tidak" data-lang="id-ID">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maaf</td>
+                                <td>Ma-af</td>
+                                <td>Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Maaf" data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Berapa harganya?</td>
+                                <td>Be-ra-pa har-ga-nya</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Berapa harganya?"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Enak!</td>
+                                <td>Eh-nak</td>
+                                <td>Delicious!</td>
+                                <td><button class="audio-btn" data-phrase="Enak" data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Di mana toilet?</td>
+                                <td>Di ma-na toy-let</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Di mana toilet?"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sampai Jumpa</td>
+                                <td>Sam-pai Joom-pa</td>
+                                <td>Goodbye / See you</td>
+                                <td><button class="audio-btn" data-phrase="Sampai Jumpa"
+                                        data-lang="id-ID">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Indonesia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

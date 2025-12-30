@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore France</title>
+
+    <meta name="description"
+        content="Experience the romance, art, and culinary excellence of France. From Paris to Provence, discover the world's most visited country with TerraVista.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR FRANCE -->
+    <style>
+        :root {
+            --theme-primary: #0055A4;
+            /* France Flag Blue */
+            --theme-secondary: #EF4135;
+            /* France Flag Red */
+            --theme-bg-light: #fdfdfd;
+            --theme-text-dark: #1a1a1a;
+        }
+
+        .culture-section::before {
+            background: #0055A4;
+            /* Blue blob */
+            opacity: 0.1;
+        }
+
+        /* Secondary accent for buttons/highlights can be gold for elegance */
+        .cta-button {
+            background: #C49B66 !important;
+            /* Gold/Beige */
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/France/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">France</h1>
+            <p class="country-slogan">"The Art of Living"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div> <!-- Euro -->
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">French</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#9728;</div>
+                <div class="stat-label">Best Time to Visit</div>
+                <div class="stat-value">Apr-Jun & Sep-Nov</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Visa</div>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in France</h2>
+            <p class="section-subtitle">Beyond the lights of Paris, discover a diverse landscape of history, coastlines,
+                and vineyards.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Eiffel Tower -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/eiffel.jpg" alt="Eiffel Tower" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Eiffel Tower</h3>
+                        <p>The global icon of France. Ascend for breathtaking views of Paris, especially dazzling at
+                            night.</p>
+                    </div>
+                </div>
+
+                <!-- 2. The Louvre -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/louvre.jpg" alt="The Louvre" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Louvre</h3>
+                        <p>The world's largest art museum, home to the Mona Lisa and thousands of masterworks.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Palace of Versailles -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/versailles.jpg" alt="Versailles" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Palace of Versailles</h3>
+                        <p>The opulent royal château famed for its Hall of Mirrors and magnificent endless gardens.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Mont Saint-Michel -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/mont-saint-michel.jpg" alt="Mont Saint-Michel"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mont Saint-Michel</h3>
+                        <p>A magical island commune in Normandy topped by a gravity-defying medieval monastery.</p>
+                    </div>
+                </div>
+
+                <!-- 5. French Riviera -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/riviera.jpg" alt="French Riviera" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>French Riviera</h3>
+                        <p>The glamorous Mediterranean coastline known for Nice, Cannes, and azimuth blue waters.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Loire Valley -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/loire.jpg" alt="Loire Valley" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Loire Valley</h3>
+                        <p>Known as the "Garden of France," featuring abundance of vineyards and fairy-tale châteaux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7. Provence -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/France/provence.jpg" alt="Provence" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Provence</h3>
+                        <p>Famous for its lavender fields, ancient Roman ruins, and sun-drenched landscapes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Culture & Lifestyle</h2>
+                <p class="section-subtitle">From high fashion to the slow enjoyment of a meal, embrace the French "Joie
+                    de vivre".</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Gastronomy -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/France/food.jpg');">
+                        <div class="culture-icon">&#129472;</div> <!-- Cheese -->
+                        <div class="culture-text">
+                            <h4>Gastronomy</h4>
+                            <p>French cuisine is UNESCO Heritage status. Wine and cheese are serious business, and meals
+                                are long, social affairs.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Cafe Culture -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/France/cafe.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Café Culture</h4>
+                            <p>People-watching from a terrace while sipping espresso is a national pastime and hub of
+                                social life.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Fashion -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/France/fashion.jpg');">
+                        <div class="culture-icon">&#128096;</div> <!-- Shoe -->
+                        <div class="culture-text">
+                            <h4>Haute Couture</h4>
+                            <p>France is the fashion capital of the world. Elegance and style are ingrained in daily
+                                life.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Art & History -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/France/art.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Palette -->
+                        <div class="culture-text">
+                            <h4>Art & Heritage</h4>
+                            <p>Birthplace of Impressionism and home to countless monuments. Culture is publicly funded
+                                and cherished.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Etiquette -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/France/social.jpg');">
+                        <div class="culture-icon">&#129309;</div>
+                        <div class="culture-text">
+                            <h4>"La Bise"</h4>
+                            <p>The traditional greeting of kissing on both cheeks. Always say "Bonjour" when entering a
+                                shop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (French)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">French Phrasebook</h2>
+                <p class="section-subtitle">Politeness is key in France. Start every interaction with "Bonjour".</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>French</th>
+                                <th>Pronunciation</th>
+                                <th>English</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bonjour</td>
+                                <td>Bohn-joor</td>
+                                <td>Hello / Good day</td>
+                                <td><button class="audio-btn" data-phrase="Bonjour" data-lang="fr-FR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Merci beaucoup</td>
+                                <td>Mehr-see boh-koo</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Merci beaucoup"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>S'il vous plaît</td>
+                                <td>Seel voo pleh</td>
+                                <td>Please (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="S'il vous plaît"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Oui / Non</td>
+                                <td>Wee / Nohn</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Oui non" data-lang="fr-FR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Au revoir</td>
+                                <td>Oh ruh-vwar</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Au revoir" data-lang="fr-FR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Excusez-moi</td>
+                                <td>Ex-kew-zay mwah</td>
+                                <td>Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Excusez-moi"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Parlez-vous anglais?</td>
+                                <td>Par-lay voo ong-glay?</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Parlez-vous anglais?"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Combien ça coûte?</td>
+                                <td>Kom-byen sah koot?</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Combien ça coûte?"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Où sont les toilettes?</td>
+                                <td>Oo sohn lay twah-let?</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Où sont les toilettes?"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>L'addition, s'il vous plaît</td>
+                                <td>Lah-dee-syohn seel voo pleh</td>
+                                <td> The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="L'addition, s'il vous plaît"
+                                        data-lang="fr-FR">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore France on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of France</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       8. FOOTER
+       ========================================================================== -->
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+</body>
+
+</html>

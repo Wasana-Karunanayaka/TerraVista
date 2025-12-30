@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Maldives</title>
+
+    <meta name="description"
+        content="Paradise found. Experience the world's clearest waters, overwater bungalows, vibrant coral reefs, and the laid-back island life.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR MALDIVES -->
+    <style>
+        :root {
+            /* Lagoon Turquoise */
+            --theme-primary: #0D98BA;
+            /* Coral Red (Flag field) */
+            --theme-secondary: #D12A2A;
+            --theme-bg-light: #f0ffff;
+            --theme-text-dark: #12343b;
+        }
+
+        .culture-section::before {
+            background: #0D98BA;
+            /* Blue blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Red button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #a81c1c !important;
+        }
+
+        /* Gradient for Title: Turquoise to Red */
+        .country-title {
+            background: linear-gradient(135deg, #0D98BA 0%, #D12A2A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Maldives/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">The Maldives</h1>
+            <p class="country-slogan">"The Sunny Side of Life"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#107;&#109;&#114;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Maldivian Rufiyaa (MVR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Dhivehi</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127965;</div>
+                <div class="stat-label">Islands</div>
+                <div class="stat-value">1,192 (Coral Islands)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Free Visa on Arrival (All)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Atolls & Islands</h2>
+            <p class="section-subtitle">From private luxury resorts to charming local fishing villages.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Male -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/male.jpg" alt="Male City" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Malé</h3>
+                        <p>One of the world's most densely populated cities. Visit the Golden Dome Friday Mosque, the
+                            fish market, and Sultan Park.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Baa Atoll -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/baa.jpg" alt="Baa Atoll" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Baa Atoll</h3>
+                        <p>A UNESCO Biosphere Reserve. Famous for its incredible biodiversity, coral reefs, and luxury
+                            eco-resorts.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Maafushi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/maafushi.jpg" alt="Maafushi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Maafushi</h3>
+                        <p>The heart of budget tourism. A local island with guesthouses, water sports, and a "Bikini
+                            Beach" for tourists.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Ari Atoll -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/ari.jpg" alt="Ari Atoll" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ari Atoll</h3>
+                        <p>The best place to spot Whale Sharks year-round. Crystal clear waters ideal for scuba diving
+                            and snorkeling.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Vaadhoo Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/vaadhoo.jpg" alt="Vaadhoo Sea of Stars" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sea of Stars (Vaadhoo)</h3>
+                        <p>Witness the magical bioluminescent plankton that lights up the shoreline like a starry night
+                            sky.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Hanifaru Bay -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/hanifaru.jpg" alt="Hanifaru Bay" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hanifaru Bay</h3>
+                        <p>A sanctuary for manta rays. In season, hundreds of mantas gather here to feed in a cyclonic
+                            frenzy.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Banana Reef -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/banana.jpg" alt="Banana Reef" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Banana Reef</h3>
+                        <p>The first dive site discovered in the Maldives. Named for its shape, it's packed with
+                            colorful fish and soft corals.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Utheemu Ganduvaru -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/utheemu.jpg" alt="Utheemu Ganduvaru" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Utheemu Ganduvaru</h3>
+                        <p>The wooden palace of Sultan Mohamed Thakurufaanu, a national hero who fought the Portuguese.
+                            Rich in history.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Addu Atoll -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/addu.jpg" alt="Addu Atoll" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Addu Atoll</h3>
+                        <p>The southernmost atoll. Heart-shaped and unique for its British colonial history and
+                            causeway-connected islands.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Water Villas -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Maldives/villa.jpg" alt="Water Villas" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Overwater Bungalows</h3>
+                        <p>The iconic Maldivian experience. Stay in a luxury villa perched on stilts directly over the
+                            turquoise lagoon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Maldivian Way of Life</h2>
+                <p class="section-subtitle">Beyond the resorts lies a rich culture of seafarers and craftsmen.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Bodu Beru -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Maldives/boduberu.jpg');">
+                        <div class="culture-icon">&#129345;</div> <!-- Drum -->
+                        <div class="culture-text">
+                            <h4>Bodu Beru</h4>
+                            <p>"Big Drums." The soul of Maldivian music. A rhythmic dance performance that builds to a
+                                trance-like crescendo.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Mas Huni -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Maldives/mashuni.jpg');">
+                        <div class="culture-icon">&#128031;</div> <!-- Fish -->
+                        <div class="culture-text">
+                            <h4>Mas Huni</h4>
+                            <p>The typical breakfast. Finely chopped tuna mixed with onion, coconut, and chili, eaten
+                                with Roshi (flatbread).</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. The Dhoni -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Maldives/dhoni.jpg');">
+                        <div class="culture-icon">&#9973;</div> <!-- Boat -->
+                        <div class="culture-text">
+                            <h4>The Dhoni</h4>
+                            <p>The traditional handcrafted fishing boat. Its curve captures the elegance of the islands'
+                                maritime heritage.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Lacquer Work -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Maldives/lacquer.jpg');">
+                        <div class="culture-icon">&#127912;</div> <!-- Art -->
+                        <div class="culture-text">
+                            <h4>Liyelaa Jehun</h4>
+                            <p>Traditional lacquer work. Strange but beautiful vases and boxes carved from wood and
+                                painted in red, yellow, and black.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Island Islam -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Maldives/mosque.jpg');">
+                        <div class="culture-icon">&#128332;</div> <!-- Mosque -->
+                        <div class="culture-text">
+                            <h4>Island Life</h4>
+                            <p>The Maldives is 100% Muslim. Local islands have a slower pace, alcohol is prohibited, and
+                                modesty is respected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Dhivehi)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Dhivehi Phrasebook</h2>
+                <p class="section-subtitle">Dhivehi is unique to the Maldives, written right-to-left in the Thaana
+                    script.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Dhivehi</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Assalaamu Alaikum</td>
+                                <td>As-sa-laam A-lai-kum</td>
+                                <td>Hello (Peace be upon you)</td>
+                                <td><button class="audio-btn" data-phrase="Assalaamu Alaikum"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kihinneh?</td>
+                                <td>Ki-hin-neh</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Kihinneh" data-lang="dv-MV">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rangalhu</td>
+                                <td>Run-ga-lu</td>
+                                <td>Good / Fine</td>
+                                <td><button class="audio-btn" data-phrase="Rangalhu" data-lang="dv-MV">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Shukuriyaa</td>
+                                <td>Shook-ri-yaa</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Shukuriyaa"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Aan / Noon</td>
+                                <td>Aan / Noon</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Aan Noon" data-lang="dv-MV">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kon thaakun?</td>
+                                <td>Kon thaa-kun</td>
+                                <td>Where from?</td>
+                                <td><button class="audio-btn" data-phrase="Kon thaakun"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kihaavarak?</td>
+                                <td>Ki-haa-va-rak</td>
+                                <td>How much?</td>
+                                <td><button class="audio-btn" data-phrase="Kihaavarak"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Adhes kohfa</td>
+                                <td>A-dhes koh-fa</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Adhes kohfa"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Varah meeru</td>
+                                <td>Va-rah mee-ru</td>
+                                <td>Very delicious</td>
+                                <td><button class="audio-btn" data-phrase="Varah meeru"
+                                        data-lang="dv-MV">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Dhanee</td>
+                                <td>Dha-nee</td>
+                                <td>Goodbye (Going)</td>
+                                <td><button class="audio-btn" data-phrase="Dhanee" data-lang="dv-MV">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Maldives on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Maldives</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

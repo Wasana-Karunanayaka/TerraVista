@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Czech Republic</title>
+
+    <meta name="description"
+        content="The Heart of Europe. Discover fairy-tale castles, medieval towns, world-class beer, and the magic of Prague.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR CZECH REPUBLIC -->
+    <style>
+        :root {
+            /* Czech Blue */
+            --theme-primary: #11457E;
+            /* Czech Red */
+            --theme-secondary: #D7141A;
+            --theme-bg-light: #f6f8fb;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #D7141A;
+            /* Red blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #0d3663 !important;
+        }
+
+        /* Gradient for Title: Blue to Red */
+        .country-title {
+            background: linear-gradient(135deg, #11457E 0%, #D7141A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/CzechRepublic/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Czech Republic</h1>
+            <p class="country-slogan">"Land of Stories"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#75;&#269;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Czech Koruna (CZK)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Czech</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127867;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Beer & Castles</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Bohemian Wonders</h2>
+            <p class="section-subtitle">A land dense with history, stunning architecture, and rolling hills.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Prague -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/prague.jpg" alt="Charles Bridge" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Prague (Praha)</h3>
+                        <p>The City of a Hundred Spires. Walk the Charles Bridge, visit the largest ancient castle in
+                            the world, and see the Astronomical Clock.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Cesky Krumlov -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/krumlov.jpg" alt="Cesky Krumlov" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Český Krumlov</h3>
+                        <p>A fairytale town. A UNESCO World Heritage site with a massive castle towering over a maze of
+                            winding medieval streets and the Vltava River.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Kutna Hora -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/kutnahora.jpg" alt="Bone Church" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kutná Hora</h3>
+                        <p>The Silver City. Famous for the Sedlec Ossuary ("Bone Church") decorated with the bones of
+                            40,000 people, and St. Barbara's Church.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Karlovy Vary -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/karlovy.jpg" alt="Karlovy Vary" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Karlovy Vary</h3>
+                        <p>The Spa Town. Famous for its 12 main hot springs, colonnades, international film festival,
+                            and Becherovka liqueur.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Bohemian Switzerland -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/bohemia.jpg" alt="Bohemian Switzerland"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bohemian Switzerland</h3>
+                        <p>A national park on the German border. Known for the Pravčická brána, the largest natural
+                            sandstone arch in Europe.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Brno -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/brno.jpg" alt="Brno" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Brno</h3>
+                        <p>The second largest city. A hub of modernist architecture (Villa Tugendhat), student life, and
+                            a vibrant cafe culture.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Pilsen -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/pilsen.jpg" alt="Pilsner Urquell" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Plzeň (Pilsen)</h3>
+                        <p>The birthplace of Pilsner beer. Visit the Pilsner Urquell brewery to taste the golden lager
+                            straight from the barrel.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Karlstejn Castle -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/castle.jpg" alt="Karlstejn Castle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Karlštejn Castle</h3>
+                        <p>A majestic Gothic castle built by Emperor Charles IV to safe-keep the Bohemian crown jewels
+                            and holy relics.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Telc -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/CzechRepublic/telc.jpg" alt="Telc" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Telč</h3>
+                        <p>The Venice of Moravia. A UNESCO town famous for its long town square lined with
+                            well-preserved Renaissance and Baroque houses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Czech Traditions</h2>
+                <p class="section-subtitle">Beer, puppets, and a darker sense of humor.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Beer Culture -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CzechRepublic/beer.jpg');">
+                        <div class="culture-icon">&#127867;</div> <!-- Beer -->
+                        <div class="culture-text">
+                            <h4>Beer Culture</h4>
+                            <p>Czechs consume the most beer per capita in the world. It's "Liquid Bread." Foam is
+                                important; a "Mlíko" pour is almost all foam.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Puppetry -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CzechRepublic/puppet.jpg');">
+                        <div class="culture-icon">&#127917;</div> <!-- Puppet -->
+                        <div class="culture-text">
+                            <h4>Puppetry</h4>
+                            <p>Marionettes are a serious art form here. You can find elaborate puppet shops and theaters
+                                performing operas like Don Giovanni.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Glass Making -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CzechRepublic/glass.jpg');">
+                        <div class="culture-icon">&#127864;</div> <!-- Wine glass -->
+                        <div class="culture-text">
+                            <h4>Bohemian Crystal</h4>
+                            <p>World-renowned for quality and craftsmanship. Hand-cut lead crystal and glass blowing
+                                traditions date back centuries.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Mushroom Hunting -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CzechRepublic/mushroom.jpg');">
+                        <div class="culture-icon">&#127812;</div> <!-- Mushroom -->
+                        <div class="culture-text">
+                            <h4>Mushroom Hunting</h4>
+                            <p>A national obsession. In autumn, families head to the forests with baskets to pick wild
+                                mushrooms ("Houbaření").</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Easter Traditions -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/CzechRepublic/whip.jpg');">
+                        <div class="culture-icon">&#127880;</div> <!-- Ribbon -->
+                        <div class="culture-text">
+                            <h4>Pomlázka</h4>
+                            <p>A unique Easter tradition where men lightly whip women with braided willow branches for
+                                youth and health. (It's controversial but traditional).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Czech)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Czech Phrasebook</h2>
+                <p class="section-subtitle">Czech is a Slavic language and notoriously difficult, but essentials go a
+                    long way.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Czech</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ahoj</td>
+                                <td>Ah-hoy</td>
+                                <td>Hello / Bye (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Ahoj" data-lang="cs-CZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Dobrý den</td>
+                                <td>Dob-ree den</td>
+                                <td>Good day (Formal Hello)</td>
+                                <td><button class="audio-btn" data-phrase="Dobrý den" data-lang="cs-CZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Děkuji</td>
+                                <td>Dye-ku-yi</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Děkuji" data-lang="cs-CZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prosím</td>
+                                <td>Pro-seem</td>
+                                <td>Please / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Prosím" data-lang="cs-CZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pivo, prosím</td>
+                                <td>Pee-vo pro-seem</td>
+                                <td>Beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Pivo prosím"
+                                        data-lang="cs-CZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Na zdraví!</td>
+                                <td>Naz-dra-vee</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Na zdraví" data-lang="cs-CZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Nerozumím</td>
+                                <td>Ne-ro-zoo-meem</td>
+                                <td>I don't understand</td>
+                                <td><button class="audio-btn" data-phrase="Nerozumím" data-lang="cs-CZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kde je toaleta?</td>
+                                <td>Gdeh yeh to-ah-le-ta</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Kde je toaleta"
+                                        data-lang="cs-CZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Účet, prosím</td>
+                                <td>Oo-chet pro-seem</td>
+                                <td>The check, please</td>
+                                <td><button class="audio-btn" data-phrase="Účet prosím"
+                                        data-lang="cs-CZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Nashledanou</td>
+                                <td>Nas-khle-da-no</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Nashledanou"
+                                        data-lang="cs-CZ">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Czech Republic on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Czech Republic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

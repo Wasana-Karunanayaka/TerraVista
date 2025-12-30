@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore China</title>
+
+    <meta name="description"
+        content="Discover the Middle Kingdom. Walk the Great Wall, meet the Giant Pandas, and explore 5,000 years of history in Beijing and Xi'an.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR CHINA -->
+    <style>
+        :root {
+            /* China Red (Luck/Joy) */
+            --theme-primary: #EE1C25;
+            /* Imperial Gold (Royalty/Power) */
+            --theme-secondary: #FFD700;
+            --theme-bg-light: #fffdfc;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #FFD700;
+            /* Gold blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Gold button, Red text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #EE1C25 !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e6c200 !important;
+        }
+
+        /* Gradient for Title: Red to Gold */
+        .country-title {
+            background: linear-gradient(135deg, #EE1C25 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/China/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">China</h1>
+            <p class="country-slogan">"The Middle Kingdom"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#165;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Renminbi / Yuan (CNY)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Mandarin Chinese</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127983;</div>
+                <div class="stat-label">History</div>
+                <div class="stat-value">5,000+ Years</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa Required (Most)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in China</h2>
+            <p class="section-subtitle">A land of epic proportions, from ancient wonders to futuristic skylines.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Great Wall -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/great-wall.jpg" alt="Great Wall of China" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Great Wall</h3>
+                        <p>One of the greatest feats of human engineering. Hike the Mutianyu or Jinshanling sections for
+                            breathtaking views.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Forbidden City -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/forbidden-city.jpg" alt="Forbidden City" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Forbidden City</h3>
+                        <p>The world's largest palace complex. The home of 24 emperors, located in the heart of Beijing
+                            across from Tiananmen Square.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Terracotta Warriors -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/terracotta.jpg" alt="Terracotta Warriors" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Terracotta Warriors</h3>
+                        <p>Xi'an. An underground army of 8,000 life-sized soldiers, horses, and chariots built to
+                            protect Emperor Qin Shi Huang.</p>
+                    </div>
+                </div>
+
+                <!-- 4. The Bund (Shanghai) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/shanghai.jpg" alt="Shanghai Bund" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Bund, Shanghai</h3>
+                        <p>A dazzling waterfront promenade showcasing colonial architecture on one side and the
+                            futuristic Lujiazui skyline on the other.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Li River (Guilin) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/guilin.jpg" alt="Li River Guilin" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Li River & Karst Mountains</h3>
+                        <p>A landscape immortalized in Chinese painting. Cruise from Guilin to Yangshuo past dramatic
+                            limestone peaks.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Chengdu Panda Base -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/panda.jpg" alt="Chengdu Panda Base" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Chengdu Panda Base</h3>
+                        <p>The best place in the world to see Giant Pandas and Red Pandas in their natural habitat. Also
+                            famous for spicy hotpot.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Zhangjiajie -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/zhangjiajie.jpg" alt="Zhangjiajie" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Zhangjiajie</h3>
+                        <p>Home of the "Avatar Mountains." Towering sandstone pillars that seem to float in the mist.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8. Summer Palace -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/summer-palace.jpg" alt="Summer Palace" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Summer Palace</h3>
+                        <p>Beijing's royal garden. A masterpiece of Chinese landscape garden design with a vast lake,
+                            temples, and the Marble Boat.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Yellow Mountain (Huangshan) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/China/huangshan.jpg" alt="Yellow Mountain" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Yellow Mountain</h3>
+                        <p>Celebrated in art and literature for its oddly shaped pines, granite peaks, and the "Sea of
+                            Clouds" phenomenon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Chinese Traditions</h2>
+                <p class="section-subtitle">A civilization that celebrates harmony, respect, and exquisite
+                    craftsmanship.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Tea Ceremony -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/China/tea.jpg');">
+                        <div class="culture-icon">&#127861;</div>
+                        <div class="culture-text">
+                            <h4>Tea Ceremony (Gongfu Cha)</h4>
+                            <p>An art form involving the ritual preparation and presentation of tea. It emphasizes
+                                mindfulness and respect.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Calligraphy -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/China/calligraphy.jpg');">
+                        <div class="culture-icon">&#128396;</div> <!-- Paintbrush -->
+                        <div class="culture-text">
+                            <h4>Calligraphy</h4>
+                            <p>Regarded as the highest visual art form. The brush strokes reveal the character and
+                                cultivation of the writer.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Kung Fu -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/China/kungfu.jpg');">
+                        <div class="culture-icon">&#129355;</div> <!-- Kimono/Martial Arts -->
+                        <div class="culture-text">
+                            <h4>Kung Fu</h4>
+                            <p>Traditional martial arts born in the Shaolin Temple. It combines physical discipline with
+                                spiritual philosophy.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Spring Festival -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/China/festival.jpg');">
+                        <div class="culture-icon">&#129458;</div> <!-- Dragon -->
+                        <div class="culture-text">
+                            <h4>Spring Festival (New Year)</h4>
+                            <p>The most important holiday. Marked by family reunions, red envelopes (Hongbao),
+                                dumplings, and fireworks.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Cuisine -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/China/food.jpg');">
+                        <div class="culture-icon">&#129369;</div> <!-- Dumpling -->
+                        <div class="culture-text">
+                            <h4>Culinary Arts</h4>
+                            <p>From the delicate Dim Sum of the south to the crispy Peking Duck of the north and the
+                                fiery spice of Sichuan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Mandarin)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Mandarin Phrasebook</h2>
+                <p class="section-subtitle">Tones are important! Mandarin has 4 tones that change the meaning of words.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Pinyin / Chinese</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nǐ hǎo (你好)</td>
+                                <td>Nee how</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="你好" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Xiè xie (谢谢)</td>
+                                <td>Shieh shieh</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="谢谢" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Duì bu qǐ (对不起)</td>
+                                <td>Dway boo chee</td>
+                                <td>Sorry</td>
+                                <td><button class="audio-btn" data-phrase="对不起" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Zài jiàn (再见)</td>
+                                <td>Zai jien</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="再见" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Shì / Bú shì (是 / 不是)</td>
+                                <td>Shrr / Boo shrr</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="是 不是" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Duō shǎo qián? (多少钱)</td>
+                                <td>Dwuh shaow chien</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="多少钱" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tài guì le (太贵了)</td>
+                                <td>Tie gway luh</td>
+                                <td>Too expensive!</td>
+                                <td><button class="audio-btn" data-phrase="太贵了" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Wǒ bù dǒng (我不懂)</td>
+                                <td>Wuh boo dong</td>
+                                <td>I don't understand</td>
+                                <td><button class="audio-btn" data-phrase="我不懂" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Hǎo chī (好吃)</td>
+                                <td>How chir</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="好吃" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jiù mìng (救命)</td>
+                                <td>Jyo ming</td>
+                                <td>Help!</td>
+                                <td><button class="audio-btn" data-phrase="救命" data-lang="zh-CN">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore China on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of China</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

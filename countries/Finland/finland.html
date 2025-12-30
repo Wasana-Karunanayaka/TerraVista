@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Finland</title>
+
+    <meta name="description"
+        content="The Land of a Thousand Lakes. Discover the Northern Lights, endless forests, modern design, and the magic of Santa Claus Village.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR FINLAND -->
+    <style>
+        :root {
+            /* Finnish Blue */
+            --theme-primary: #003580;
+            /* White / Snow */
+            --theme-secondary: #002050;
+            /* Darker blue for contrast */
+            --theme-bg-light: #f0f8ff;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #003580;
+            /* Blue blob */
+            opacity: 0.10;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #002050 !important;
+        }
+
+        /* Gradient for Title: Blue to White/Light Blue */
+        .country-title {
+            background: linear-gradient(135deg, #003580 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Finland/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Finland</h1>
+            <p class="country-slogan">"Happiest Country in the World"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Finnish & Swedish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#10052;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Saunas & Santa</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Area</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Arctic Magic & Lakeland</h2>
+            <p class="section-subtitle">A land of stark beauty, from the frozen north to the serene southern lakes.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Helsinki -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/helsinki.jpg" alt="Helsinki Cathedral" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Helsinki</h3>
+                        <p>The White City of the North. Famous for its design district, the white cathedral, and the
+                            Temppeliaukio Rock Church.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Rovaniemi (Lapland) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/santa.jpg" alt="Santa Claus Village" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rovaniemi</h3>
+                        <p>The Official Hometown of Santa Claus. Cross the Arctic Circle, meet reindeer, and visit the
+                            Santa Claus Village year-round.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Northern Lights -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/aurora.jpg" alt="Northern Lights" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Aurora Borealis</h3>
+                        <p>Lapland. One of the best places on Earth to see the Northern Lights. Stay in a glass igloo in
+                            Kakslauttanen for a view from bed.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Lakeland (Saimaa) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/lake.jpg" alt="Lake Saimaa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Finnish Lakeland</h3>
+                        <p>Europe's largest lake district. A labyrinth of thousands of blue lakes, islands, and summer
+                            cottages (mökki).</p>
+                    </div>
+                </div>
+
+                <!-- 5. Suomenlinna -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/suomenlinna.jpg" alt="Suomenlinna Fortress"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Suomenlinna</h3>
+                        <p>Helsinki. A massive 18th-century sea fortress built on six islands. A UNESCO World Heritage
+                            site and popular picnic spot.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Nuuksio National Park -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/nuuksio.jpg" alt="Nuuksio Forest" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Nuuksio National Park</h3>
+                        <p>Wilderness near the capital. Dense forests, marked trails, and lakes, perfect for
+                            experiencing the Finnish connection to nature.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Turku -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/turku.jpg" alt="Turku Castle" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Turku</h3>
+                        <p>The oldest city in Finland. Known for its medieval castle, cathedral, and the beautiful Turku
+                            Archipelago with 20,000 islands.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Porvoo -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/porvoo.jpg" alt="Old Porvoo" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Porvoo</h3>
+                        <p>A charming medieval town famous for its red wooden warehouses along the riverside and
+                            cobblestone streets.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Levi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Finland/levi.jpg" alt="Levi Ski Resort" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Levi</h3>
+                        <p>The largest ski resort in Finland. Offers world-class skiing, husky safaris, and snowmobiling
+                            under the midnight sun or polar night.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">The Finnish Way</h2>
+                <p class="section-subtitle">Sisu, Sauna, and silence.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Sauna -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Finland/sauna.jpg');">
+                        <div class="culture-icon">&#9832;</div> <!-- Hot springs/Steam -->
+                        <div class="culture-text">
+                            <h4>Sauna Culture</h4>
+                            <p>With 3 million saunas for 5.5 million people, it's a way of life. It's a place for
+                                cleansing, socializing, and major decisions.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Sisu -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Finland/sisu.jpg');">
+                        <div class="culture-icon">&#128170;</div> <!-- Muscle -->
+                        <div class="culture-text">
+                            <h4>Sisu</h4>
+                            <p>A unique Finnish concept of stoic determination, grit, and bravery in the face of
+                                adversity. It's the national spirit.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Coffee -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Finland/coffee.jpg');">
+                        <div class="culture-icon">&#9749;</div> <!-- Coffee -->
+                        <div class="culture-text">
+                            <h4>Coffee Consumption</h4>
+                            <p>Finns drink more coffee per capita than anyone else in the world. Served black and often,
+                                usually with a sweet bun (Pulla).</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Everyman's Right -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Finland/forest.jpg');">
+                        <div class="culture-icon">&#127794;</div> <!-- Tree -->
+                        <div class="culture-text">
+                            <h4>Everyman's Right</h4>
+                            <p>Jokamiehenoikeus. You can roam freely in nature, forage for berries and mushrooms, and
+                                camp anywhere, even on private land.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Heavy Metal -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Finland/metal.jpg');">
+                        <div class="culture-icon">&#127928;</div> <!-- Guitar -->
+                        <div class="culture-text">
+                            <h4>Heavy Metal</h4>
+                            <p>Surprisingly, Finland has the most heavy metal bands per capita. Bands like Nightwish and
+                                HIM are national treasures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Finnish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Finnish Basics</h2>
+                <p class="section-subtitle">Finnish is unique (Finno-Ugric), unrelated to Scandinavian languages..</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Finnish</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hei / Moi</td>
+                                <td>Hay / Moy</td>
+                                <td>Hello / Hi</td>
+                                <td><button class="audio-btn" data-phrase="Hei" data-lang="fi-FI">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kiitos</td>
+                                <td>Key-toss</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Kiitos" data-lang="fi-FI">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ole hyvä</td>
+                                <td>O-le hy-va</td>
+                                <td>You're welcome / Here you go</td>
+                                <td><button class="audio-btn" data-phrase="Ole hyvä" data-lang="fi-FI">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Anteeksi</td>
+                                <td>An-teek-si</td>
+                                <td>Sorry / Excuse me</td>
+                                <td><button class="audio-btn" data-phrase="Anteeksi" data-lang="fi-FI">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kippis!</td>
+                                <td>Kip-pis</td>
+                                <td>Cheers!</td>
+                                <td><button class="audio-btn" data-phrase="Kippis" data-lang="fi-FI">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mitä kuuluu?</td>
+                                <td>Mi-ta koo-loo</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Mitä kuuluu"
+                                        data-lang="fi-FI">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Yksi olut, kiitos</td>
+                                <td>Yk-si o-loot, key-toss</td>
+                                <td>One beer, please</td>
+                                <td><button class="audio-btn" data-phrase="Yksi olut kiitos"
+                                        data-lang="fi-FI">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Missä on vessa?</td>
+                                <td>Mis-sa on ves-sa</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Missä on vessa"
+                                        data-lang="fi-FI">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lasku, kiitos</td>
+                                <td>Las-koo, key-toss</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="Lasku kiitos"
+                                        data-lang="fi-FI">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Näkemiin</td>
+                                <td>Na-ke-meen</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Näkemiin" data-lang="fi-FI">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Finland on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Finland</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

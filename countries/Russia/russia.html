@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Russia</title>
+
+    <meta name="description"
+        content="Discover the vastness of Russia. From the domes of St. Basil's to the depths of Lake Baikal and the volcanoes of Kamchatka.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR RUSSIA -->
+    <style>
+        :root {
+            /* Russia Red (Power/Energy) */
+            --theme-primary: #D52B1E;
+            /* Russia Blue (Faith/Loyalty) */
+            --theme-secondary: #0039A6;
+            --theme-bg-light: #f9f9f9;
+            --theme-text-dark: #222222;
+        }
+
+        .culture-section::before {
+            background: #0039A6;
+            /* Blue blob */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text: Blue button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+        }
+
+        .cta-button:hover {
+            background: #00287a !important;
+        }
+
+        /* Gradient for Title: Red to Blue */
+        .country-title {
+            background: linear-gradient(135deg, #D52B1E 0%, #0039A6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Russia/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Russia</h1>
+            <p class="country-slogan">"The Whole World in One Country"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8381;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Ruble (RUB)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Russian</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127760;</div>
+                <div class="stat-label">Size</div>
+                <div class="stat-value">Largest Land Mass</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">E-Visa (Selected Nations)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Russia</h2>
+            <p class="section-subtitle">A land of epic proportions, spanning 11 time zones and two continents.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Moscow -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/moscow.jpg" alt="Moscow" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Moscow</h3>
+                        <p>The mighty capital. Home to the colorful St. Basil's Cathedral, the historic Kremlin, and the
+                            Red Square.</p>
+                    </div>
+                </div>
+
+                <!-- 2. St. Petersburg -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/st-petersburg.jpg" alt="St. Petersburg" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>St. Petersburg</h3>
+                        <p>The "Venice of the North." Famous for the Hermitage Museum, imperial palaces, and the White
+                            Nights festival.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Lake Baikal -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/baikal.jpg" alt="Lake Baikal" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Lake Baikal</h3>
+                        <p>The world's deepest and oldest freshwater lake. In winter, its transparent ice is a
+                            photographer's dream.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Trans-Siberian Railway -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/trans-siberian.jpg" alt="Trans-Siberian Railway"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Trans-Siberian Railway</h3>
+                        <p>The longest railway in the world, stretching from Moscow to Vladivostok (9,289 km) across
+                            endless forests.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Kazan -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/kazan.jpg" alt="Kazan" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kazan</h3>
+                        <p>The "Third Capital." A melting pot of Tartar and Russian cultures, featuring the stunning Kul
+                            Sharif Mosque within its Kremlin.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Kamchatka -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/kamchatka.jpg" alt="Kamchatka" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kamchatka</h3>
+                        <p>The land of fire and ice in the Far East. Pristine wilderness with active volcanoes, geysers,
+                            and grizzly bears.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Sochi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/sochi.jpg" alt="Sochi" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Sochi</h3>
+                        <p>A unique resort city on the Black Sea where you can swim in the ocean and ski in the
+                            mountains on the same day.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Kizhi Island -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/kizhi.jpg" alt="Kizhi Island" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kizhi Island</h3>
+                        <p>Located in Lake Onega, famous for its 18th-century wooden churches built without a single
+                            nail.</p>
+                    </div>
+                </div>
+
+                <!-- 9. The Golden Ring (Suzdal) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Russia/suzdal.jpg" alt="Suzdal" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Golden Ring</h3>
+                        <p>A circle of ancient towns like Suzdal and Vladimir, preserving the memory of medieval Russia
+                            with white-stone churches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">The Russian Soul</h2>
+                <p class="section-subtitle">Rich traditions in art, hospitality, and resilience.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Ballet -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Russia/ballet.jpg');">
+                        <div class="culture-icon">&#128131;</div>
+                        <div class="culture-text">
+                            <h4>Russian Ballet</h4>
+                            <p>Renowned worldwide for technical perfection. The Bolshoi (Moscow) and Mariinsky (St.
+                                Petersburg) are legendary.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Matryoshka -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Russia/matryoshka.jpg');">
+                        <div class="culture-icon">&#129528;</div> <!-- Doll/Toy -->
+                        <div class="culture-text">
+                            <h4>Matryoshka</h4>
+                            <p>The famous nesting dolls. A symbol of motherhood and family, crafted from lime wood and
+                                hand-painted.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Banya -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Russia/banya.jpg');">
+                        <div class="culture-icon">&#128704;</div>
+                        <div class="culture-text">
+                            <h4>Banya (Sauna)</h4>
+                            <p>A cornerstone of health and social life. Involves high heat, steam, and being whipped
+                                with birch twigs (venik).</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Literature -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Russia/literature.jpg');">
+                        <div class="culture-icon">&#128366;</div>
+                        <div class="culture-text">
+                            <h4>Literature</h4>
+                            <p>Home to giants like Tolstoy, Dostoevsky, and Pushkin. Poetry and philosophy are deeply
+                                embedded in the culture.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Samovar -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Russia/samovar.jpg');">
+                        <div class="culture-icon">&#127861;</div> <!-- Tea -->
+                        <div class="culture-text">
+                            <h4>Tea & Samovar</h4>
+                            <p>Tea is the national drink, often brewed strong in a heated metal container (Samovar) and
+                                served with sweets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Russian)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Russian Phrasebook</h2>
+                <p class="section-subtitle">Uses the Cyrillic alphabet. It sounds formidable but is rich and expressive.
+                </p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Russian</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Привет</td>
+                                <td>Privet</td>
+                                <td>Hi (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Privet" data-lang="ru-RU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Здравствуйте</td>
+                                <td>Zdrav-stvuy-te</td>
+                                <td>Hello (Formal)</td>
+                                <td><button class="audio-btn" data-phrase="Здравствуйте"
+                                        data-lang="ru-RU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Спасибо</td>
+                                <td>Spa-si-ba</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Spasibo" data-lang="ru-RU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Пожалуйста</td>
+                                <td>Pa-zhal-sta</td>
+                                <td>Please / You're welcome</td>
+                                <td><button class="audio-btn" data-phrase="Pozhaluysta"
+                                        data-lang="ru-RU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Да / Нет</td>
+                                <td>Da / Nyet</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Da Nyet" data-lang="ru-RU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Извините</td>
+                                <td>Iz-vi-ni-te</td>
+                                <td>Excuse me / Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Izvinite" data-lang="ru-RU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Сколько стоит?</td>
+                                <td>Skol-ka stoy-it</td>
+                                <td>How much is it?</td>
+                                <td><button class="audio-btn" data-phrase="Skolko stoit"
+                                        data-lang="ru-RU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Где туалет?</td>
+                                <td>Gde tua-let</td>
+                                <td>Where is the toilet?</td>
+                                <td><button class="audio-btn" data-phrase="Gde tualet"
+                                        data-lang="ru-RU">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Вкусно</td>
+                                <td>Vkoos-na</td>
+                                <td>Delicious</td>
+                                <td><button class="audio-btn" data-phrase="Vkusno" data-lang="ru-RU">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>До свидания</td>
+                                <td>Da svi-da-ni-ya</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Do svidaniya"
+                                        data-lang="ru-RU">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Russia on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Russia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

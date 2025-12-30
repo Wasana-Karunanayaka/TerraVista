@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore India</title>
+
+    <meta name="description"
+        content="Incredible India. A land of vibrant colors, spirituality, ancient history, and diverse landscapes from the Himalayas to the Indian Ocean.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR INDIA -->
+    <style>
+        :root {
+            /* Saffron */
+            --theme-primary: #FF9933;
+            /* India Green */
+            --theme-secondary: #000080;
+            /* Using Blue for secondary text contrast */
+            /* Accent Green */
+            --accent-color: #138808;
+
+            --theme-bg-light: #fffaf0;
+            --theme-text-dark: #202020;
+        }
+
+        .culture-section::before {
+            background: #FF9933;
+            /* Saffron blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text: Orange button, White text */
+        .cta-button {
+            background: var(--theme-primary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #e68a00 !important;
+        }
+
+        /* Gradient for Title: Saffron to White to Green (Simulated with 3 stops) */
+        .country-title {
+            background: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/India/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">India</h1>
+            <p class="country-slogan">"Incredible India"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8377;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Indian Rupee (INR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Hindi & English</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128330;</div>
+                <div class="stat-label">Famous For</div>
+                <div class="stat-value">Culture & Spirit</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">e-Visa</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">A Subcontinent of Wonders</h2>
+            <p class="section-subtitle">Experience a sensory overload of colors, sounds, and tastes.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Taj Mahal -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/tajmahal.jpg" alt="Taj Mahal" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Taj Mahal</h3>
+                        <p>Agra. The white marble mausoleum built by Emperor Shah Jahan for his wife. A global symbol of
+                            love and architectural perfection.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Jaipur -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/jaipur.jpg" alt="Hawa Mahal" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Jaipur</h3>
+                        <p>The Pink City. Famous for the Hawa Mahal (Palace of Winds), Amber Fort, and vibrant bazaars
+                            filled with textiles and jewelry.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Varanasi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/varanasi.jpg" alt="Ganga Aarti" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Varanasi</h3>
+                        <p>The Spiritual Capital. One of the world's oldest living cities on the banks of the Ganges.
+                            Witness the mesmerizing evening Aarti.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Kerala Backwaters -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/kerala.jpg" alt="Kerala Houseboat" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Kerala</h3>
+                        <p>God's Own Country. rent a traditional houseboat (Kettuvallam) and cruise the serene,
+                            palm-lined backwaters of Alleppey.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Goa -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/goa.jpg" alt="Goa Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Goa</h3>
+                        <p>Beach, Party, and Relaxation. A blend of Indian and Portuguese cultures, known for its golden
+                            coastlines, nightlife, and seafood.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Ladakh -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/ladakh.jpg" alt="Pangong Lake" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ladakh</h3>
+                        <p>The Land of High Passes. A stunning high-altitude desert in the Himalayas with Buddhist
+                            monasteries and blue lakes.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Mumbai -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/mumbai.jpg" alt="Gateway of India" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mumbai</h3>
+                        <p>The City of Dreams. Home to Bollywood, the Gateway of India, colonial architecture, and
+                            bustling street life.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Hampi -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/hampi.jpg" alt="Hampi Ruins" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hampi</h3>
+                        <p>A UNESCO site of ancient ruins. Explore the remnants of the Vijayanagara Empire amidst a
+                            surreal landscape of giant boulders.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Golden Temple (Amritsar) -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/India/goldentemple.jpg" alt="Golden Temple" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Golden Temple</h3>
+                        <p>Amritsar. The holiest shrine of Sikhism. Stunningly beautiful at night, with a community
+                            kitchen reinforcing equality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Indian Essence</h2>
+                <p class="section-subtitle">Unity in Diversity.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Festivals -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/India/diwali.jpg');">
+                        <div class="culture-icon">&#129496;</div> <!-- Lantern/Light -->
+                        <div class="culture-text">
+                            <h4>Festivals (Diwali & Holi)</h4>
+                            <p>India is the land of festivals. Diwali (Lights) and Holi (Colors) are celebrated with
+                                immense joy, food, and community.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Yoga -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/India/yoga.jpg');">
+                        <div class="culture-icon">&#129496;</div> <!-- Yoga -->
+                        <div class="culture-text">
+                            <h4>Yoga & Spirituality</h4>
+                            <p>The birthplace of Yoga. Ashrams in Rishikesh offer a chance to connect with your inner
+                                self and learn ancient wellness.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Cuisine -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/India/food.jpg');">
+                        <div class="culture-icon">&#127798;</div> <!-- Chili -->
+                        <div class="culture-text">
+                            <h4>Spice & Cuisine</h4>
+                            <p>Indian food changes every 100km. From North Indian curries to South Indian Dosas, hygiene
+                                and spice levels vary.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bollywood -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/India/bollywood.jpg');">
+                        <div class="culture-icon">&#127909;</div> <!-- Movie -->
+                        <div class="culture-text">
+                            <h4>Bollywood</h4>
+                            <p>The world's largest film industry. Movies are filled with song, dance, and drama,
+                                reflecting the vibrant pulse of the nation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Atithi Devo Bhava -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/India/namaste.jpg');">
+                        <div class="culture-icon">&#128591;</div> <!-- Namaste -->
+                        <div class="culture-text">
+                            <h4>Atithi Devo Bhava</h4>
+                            <p>"The guest is equivalent to God." A traditional Hindu-Buddhist code of conduct insisting
+                                on supreme hospitality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Hindi)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Hindi Essentials</h2>
+                <p class="section-subtitle">While many people speak English, Hindi is widely spoken in the North.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Hindi</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>नमस्ते</td>
+                                <td>Nam-as-te</td>
+                                <td>Hello / Greetings</td>
+                                <td><button class="audio-btn" data-phrase="Namaste" data-lang="hi-IN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>धन्यवाद</td>
+                                <td>Dhan-ya-vaad</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Dhanyavaad"
+                                        data-lang="hi-IN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>हाँ / नहीं</td>
+                                <td>Haa / Na-hee</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Haa Nahi" data-lang="hi-IN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>आप कैसे हैं?</td>
+                                <td>Aap kai-se hain?</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Aap kaise hain"
+                                        data-lang="hi-IN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>मैं ठीक हूँ</td>
+                                <td>Main theek hoon</td>
+                                <td>I am fine</td>
+                                <td><button class="audio-btn" data-phrase="Main theek hoon"
+                                        data-lang="hi-IN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>कितने का है?</td>
+                                <td>Kit-ne ka hai?</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Kitne ka hai"
+                                        data-lang="hi-IN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>मदद करो</td>
+                                <td>Ma-dad ka-ro</td>
+                                <td>Help me</td>
+                                <td><button class="audio-btn" data-phrase="Madad karo"
+                                        data-lang="hi-IN">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>पानी</td>
+                                <td>Paa-nee</td>
+                                <td>Water</td>
+                                <td><button class="audio-btn" data-phrase="Paani" data-lang="hi-IN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>चलो</td>
+                                <td>Cha-lo</td>
+                                <td>Let's go</td>
+                                <td><button class="audio-btn" data-phrase="Chalo" data-lang="hi-IN">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>अलविदा</td>
+                                <td>Al-vi-da</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Alvida" data-lang="hi-IN">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore India on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

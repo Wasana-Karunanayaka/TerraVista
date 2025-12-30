@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Belgium</title>
+
+    <meta name="description"
+        content="Discover Belgium, the heart of Europe. Taste world-class chocolate, explore medieval towns like Bruges, and marvel at the Grand Place.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR BELGIUM -->
+    <style>
+        :root {
+            /* Belgium Black (Elegant & Bold) */
+            --theme-primary: #1D1D1B;
+            /* Belgium Yellow/Gold */
+            --theme-secondary: #FDDA24;
+            --theme-bg-light: #fffcf9;
+            --theme-text-dark: #2c2c2c;
+        }
+
+        .culture-section::before {
+            background: #EF3340;
+            /* Belgium Red (Accent) */
+            opacity: 0.1;
+        }
+
+        /* Ensure text on Gold buttons is readable */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #1D1D1B !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Belgium/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Belgium</h1>
+            <p class="country-slogan">"Small Country, Great Taste"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#8364;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Euro (EUR)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Languages</div>
+                <div class="stat-value">Dutch, French, German</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127807;</div>
+                <div class="stat-label">Best Time to Visit</div>
+                <div class="stat-value">Apr-Jun & Sep-Oct</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Schengen Visa</div>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Belgium</h2>
+            <p class="section-subtitle">From the capital of the EU to fairy-tale medieval towns.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Brussels -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/brussels.jpg" alt="Brussels" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Brussels</h3>
+                        <p>The capital, home to the stunning Grand Place, the Atomium, and the Manneken Pis.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Bruges -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/bruges.jpg" alt="Bruges" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bruges</h3>
+                        <p>The "Venice of the North," a medieval fairy-tale town with winding canals and cobbled
+                            streets.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Ghent -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/ghent.jpg" alt="Ghent" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ghent</h3>
+                        <p>A vibrant university city known for its medieval architecture, Gravensteen castle, and quirky
+                            vibe.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Antwerp -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/antwerp.jpg" alt="Antwerp" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Antwerp</h3>
+                        <p>The world's diamond capital and a hub of fashion, art (Peter Paul Rubens), and cool cafes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. delightful Ardennes -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/ardennes.jpg" alt="The Ardennes" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>The Ardennes</h3>
+                        <p>A region of extensive forests, rough terrain, and rolling hills, perfect for hiking and
+                            history (WWII).</p>
+                    </div>
+                </div>
+
+                <!-- 6. Dinant -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Belgium/dinant.jpg" alt="Dinant" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Dinant</h3>
+                        <p>A picturesque cliff-side town on the Meuse River, birthplace of Adolphe Sax, inventor of the
+                            saxophone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Culture & Delicacies</h2>
+                <p class="section-subtitle">Belgium is famous for its fine tastes, quirky humor, and artistic heritage.
+                </p>
+
+                <div class="culture-grid">
+                    <!-- 1. Chocolate -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Belgium/chocolate.jpg');">
+                        <div class="culture-icon">&#127851;</div>
+                        <div class="culture-text">
+                            <h4>Belgian Chocolate</h4>
+                            <p>Renowned worldwide for its quality. Pralines were invented here in 1912 by Jean Neuhaus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Beer -->
+                    <div class="culture-item" style="background-image: url('../resourcesCountry/Belgium/beer.jpg');">
+                        <div class="culture-icon">&#127867;</div>
+                        <div class="culture-text">
+                            <h4>Beer Culture</h4>
+                            <p>With over 1,600 types of beer, Belgian Beer Culture is a UNESCO Intangible Cultural
+                                Heritage.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Waffles -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Belgium/waffles.jpg');">
+                        <div class="culture-icon">&#129383;</div>
+                        <div class="culture-text">
+                            <h4>Waffles</h4>
+                            <p>Choose between the light, rectangular Brussels waffle or the sweet, dense Liège waffle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Comics -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Belgium/comics.jpg');">
+                        <div class="culture-icon">&#128218;</div>
+                        <div class="culture-text">
+                            <h4>Comic Strips</h4>
+                            <p>The land of Tintin and The Smurfs. Comics are treated as the "Ninth Art" here.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Tomorrowland -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Belgium/music.jpg');">
+                        <div class="culture-icon">&#127926;</div>
+                        <div class="culture-text">
+                            <h4>Festivals</h4>
+                            <p>Home to Tomorrowland and Rock Werchter, Belgium hosts some of the world's biggest music
+                                festivals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Dutch/Flemish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Flemish (Dutch) Phrasebook</h2>
+                <p class="section-subtitle">While many speak English and French, try some Flemish in the north!</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Dutch</th>
+                                <th>Pronunciation</th>
+                                <th>English</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hallo</td>
+                                <td>Hah-loh</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hallo" data-lang="nl-BE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dank u wel</td>
+                                <td>Dahnk uu wel</td>
+                                <td>Thank you very much</td>
+                                <td><button class="audio-btn" data-phrase="Dank u wel"
+                                        data-lang="nl-BE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ja / Nee</td>
+                                <td>Yah / Nay</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ja, Nee" data-lang="nl-BE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alstublieft</td>
+                                <td>Als-too-bleeft</td>
+                                <td>Please / Here you go</td>
+                                <td><button class="audio-btn" data-phrase="Alstublieft"
+                                        data-lang="nl-BE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Tot ziens</td>
+                                <td>Tot zeens</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Tot ziens" data-lang="nl-BE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Spreekt u Engels?</td>
+                                <td>Spraykt uu Ay-ngels?</td>
+                                <td>Do you speak English?</td>
+                                <td><button class="audio-btn" data-phrase="Spreekt u Engels?"
+                                        data-lang="nl-BE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sorry</td>
+                                <td>Soh-ree</td>
+                                <td>Sorry</td>
+                                <td><button class="audio-btn" data-phrase="Sorry" data-lang="nl-BE">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hoeveel kost dit?</td>
+                                <td>Hoo-vayl kost dit?</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="Hoeveel kost dit?"
+                                        data-lang="nl-BE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Waar is het toilet?</td>
+                                <td>Waar is het twah-let?</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="Waar is het toilet?"
+                                        data-lang="nl-BE">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Lekker!</td>
+                                <td>Leh-ker!</td>
+                                <td>Tasty / Good!</td>
+                                <td><button class="audio-btn" data-phrase="Lekker" data-lang="nl-BE">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Belgium on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Belgium</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

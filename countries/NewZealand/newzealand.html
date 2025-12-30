@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore New Zealand</title>
+
+    <meta name="description"
+        content="Welcome to Middle-earth. Discover New Zealand's majestic fiords, glowing caves, Maori culture, and adrenaline-pumping adventures.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR NEW ZEALAND -->
+    <style>
+        :root {
+            /* Fern Green (Nature/Landscape) */
+            --theme-primary: #009E60;
+            /* Maori Black (Cultural Identity/Rugby) */
+            --theme-secondary: #111111;
+            --theme-bg-light: #f4fcf6;
+            --theme-text-dark: #222222;
+        }
+
+        .culture-section::before {
+            background: #009E60;
+            /* Green blob */
+            opacity: 0.1;
+        }
+
+        /* Adjust button text: Black button, White text */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .cta-button:hover {
+            background: #333333 !important;
+        }
+
+        /* Gradient for Title: Green to Black */
+        .country-title {
+            background: linear-gradient(135deg, #009E60 0%, #111111 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/NewZealand/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">New Zealand</h1>
+            <p class="country-slogan">"100% Pure Aotearoa"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">NZ Dollar (NZD)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">English & Te Reo Māori</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127954;</div>
+                <div class="stat-label">Nature</div>
+                <div class="stat-value">Adventure Capital</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">NZeTA (Electronic)</div>
+            </div>
+
+            <!-- Flag Card managed by JS -->
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS (Comprehensive List)
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Aotearoa</h2>
+            <p class="section-subtitle">A land of long white clouds, dramatic landscapes, and friendly hobbits.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Milford Sound -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/milford.jpg" alt="Milford Sound" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Milford Sound</h3>
+                        <p>The "Eighth Wonder of the World." Towering peaks, cascading waterfalls, and deep dark waters
+                            in Fiordland.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Hobbiton -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/hobbiton.jpg" alt="Hobbiton" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Hobbiton Movie Set</h3>
+                        <p>The Shire comes to life. Walk through the lush pastures of the Shire, visit Bag End, and have
+                            a drink at the Green Dragon.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Queenstown -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/queenstown.jpg" alt="Queenstown" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Queenstown</h3>
+                        <p>The Adventure Capital of the World. Bungee jumping, jet boating, skiing, and stunning views
+                            of Lake Wakatipu.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Rotorua -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/rotorua.jpg" alt="Rotorua" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Rotorua</h3>
+                        <p>A geothermal wonderland of bubbling mud pools, shooting geysers (Pohutu), and rich Maori
+                            culture.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Waitomo Glowworm Caves -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/waitomo.jpg" alt="Waitomo Caves" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Waitomo Caves</h3>
+                        <p>A magical underground boat ride under a starry galaxy of thousands of bioluminescent
+                            glowworms.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Aoraki / Mount Cook -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/mt-cook.jpg" alt="Aoraki Mount Cook" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Aoraki / Mount Cook</h3>
+                        <p>New Zealand's highest peak. A rugged alpine playground with glaciers, turquoise lakes, and
+                            starry attractions.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Franz Josef Glacier -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/glacier.jpg" alt="Franz Josef Glacier" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Franz Josef Glacier</h3>
+                        <p>One of the steepest glaciers in New Zealand, descending from the Southern Alps into
+                            rainforest near sea level.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Tongariro Alpine Crossing -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/tongariro.jpg" alt="Tongariro Crossing"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Tongariro Crossing</h3>
+                        <p>Often called the world's best day hike. traverse volcanic craters, emerald lakes, and "Mount
+                            Doom" (Ngauruhoe).</p>
+                    </div>
+                </div>
+
+                <!-- 9. Bay of Islands -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/NewZealand/bay-of-islands.jpg" alt="Bay of Islands"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bay of Islands</h3>
+                        <p>A subtropical micro-region known for its stunning beauty, history (Waitangi), sailing, and
+                            big-game fishing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS (Deep Dive)
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Māori Heritage & Kiwi Life</h2>
+                <p class="section-subtitle">"Manaakitanga" — A traditional Maori value of hospitality and kindness.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Haka -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/NewZealand/haka.jpg');">
+                        <div class="culture-icon">&#128170;</div>
+                        <div class="culture-text">
+                            <h4>The Haka</h4>
+                            <p>A traditional war dance made famous by the All Blacks. It's a fierce display of strength,
+                                unity, and tribal pride.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Hangi -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/NewZealand/hangi.jpg');">
+                        <div class="culture-icon">&#127831;</div> <!-- Meat on bone/Pot -->
+                        <div class="culture-text">
+                            <h4>Hāngī</h4>
+                            <p>A traditional feast cooked in an earth oven using heated rocks. Earthy, smoky flavors of
+                                meat and kumara.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Rugby -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/NewZealand/rugby.jpg');">
+                        <div class="culture-icon">&#127944;</div>
+                        <div class="culture-text">
+                            <h4>Rugby Union</h4>
+                            <p>The national obsession. The All Blacks are legendary, and match days see the whole
+                                country come to a standstill.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Kiwi Bird -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/NewZealand/kiwi.jpg');">
+                        <div class="culture-icon">&#129431;</div> <!-- Bird (generic) -->
+                        <div class="culture-text">
+                            <h4>The Kiwi</h4>
+                            <p>An odd, flightless, nocturnal bird that serves as the national symbol. New Zealanders
+                                proudly call themselves "Kiwis."</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Marae -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/NewZealand/marae.jpg');">
+                        <div class="culture-icon">&#127968;</div>
+                        <div class="culture-text">
+                            <h4>The Marae</h4>
+                            <p>The sacred meeting ground of Mäori communities. Visitors can experience a 'Powhiri'
+                                (welcome ceremony) here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Maori)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Te Reo Māori Phrasebook</h2>
+                <p class="section-subtitle">Māori is an official language and experiencing a massive revival.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Māori</th>
+                                <th>Pronunciation</th>
+                                <th>Meaning</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kia Ora</td>
+                                <td>Key-ah Aura</td>
+                                <td>Hello / Cheers / Good Health</td>
+                                <td><button class="audio-btn" data-phrase="Kia Ora" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Haere Mai</td>
+                                <td>High-reh My</td>
+                                <td>Welcome</td>
+                                <td><button class="audio-btn" data-phrase="Haere Mai" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kei te pēhea koe?</td>
+                                <td>Kay teh pear-hear kway</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="Kei te pēhea koe"
+                                        data-lang="mi-NZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Kei te pai</td>
+                                <td>Kay teh pie</td>
+                                <td>I am good</td>
+                                <td><button class="audio-btn" data-phrase="Kei te pai"
+                                        data-lang="mi-NZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ka kite anō</td>
+                                <td>Kah key-teh ah-nore</td>
+                                <td>See you later</td>
+                                <td><button class="audio-btn" data-phrase="Ka kite anō"
+                                        data-lang="mi-NZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Aroha</td>
+                                <td>Ah-row-ha</td>
+                                <td>Love / Compassion</td>
+                                <td><button class="audio-btn" data-phrase="Aroha" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Whānau</td>
+                                <td>Far-no</td>
+                                <td>Family</td>
+                                <td><button class="audio-btn" data-phrase="Whānau" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tēnā koutou</td>
+                                <td>Ten-ah coat-toe</td>
+                                <td>Greetings to you all</td>
+                                <td><button class="audio-btn" data-phrase="Tēnā koutou"
+                                        data-lang="mi-NZ">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Ae / Kao</td>
+                                <td>Eye / Cow</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Ae Kao" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aotearoa</td>
+                                <td>Au-te-a-ro-a</td>
+                                <td>New Zealand (Land of the Long White Cloud)</td>
+                                <td><button class="audio-btn" data-phrase="Aotearoa" data-lang="mi-NZ">&#9658;</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore New Zealand on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of New Zealand</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>

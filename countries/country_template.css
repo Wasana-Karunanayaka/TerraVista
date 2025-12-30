@@ -1,0 +1,482 @@
+/**
+ * TerraVista - Country Page Template Styles
+ *
+ * File:        country_template.css
+ * Author:      Wasana Karunanayaka
+ * Description: Specific styles for individual country pages, featuring 
+ *              dynamic theming and modern UI components.
+ */
+
+/* ==========================================================================
+   [1] THEME CONFIGURATION
+   ========================================================================== */
+/**
+ * DYNAMIC THEME VARIABLES
+ * Instructions: To create a new country theme, copy this block and 
+ * update the values below to match the country's vibe.
+ * 
+ * Example (Japan):
+ * --theme-primary: #ffb7c5; (Cherry Blossom)
+ * --theme-secondary: #c0392b; (Flag Red)
+ * --theme-text-on-primary: #333;
+ */
+:root {
+    /* Default: Blueprint Blue (Template Theme) */
+    --theme-primary: #2c5aa0;
+    /* Main Brand Color */
+    --theme-secondary: #f39c12;
+    /* Accent/Highlight Color */
+    --theme-bg-light: #f4f7f6;
+    /* Light Background for sections */
+    --theme-text-dark: #2c3e50;
+    /* Primary Text Color */
+    --theme-text-light: #ffffff;
+    /* Text on dark backgrounds */
+
+    /* UI Component Variables */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* ==========================================================================
+   [2] GLOBAL PAGE OVERRIDES & UTILITIES
+   ========================================================================== */
+
+body {
+    background-color: var(--theme-bg-light);
+}
+
+.section-title {
+    color: var(--theme-primary) !important;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--theme-secondary);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   [3] PARALLAX HERO SECTION
+   ========================================================================== */
+
+.country-hero {
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--theme-text-light);
+    perspective: 1px;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Placeholder Image - Replace in HTML or CSS overrides */
+    background-image: url('main/resourcesMain/home-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Creates the Parallax effect */
+    z-index: -2;
+    filter: brightness(0.8);
+}
+
+.hero-content-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    z-index: 10;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.country-title {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    color: var(--theme-primary);
+    /* Force Theme Color */
+}
+
+.country-slogan {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
+    opacity: 1;
+    /* Improved visibility */
+    color: #ffffff;
+    /* Force White */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    /* Add specific shadow for contrast */
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   [4] OVERVIEW (QUICK STATS)
+   ========================================================================== */
+
+.overview-strip {
+    transform: translateY(-50px);
+    position: relative;
+    z-index: 20;
+    padding: 0 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    /* Smaller min-width to fit 5 items */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--theme-secondary);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--theme-primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--theme-text-dark);
+}
+
+/* ==========================================================================
+   [5] TOP DESTINATIONS (MASONRY-LIKE GRID)
+   ========================================================================== */
+
+.destinations-section {
+    padding-top: 0;
+    /* Since stats pull up, we don't need huge top padding */
+    padding-bottom: 4rem;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Destination Cards with Glassmorphism Hover */
+.dest-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dest-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.dest-card:hover .dest-img {
+    transform: scale(1.1);
+}
+
+.dest-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 2rem;
+    color: white;
+    transform: translateY(100px);
+    transition: transform 0.4s ease;
+}
+
+/* Always show title, show details on hover */
+.dest-overlay h3 {
+    margin-bottom: 0.5rem;
+    transform: translateY(-100px);
+    transition: transform 0.4s ease;
+    color: var(--theme-secondary);
+}
+
+.dest-overlay p {
+    opacity: 0;
+    transition: opacity 0.4s ease 0.1s;
+    font-size: 0.95rem;
+}
+
+.dest-card:hover .dest-overlay {
+    transform: translateY(0);
+}
+
+.dest-card:hover .dest-overlay h3 {
+    transform: translateY(0);
+}
+
+.dest-card:hover .dest-overlay p {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   [6] CULTURAL HIGHLIGHTS
+   ========================================================================== */
+
+.culture-section {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Circle Background */
+.culture-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: var(--theme-primary);
+    opacity: 0.05;
+    border-radius: 50%;
+}
+
+/* REVISED CULTURE SECTION (Image Backgrounds) */
+.culture-grid {
+    display: grid;
+    /* Switched to Grid for better control */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.culture-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 300px;
+    /* Taller for image impact */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.culture-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.culture-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.culture-icon {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    /* Icon is always white now */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.culture-text {
+    position: relative;
+    z-index: 2;
+}
+
+.culture-text h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    /* Text is always white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.culture-text p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   [7] TRAVELER'S TOOLKIT (PHRASES)
+   ========================================================================== */
+
+.toolkit-section {
+    background: linear-gradient(135deg, var(--theme-bg-light) 0%, #eef2f3 100%);
+}
+
+.phrase-table-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.phrase-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.phrase-table th {
+    background: var(--theme-primary);
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.phrase-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #eee;
+    color: var(--theme-text-dark);
+}
+
+.phrase-table tr:last-child td {
+    border-bottom: none;
+}
+
+.phrase-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.audio-btn {
+    background: transparent;
+    border: 2px solid var(--theme-secondary);
+    color: var(--theme-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.audio-btn:hover {
+    background: var(--theme-secondary);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   [8] INTERACTIVE MAP
+   ========================================================================== */
+
+/* Reusing .map-container from stylesMain.css but adding specific sizing */
+.country-map-container {
+    height: 500px;
+    margin-top: 3rem;
+}
+
+/* ==========================================================================
+   [9] RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .country-title {
+        font-size: 3rem;
+    }
+
+    .hero-content-glass {
+        margin: 0 1rem;
+        padding: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-strip {
+        transform: translateY(0);
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+
+    .phrase-table th,
+    .phrase-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}

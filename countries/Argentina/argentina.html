@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVista - Explore Argentina</title>
+
+    <meta name="description"
+        content="Journey through Argentina. Experience the passion of Tango, the vastness of Patagonia, and the thunder of Iguazu Falls with TerraVista.">
+
+    <link rel="icon" type="image/x-icon" href="../../main/resourcesMain/favicon.ico">
+    <link rel="stylesheet" href="../../main/stylesMain.css">
+    <link rel="stylesheet" href="../country_template.css">
+
+    <!-- DYNAMIC THEME OVERRIDES FOR ARGENTINA -->
+    <style>
+        :root {
+            /* Argentina Blue (Sun of May) - Distinct from Home Page Blue */
+            --theme-primary: #0084C9;
+            /* Sun Gold */
+            --theme-secondary: #FFB81C;
+            --theme-bg-light: #fbfdff;
+            --theme-text-dark: #2c3e50;
+        }
+
+        .culture-section::before {
+            background: #75AADB;
+            /* Light Blue blob */
+            opacity: 0.15;
+        }
+
+        /* Adjust button text for contrast on Gold */
+        .cta-button {
+            background: var(--theme-secondary) !important;
+            color: #2c3e50 !important;
+            /* Dark text on Yellow/Gold */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHARED NAVBAR -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+    <header class="country-hero">
+        <div class="parallax-bg" style="background-image: url('../resourcesCountry/Argentina/hero.jpg');"></div>
+
+        <div class="hero-content-glass">
+            <h1 class="country-title">Argentina</h1>
+            <p class="country-slogan">"Rhythm, Passion, and Nature"</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       3. OVERVIEW / QUICK STATS
+       ========================================================================== -->
+    <section class="overview-strip">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">&#36;</div>
+                <div class="stat-label">Currency</div>
+                <div class="stat-value">Arg. Peso (ARS)</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128483;</div>
+                <div class="stat-label">Language</div>
+                <div class="stat-value">Spanish</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#127810;</div>
+                <div class="stat-label">Best Time to Visit</div>
+                <div class="stat-value">Mar-May & Sep-Nov</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">&#128706;</div>
+                <div class="stat-label">Visa Req</div>
+                <div class="stat-value">Visa-Free (90 Days)</div>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ==========================================================================
+           4. TOP DESTINATIONS
+           ========================================================================== -->
+        <section class="container destinations-section">
+            <h2 class="section-title">Must-Visit Destinations in Argentina</h2>
+            <p class="section-subtitle">From the glacial ends of the earth to the vibrant streets of Buenos Aires.</p>
+
+            <div class="masonry-grid">
+                <!-- 1. Buenos Aires -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/buenos-aires.jpg" alt="Buenos Aires" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Buenos Aires</h3>
+                        <p>The "Paris of South America," famous for its European architecture, Tango clubs, and vibrant
+                            nightlife.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Iguazu Falls -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/iguazu.jpg" alt="Iguazu Falls" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Iguazu Falls</h3>
+                        <p>One of the New Seven Wonders of Nature, a massive system of waterfalls thundering into the
+                            jungle.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Perito Moreno Glacier -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/glacier.jpg" alt="Perito Moreno Glacier"
+                        class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Perito Moreno Glacier</h3>
+                        <p>A stunning blue glacier in Patagonia that you can trek across, constantly shifting and
+                            cracking.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Mendoza -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/mendoza.jpg" alt="Mendoza" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Mendoza</h3>
+                        <p>The heart of Argentina's wine country, nestled against the Andes mountains, famous for
+                            Malbec.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Bariloche -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/bariloche.jpg" alt="Bariloche" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Bariloche</h3>
+                        <p>A Swiss-style alpine town known for its chocolate, glistening lakes, and ski slopes.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Ushuaia -->
+                <div class="dest-card">
+                    <img src="../resourcesCountry/Argentina/ushuaia.jpg" alt="Ushuaia" class="dest-img">
+                    <div class="dest-overlay">
+                        <h3>Ushuaia</h3>
+                        <p>The "End of the World," the southernmost city on Earth and gateway to Antarctica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. CULTURAL HIGHLIGHTS
+           ========================================================================== -->
+        <section class="culture-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Culture & Traditions</h2>
+                <p class="section-subtitle">A land of fiery passion, deep traditions, and world-class steak.</p>
+
+                <div class="culture-grid">
+                    <!-- 1. Tango -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Argentina/tango.jpg');">
+                        <div class="culture-icon">&#128131;</div>
+                        <div class="culture-text">
+                            <h4>Tango</h4>
+                            <p>Born in the streets of Buenos Aires, this sensual dance is an expression of longing and
+                                passion.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Asado -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Argentina/asado.jpg');">
+                        <div class="culture-icon">&#129385;</div>
+                        <div class="culture-text">
+                            <h4>Asado (BBQ)</h4>
+                            <p>More than just a meal, the Asado is a ritual of grilling high-quality beef and
+                                socializing with friends.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mate -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Argentina/mate.jpg');">
+                        <div class="culture-icon">&#129486;</div>
+                        <div class="culture-text">
+                            <h4>Yerba Mate</h4>
+                            <p>A caffeine-rich infused drink shared socially from a gourd. It's an essential part of
+                                daily life.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Football -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Argentina/football.jpg');">
+                        <div class="culture-icon">&#9917;</div>
+                        <div class="culture-text">
+                            <h4>Fútbol</h4>
+                            <p>Football is a religion here. From Maradona to Messi, the passion for the game is
+                                unmatched.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Gauchos -->
+                    <div class="culture-item"
+                        style="background-image: url('../resourcesCountry/Argentina/gaucho.jpg');">
+                        <div class="culture-icon">&#128052;</div>
+                        <div class="culture-text">
+                            <h4>Gauchos</h4>
+                            <p>The skilled horsemen and cowboys of the Pampas, symbols of freedom and national identity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           6. TRAVELER'S TOOLKIT (Spanish)
+           ========================================================================== -->
+        <section class="toolkit-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Argentine Spanish Phrasebook</h2>
+                <p class="section-subtitle">Locals appreciate it when you try. Note: 'll' and 'y' are often pronounced
+                    'sh'.</p>
+
+                <div class="phrase-table-container">
+                    <table class="phrase-table">
+                        <thead>
+                            <tr>
+                                <th>Spanish</th>
+                                <th>Pronunciation</th>
+                                <th>English</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hola</td>
+                                <td>Oh-lah</td>
+                                <td>Hello</td>
+                                <td><button class="audio-btn" data-phrase="Hola" data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Gracias</td>
+                                <td>Grah-see-ahs</td>
+                                <td>Thank you</td>
+                                <td><button class="audio-btn" data-phrase="Gracias" data-lang="es-AR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Por favor</td>
+                                <td>Por fah-vor</td>
+                                <td>Please</td>
+                                <td><button class="audio-btn" data-phrase="Por favor" data-lang="es-AR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sí / No</td>
+                                <td>See / Noh</td>
+                                <td>Yes / No</td>
+                                <td><button class="audio-btn" data-phrase="Sí, No" data-lang="es-AR">&#9658;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chau / Adios</td>
+                                <td>Chow / Ah-dee-os</td>
+                                <td>Goodbye</td>
+                                <td><button class="audio-btn" data-phrase="Chau" data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Cómo estás?</td>
+                                <td>Koh-moh ehs-tahs?</td>
+                                <td>How are you?</td>
+                                <td><button class="audio-btn" data-phrase="¿Cómo estás?"
+                                        data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>Che, boludo (Slang)</td>
+                                <td>Cheh, boh-loo-doh</td>
+                                <td>Hey, friend (Informal)</td>
+                                <td><button class="audio-btn" data-phrase="Che, boludo"
+                                        data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Cuánto cuesta?</td>
+                                <td>Kwahn-toh kwehs-tah?</td>
+                                <td>How much is this?</td>
+                                <td><button class="audio-btn" data-phrase="¿Cuánto cuesta?"
+                                        data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>La cuenta, por favor</td>
+                                <td>Lah kwehn-tah</td>
+                                <td>The bill, please</td>
+                                <td><button class="audio-btn" data-phrase="La cuenta, por favor"
+                                        data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                            <tr>
+                                <td>¿Dónde está el baño?</td>
+                                <td>Dohn-deh ehs-tah el bah-nyoh?</td>
+                                <td>Where is the bathroom?</td>
+                                <td><button class="audio-btn" data-phrase="¿Dónde está el baño?"
+                                        data-lang="es-AR">&#9658;</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           7. INTERACTIVE MAP
+           ========================================================================== -->
+        <section class="container" style="padding: 4rem 0;">
+            <h2 class="section-title">Explore Argentina on Map</h2>
+
+            <div class="map-container country-map-container" id="map-placeholder">
+                <div class="map-load-button">
+                    <div>
+                        <p style="margin-bottom: 10px; font-size: 2rem;">&#127757;</p>
+                        <span>Click to Load Interactive Map of Argentina</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- SCRIPTS -->
+    <script src="../../main/scriptMain.js"></script>
+    <script src="../country_template.js"></script>
+    <script src="../../components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents('../../');
+        });
+    </script>
+
+</body>
+
+</html>
